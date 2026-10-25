@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Sbatty - Tati & Thomas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f7f4ed;
+            --text-main: #222222;
+            --text-muted: #555555;
+            --accent-gold: #a67c52;
+            --dark-box: #232b26;
+            --border-color: #e3decb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        header {
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 0.85rem;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 0 60px;
+        }
+
+        .subtitle-top {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+
+        h1 span {
+            font-style: italic;
+            color: var(--accent-gold);
+            display: block;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 35px;
+            padding: 0 10px;
+        }
+
+        .btn-dark {
+            background-color: var(--dark-box);
+            color: #fff;
+            padding: 16px 24px;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            border-radius: 2px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-dark:hover {
+            opacity: 0.9;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--text-main);
+            padding: 14px 24px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            font-size: 0.95rem;
+            border-radius: 2px;
+        }
+
+        section {
+            padding: 60px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-tag {
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .section-title span {
+            font-style: italic;
+            color: var(--accent-gold);
+            display: block;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .service-list {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .service-list li {
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .service-list span {
+            color: var(--accent-gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-right: 20px;
+            font-style: italic;
+        }
+
+        .step-box {
+            margin-bottom: 35px;
+        }
+
+        .step-box .num {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .step-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .step-box p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-dark {
+            background-color: var(--dark-box);
+            color: #fff;
+            padding: 60px 24px;
+            text-align: center;
+        }
+
+        .footer-dark .subtitle-top {
+            color: var(--accent-gold);
+        }
+
+        .footer-dark h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .footer-dark h2 span {
+            font-style: italic;
+            color: var(--accent-gold);
+            display: block;
+        }
+
+        .footer-dark p {
+            color: #b5b5b5;
+            font-size: 0.9rem;
+            margin-bottom: 35px;
+        }
+
+        .footer-bottom {
+            background-color: #1a211d;
+            padding: 30px 24px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8c938f;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand-name">Tati & Thomas</div>
+        <nav>
+            <a href="#video">1. Video</a>
+            <a href="#dj">2. DJ</a>
+            <a href="#drone">3. Drone</a>
+            <a href="#contatti">Contatti</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <div class="subtitle-top">Zero Sbatty &bull; Video Promozionali &bull; Wedding DJ &bull; Drone</div>
+            <h1>Le vostre storie. <span>La nostra creatività.</span></h1>
+            <p>Siamo Tati & Thomas. Creiamo video promozionali per le attività, accompagniamo i vostri matrimoni con la musica e raccontiamo luoghi ed eventi con riprese dal cielo.</p>
+            
+            <a href="https://wa.me/393669800153" class="btn-dark">
+              <span>Raccontateci la vostra idea</span>
+              <span>↗</span>
+            </a>
+            <a href="#video" class="btn-outline">Scoprite i servizi ↓</a>
+        </div>
+
+        <!-- SEZIONE 1: VIDEO -->
+        <section id="video">
+            <div class="section-tag">1. Video Promozionali</div>
+            <h2 class="section-title">Facciamo vedere <span>il meglio di te.</span></h2>
+            <p class="section-desc">Con Zero Sbatty realizziamo video pubblicitari e promozionali per raccontare la tua attività, presentare i tuoi prodotti e dare spazio ai tuoi servizi.</p>
+            <p class="section-desc">Dall'idea alle riprese, fino al montaggio: trasformiamo quello che fai in contenuti pensati per i social e la comunicazione della tua attività.</p>
+
+            <ul class="service-list">
+                <li><span>01</span> Spot pubblicitari e video promozionali</li>
+                <li><span>02</span> Reel e contenuti per i social</li>
+                <li><span>03</span> Video per prodotti, servizi ed eventi</li>
+            </ul>
+
+            <a href="https://wa.me/393669800153" class="btn-dark">
+              <span>Parliamo del tuo prossimo video</span>
+              <span>↗</span>
+            </a>
+        </section>
+
+        <!-- SEZIONE 2: DJ -->
+        <section id="dj">
+            <div class="section-tag">2. DJ</div>
+            <h2 class="section-title">Ogni momento, <span>la sua musica.</span></h2>
+            <p class="section-desc">Ci sono canzoni che parlano di voi. E altre che fanno alzare tutti dalla sedia. Costruiamo insieme il percorso musicale del vostro matrimonio, dall'atmosfera dell'aperitivo all'energia della festa.</p>
+
+            <ul class="service-list">
+                <li><span>01</span> L'aperitivo e l'inizio della festa</li>
+                <li><span>02</span> Il vostro primo ballo</li>
+                <li><span>03</span> Il DJ set, fino all'ultima canzone</li>
+            </ul>
+
+            <a href="https://wa.me/393669800153" class="btn-dark">
+              <span>Parliamo della vostra musica</span>
+              <span>↗</span>
+            </a>
+        </section>
+
+        <!-- SEZIONE 3: DRONE -->
+        <section id="drone">
+            <div class="section-tag">3. Drone</div>
+            <h2 class="section-title">Il vostro matrimonio, <span>da un'altra prospettiva.</span></h2>
+            <p class="section-desc">La location, il paesaggio e l'atmosfera del vostro giorno speciale: le riprese con drone aggiungono uno sguardo diverso al racconto del matrimonio.</p>
+            <p class="section-desc">Raccontateci dove e quando vi sposate: valuteremo insieme le possibilità delle riprese nella vostra location.</p>
+
+            <a href="https://wa.me/393669800153" class="btn-outline" style="border-color: var(--text-main); color: var(--text-main);">
+              Chiedete informazioni sul drone ↗
+            </a>
+        </section>
+
+        <!-- COME FUNZIONA -->
+        <section>
+            <div class="section-tag">Si comincia da voi</div>
+            <h2 class="section-title" style="margin-bottom: 40px;">Dall'idea al <span>vostro progetto.</span></h2>
+
+            <div class="step-box">
+                <div class="num">01</div>
+                <h3>Raccontateci</h3>
+                <p>La vostra attività, l'evento o il matrimonio: raccontateci cosa avete in mente.</p>
+            </div>
+
+            <div class="step-box">
+                <div class="num">02</div>
+                <h3>Scegliamo insieme</h3>
+                <p>Video promozionali, musica o riprese con drone: scegliamo i servizi adatti alla vostra idea.</p>
+            </div>
+
+            <div class="step-box">
+                <div class="num">03</div>
+                <h3>Definiamo i dettagli</h3>
+                <p>Definiamo contenuti, tempi e dettagli e prepariamo una proposta dedicata.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER CONTATTI -->
+    <footer class="footer-dark" id="contatti">
+        <div class="subtitle-top">Tati & Thomas</div>
+        <h2>Il primo passo? <span>Un messaggio.</span></h2>
+        <p>Scriveteci su WhatsApp per informazioni, disponibilità e preventivi. Raccontateci la vostra idea e il servizio che vi interessa.</p>
+
+        <a href="https://wa.me/393669800153" class="btn-dark" style="border: 1px solid rgba(255,255,255,0.2); margin-bottom: 15px;">
+          <span>SCRIVI A THOMAS &bull; 3669800153</span>
+          <span>↗</span>
+        </a>
+
+        <a href="https://wa.me/393314828343" class="btn-dark" style="border: 1px solid rgba(255,255,255,0.2);">
+          <span>SCRIVI A TATIANA &bull; 3314828343</span>
+          <span>↗</span>
+        </a>
+    </footer>
+
+    <div class="footer-bottom">
+        Zero Sbatty &bull; Tati & Thomas &bull; Video, DJ e drone<br>
+        Le vostre storie. La nostra creatività.
+    </div>
+
+</body>
+</html>
