@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Zero Sbatty | Video, DJ Set e Drone a Lucca</title>
 
-<meta name="description" content="Zero Sbatty di Tati & Thomas: video pubblicitari, DJ set per matrimoni ed eventi e riprese con drone a Lucca e in Toscana.">
+<meta name="description" content="Zero Sbatty di Tati & Thomas. Video promozionali, DJ set per eventi e matrimoni e riprese con drone a Lucca e in Toscana.">
 
 <meta name="theme-color" content="#232b26">
 
@@ -18,36 +19,32 @@
 
 <style>
 
-/* ==========================
-   ZERO SBATTY LUXURY
-========================== */
+/* COLORI */
 
 :root {
-    --bg:#f7f4ed;
-    --soft:#efe9dc;
-    --dark:#232b26;
-    --dark2:#18201c;
-    --gold:#a67c52;
-    --goldlight:#c6a27c;
-    --text:#222222;
-    --muted:#66645f;
-    --border:#dfd8c9;
-    --white:#ffffff;
-    --green:#25D366;
+    --bg: #f7f4ed;
+    --soft: #efe9dc;
+    --dark: #232b26;
+    --dark2: #18201c;
+    --gold: #a67c52;
+    --goldlight: #c6a27c;
+    --muted: #68655e;
+    --border: #dfd8c9;
+    --green: #25d366;
 }
 
 * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 html {
-    scroll-behavior:smooth;
-    scroll-padding-top:90px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
+    margin: 0;
+    color: var(--dark);
     background:
         radial-gradient(
             circle at top right,
@@ -55,1006 +52,956 @@ body {
             transparent 35%
         ),
         var(--bg);
-
-    font-family:'DM Sans',sans-serif;
-    color:var(--text);
-    line-height:1.7;
-    overflow-x:hidden;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.65;
+    overflow-x: hidden;
 }
 
-h1,h2,h3 {
-    font-family:'Playfair Display',serif;
-    font-weight:400;
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
 }
 
 a {
-    text-decoration:none;
-    -webkit-tap-highlight-color:transparent;
+    text-decoration: none;
+    color: inherit;
 }
 
 button {
-    font:inherit;
+    font: inherit;
 }
 
-.container {
-    width:min(94%,1500px);
-    margin:auto;
+.wrap {
+    width: min(92%, 1480px);
+    margin-inline: auto;
 }
 
-/* ==========================
-   HEADER
-========================== */
+/* HEADER */
 
 header {
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(247,244,237,.93);
-    backdrop-filter:blur(22px);
-    -webkit-backdrop-filter:blur(22px);
-    border-bottom:1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(247,244,237,.94);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(18px);
 }
 
-.header-inner {
-    width:min(94%,1500px);
-    margin:auto;
-    min-height:82px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
+.nav {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .logo {
-    font-family:'Playfair Display',serif;
-    font-size:1.6rem;
-    font-weight:600;
-    color:var(--dark);
-    white-space:nowrap;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.65rem;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
-.logo span {
-    color:var(--gold);
-    font-style:italic;
+.logo em {
+    color: var(--gold);
 }
 
-nav {
-    display:flex;
-    align-items:center;
-    gap:30px;
+.navlinks {
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 2.5vw, 36px);
 }
 
-nav a {
-    color:var(--dark);
-    font-size:.88rem;
-    font-weight:600;
-    transition:.3s;
+.navlinks a {
+    font-size: .88rem;
+    font-weight: 600;
 }
 
-nav a:hover {
-    color:var(--gold);
+.navlinks a:hover {
+    color: var(--gold);
 }
 
-.nav-button {
-    background:var(--dark);
-    color:white;
-    padding:12px 22px;
-    border-radius:100px;
+.navlinks .navbtn {
+    background: var(--dark);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 100px;
 }
 
-.nav-button:hover {
-    background:var(--gold);
-    color:white;
+/* ELEMENTI COMUNI */
+
+.eyebrow {
+    font-size: .74rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--gold);
 }
 
-/* ==========================
-   BUTTONS
-========================== */
+.serif {
+    color: var(--gold);
+    font-style: italic;
+}
 
 .btn {
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:13px;
-    min-height:57px;
-    padding:16px 27px;
-    border-radius:15px;
-    font-size:.92rem;
-    font-weight:600;
-    text-align:center;
-    transition:
-        transform .3s,
-        background .3s,
-        box-shadow .3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 56px;
+    padding: 15px 24px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: .92rem;
+    text-align: center;
+    transition: .3s;
 }
 
 .btn:hover {
-    transform:translateY(-4px);
+    transform: translateY(-3px);
 }
 
 .btn-dark {
-    background:var(--dark);
-    color:white;
-    box-shadow:0 12px 30px rgba(35,43,38,.15);
+    background: var(--dark);
+    color: white;
+    box-shadow: 0 12px 28px rgba(35,43,38,.15);
 }
 
 .btn-dark:hover {
-    background:#344238;
-    box-shadow:0 18px 40px rgba(35,43,38,.22);
+    background: #35443a;
 }
 
 .btn-outline {
-    color:var(--dark);
-    border:1px solid var(--dark);
-    background:rgba(255,255,255,.3);
+    border: 1px solid var(--dark);
+    background: rgba(255,255,255,.4);
 }
 
-.btn-light {
-    background:white;
-    color:var(--dark);
-}
-
-.btn i {
-    font-size:1.2rem;
+.btn-white {
+    background: white;
+    color: var(--dark);
 }
 
 .btn .fa-whatsapp {
-    color:var(--green);
+    color: var(--green);
+    font-size: 1.2rem;
 }
 
-/* ==========================
-   HERO
-========================== */
+.section {
+    padding: 112px 0;
+    border-top: 1px solid var(--border);
+}
+
+.section h2 {
+    font-size: clamp(2.8rem, 4.6vw, 5.5rem);
+    line-height: 1.1;
+    letter-spacing: -.025em;
+    margin: 15px 0 28px;
+}
+
+.section h2 .serif {
+    display: block;
+}
+
+.lead {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 620px;
+}
+
+/* HERO */
 
 .hero {
-    position:relative;
-    min-height:80vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:115px 0 100px;
+    position: relative;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 60px;
+    padding: 90px 0 110px;
 }
 
-.hero-content {
-    max-width:1250px;
-    position:relative;
-    z-index:2;
+.hero-copy {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-badge {
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    padding:10px 20px;
-    border:1px solid var(--border);
-    border-radius:100px;
-    background:rgba(255,255,255,.55);
-    color:var(--gold);
-    font-size:.75rem;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    font-weight:700;
-    margin-bottom:32px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 16px;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    background: rgba(255,255,255,.5);
+    margin-bottom: 26px;
 }
 
 .hero-badge::before {
-    content:"";
-    width:7px;
-    height:7px;
-    border-radius:50%;
-    background:var(--gold);
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
 }
 
 .hero h1 {
-    font-size:clamp(3.3rem,7vw,8rem);
-    line-height:1.05;
-    letter-spacing:-2px;
-    margin-bottom:30px;
+    font-size: clamp(3.7rem, 6.5vw, 7.5rem);
+    line-height: 1.03;
+    letter-spacing: -.045em;
+    margin-bottom: 26px;
 }
 
-.hero h1 span {
-    display:block;
-    color:var(--gold);
-    font-style:italic;
+.hero h1 .serif {
+    display: block;
 }
 
-.hero p {
-    max-width:750px;
-    margin:0 auto 38px;
-    font-size:clamp(1rem,1.4vw,1.2rem);
-    color:var(--muted);
+.hero-copy > p {
+    max-width: 600px;
+    color: var(--muted);
+    font-size: 1.12rem;
+    margin-bottom: 34px;
 }
 
-.hero-buttons {
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
-.hero-circle {
-    position:absolute;
-    border:1px solid rgba(166,124,82,.15);
-    border-radius:50%;
-    pointer-events:none;
+/* RIQUADRO DECORATIVO */
+
+.hero-art {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 470px;
 }
 
-.hero-circle.one {
-    width:380px;
-    height:380px;
-    left:-200px;
-    top:10%;
+.hero-panel {
+    position: relative;
+    width: min(100%, 430px);
+    min-height: 460px;
+    background: var(--dark);
+    border-radius: 36px;
+    padding: 48px 34px;
+    color: white;
+    box-shadow: 0 30px 70px rgba(35,43,38,.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
-.hero-circle.two {
-    width:500px;
-    height:500px;
-    right:-300px;
-    bottom:0;
+.hero-panel::before {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(198,162,124,.23);
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    right: -180px;
+    top: -170px;
 }
 
-/* ==========================
-   SERVICE BAR
-========================== */
-
-.service-bar {
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    border:1px solid var(--border);
-    border-radius:25px;
-    background:rgba(255,255,255,.55);
-    overflow:hidden;
-    margin-bottom:85px;
+.hero-panel .small {
+    color: var(--goldlight);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: .74rem;
+    font-weight: 700;
 }
 
-.service-bar-item {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:15px;
-    padding:30px 15px;
+.hero-panel h2 {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(2.7rem, 3.7vw, 4.5rem);
+    line-height: 1.16;
+    margin: 40px 0;
 }
 
-.service-bar-item:not(:last-child) {
-    border-right:1px solid var(--border);
+.hero-panel h2 em {
+    color: var(--goldlight);
 }
 
-.service-bar-item i {
-    color:var(--gold);
-    font-size:1.6rem;
+.hero-panel-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    border-top: 1px solid rgba(255,255,255,.2);
+    padding-top: 22px;
 }
 
-.service-bar-item span {
-    font-weight:600;
-    font-size:.95rem;
+.hero-panel-bottom span {
+    text-align: center;
+    font-size: .78rem;
 }
 
-/* ==========================
-   SECTIONS
-========================== */
-
-section {
-    padding:115px 0;
-    border-top:1px solid var(--border);
+.hero-panel-bottom i {
+    display: block;
+    color: var(--goldlight);
+    font-size: 1.35rem;
+    margin-bottom: 8px;
 }
 
-.section-tag {
-    color:var(--gold);
-    text-transform:uppercase;
-    letter-spacing:2px;
-    font-size:.76rem;
-    font-weight:700;
-    margin-bottom:20px;
+/* BARRA SERVIZI */
+
+.servicebar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(255,255,255,.5);
+    margin-bottom: 85px;
 }
 
-.section-title {
-    font-size:clamp(2.8rem,4.5vw,5.5rem);
-    line-height:1.1;
-    margin-bottom:28px;
+.servicebar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 29px 15px;
+    font-weight: 700;
 }
 
-.section-title span {
-    display:block;
-    color:var(--gold);
-    font-style:italic;
+.servicebar a:not(:last-child) {
+    border-right: 1px solid var(--border);
 }
 
-.section-desc {
-    color:var(--muted);
-    font-size:1.05rem;
-    max-width:650px;
-    margin-bottom:30px;
+.servicebar i {
+    color: var(--gold);
+    font-size: 1.5rem;
 }
 
-/* ==========================
-   SERVIZI
-========================== */
-
-.service-layout {
-    display:grid;
-    grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);
-    gap:clamp(40px,6vw,110px);
-    align-items:center;
+.servicebar a:hover {
+    background: white;
 }
 
-.service-layout.reverse {
-    grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+/* SERVIZI */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(300px,480px);
+    gap: clamp(45px,7vw,125px);
+    align-items: center;
 }
 
-.service-layout.reverse .service-content {
-    order:2;
+.service-grid.reverse {
+    grid-template-columns: minmax(300px,480px) minmax(0,1fr);
 }
 
-.service-layout.reverse .service-media {
-    order:1;
+.service-grid.reverse .copy {
+    order: 2;
 }
 
-.service-content {
-    min-width:0;
+.service-grid.reverse .media {
+    order: 1;
 }
 
-.service-list {
-    list-style:none;
-    margin:35px 0;
-    max-width:600px;
+.copy {
+    min-width: 0;
 }
 
-.service-list li {
-    display:flex;
-    align-items:center;
-    padding:17px 0;
-    border-bottom:1px solid var(--border);
-    font-size:.95rem;
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0;
 }
 
-.service-list span {
-    color:var(--gold);
-    font-family:'Playfair Display',serif;
-    font-style:italic;
-    font-size:1.2rem;
-    margin-right:20px;
+.list li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--border);
+    padding: 15px 0;
+    font-weight: 500;
 }
 
-/* ==========================
-   VIDEO RETTANGOLARI
-========================== */
-
-.service-media {
-    width:100%;
-    min-width:0;
+.list b {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
-.video-label {
-    color:var(--gold);
-    font-size:.75rem;
-    letter-spacing:2px;
-    font-weight:700;
-    text-transform:uppercase;
-    margin-bottom:18px;
+/* VIDEO VERTICALI */
+
+.media {
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+}
+
+.media-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--gold);
+    font-weight: 700;
+    font-size: .73rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.media-label::after {
+    content: "";
+    height: 1px;
+    background: var(--border);
+    flex: 1;
+}
+
+.video-shell {
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 36px;
+    background: rgba(255,255,255,.72);
+    box-shadow: 0 25px 70px rgba(35,43,38,.12);
+    transition: transform .35s, box-shadow .35s;
+}
+
+.video-shell:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 32px 80px rgba(35,43,38,.18);
 }
 
 .video-frame {
-    position:relative;
-    width:100%;
-    aspect-ratio:16/9;
-    overflow:hidden;
-    border-radius:32px;
-    background:#151515;
-    box-shadow:0 25px 70px rgba(35,43,38,.17);
-    transition:
-        transform .5s ease,
-        box-shadow .5s ease;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    border-radius: 27px;
+    background: #202020;
 }
 
-.video-frame:hover {
-    transform:translateY(-8px);
-    box-shadow:0 35px 90px rgba(35,43,38,.24);
+.video-frame video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.service-video {
-    width:100%;
-    height:100%;
-    display:block;
-    object-fit:cover;
-    object-position:center;
+.media-caption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: .85rem;
+    margin-top: 20px;
 }
 
-.video-frame::after {
-    content:"";
-    position:absolute;
-    inset:0;
-    border:1px solid rgba(255,255,255,.2);
-    border-radius:32px;
-    pointer-events:none;
+.media-caption i {
+    color: var(--gold);
 }
 
-/* DECORAZIONE SOTTO VIDEO */
+/* PORTFOLIO */
 
-.video-caption {
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-top:20px;
-    color:var(--muted);
-    font-size:.83rem;
-}
-
-.video-caption i {
-    color:var(--gold);
-}
-
-/* ==========================
-   PORTFOLIO
-========================== */
-
-.portfolio-grid {
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:25px;
-    margin-top:45px;
-}
-
-.portfolio-card {
-    position:relative;
-    overflow:hidden;
-    min-height:280px;
-    padding:45px 35px;
-    border:1px solid var(--border);
-    border-radius:28px;
-    background:rgba(255,255,255,.6);
-    transition:.4s;
-}
-
-.portfolio-card:hover {
-    transform:translateY(-9px);
-    box-shadow:0 25px 60px rgba(35,43,38,.12);
-}
-
-.portfolio-card::before {
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:3px;
-    background:var(--gold);
-    transform:scaleX(0);
-    transform-origin:left;
-    transition:.4s;
-}
-
-.portfolio-card:hover::before {
-    transform:scaleX(1);
-}
-
-.portfolio-card i {
-    color:var(--gold);
-    font-size:2rem;
-    margin-bottom:25px;
-}
-
-.portfolio-card h3 {
-    font-size:1.7rem;
-    margin-bottom:12px;
-}
-
-.portfolio-card p {
-    color:var(--muted);
-    font-size:.94rem;
-}
-
-/* ==========================
-   ABOUT
-========================== */
-
-.about-box {
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:center;
-}
-
-.about-decoration {
-    min-height:380px;
-    background:var(--dark);
-    color:white;
-    border-radius:35px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:40px;
-    position:relative;
-    overflow:hidden;
-}
-
-.about-decoration::before {
-    content:"";
-    position:absolute;
-    width:340px;
-    height:340px;
-    border:1px solid rgba(198,162,124,.25);
-    border-radius:50%;
-}
-
-.about-decoration::after {
-    content:"";
-    position:absolute;
-    width:460px;
-    height:460px;
-    border:1px solid rgba(198,162,124,.13);
-    border-radius:50%;
-}
-
-.about-decoration h3 {
-    position:relative;
-    z-index:2;
-    font-size:clamp(2.7rem,4vw,4.5rem);
-    line-height:1.15;
-}
-
-.about-decoration h3 span {
-    display:block;
-    color:var(--goldlight);
-    font-style:italic;
-}
-
-.about-decoration p {
-    position:relative;
-    z-index:2;
-    margin-top:20px;
-    color:rgba(255,255,255,.7);
-    letter-spacing:2px;
-    text-transform:uppercase;
-    font-size:.75rem;
-}
-
-/* ==========================
-   CTA
-========================== */
-
-.cta-box {
-    position:relative;
-    overflow:hidden;
-    background:var(--dark);
-    border-radius:38px;
-    color:white;
-    text-align:center;
-    padding:105px 35px;
-    margin:55px 0;
-    box-shadow:0 25px 70px rgba(35,43,38,.15);
-}
-
-.cta-box::before {
-    content:"";
-    position:absolute;
-    width:480px;
-    height:480px;
-    border:1px solid rgba(198,162,124,.2);
-    border-radius:50%;
-    right:-200px;
-    top:-200px;
-}
-
-.cta-box h2 {
-    position:relative;
-    font-size:clamp(3rem,5.5vw,6rem);
-    line-height:1.1;
-    margin-bottom:25px;
-}
-
-.cta-box h2 span {
-    display:block;
-    color:var(--goldlight);
-    font-style:italic;
-}
-
-.cta-box p {
-    position:relative;
-    max-width:620px;
-    margin:0 auto 35px;
-    color:rgba(255,255,255,.75);
-}
-
-.cta-box .btn {
-    position:relative;
-}
-
-/* ==========================
-   COME FUNZIONA
-========================== */
-
+.cards,
 .steps {
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:25px;
-    margin-top:45px;
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 22px;
+    margin-top: 45px;
 }
 
-.step-card {
-    background:rgba(255,255,255,.5);
-    border:1px solid var(--border);
-    border-radius:25px;
-    padding:40px;
+.card,
+.step {
+    background: rgba(255,255,255,.58);
+    border: 1px solid var(--border);
+    border-radius: 27px;
+    padding: 42px 35px;
+    transition: .3s;
+}
+
+.card:hover,
+.step:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 55px rgba(35,43,38,.1);
+}
+
+.card i {
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 25px;
+}
+
+.card h3,
+.step h3 {
+    font-size: 1.65rem;
+    margin-bottom: 10px;
+}
+
+.card p,
+.step p {
+    color: var(--muted);
+    font-size: .94rem;
+    margin: 0;
 }
 
 .step-number {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:45px;
-    height:45px;
-    border:1px solid var(--gold);
-    border-radius:50%;
-    color:var(--gold);
-    font-family:'Playfair Display',serif;
-    margin-bottom:25px;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    margin-bottom: 26px;
 }
 
-.step-card h3 {
-    font-size:1.6rem;
-    margin-bottom:12px;
+/* CHI SIAMO */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: clamp(40px,7vw,110px);
 }
 
-.step-card p {
-    color:var(--muted);
-    font-size:.94rem;
+.about-visual {
+    min-height: 440px;
+    border-radius: 36px;
+    background: var(--dark);
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 30px;
+    color: white;
 }
 
-/* ==========================
-   INSTAGRAM
-========================== */
-
-.instagram-box {
-    max-width:1050px;
-    margin:auto;
-    padding:85px 40px;
-    text-align:center;
-    background:rgba(255,255,255,.55);
-    border:1px solid var(--border);
-    border-radius:30px;
+.about-visual::before,
+.about-visual::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(198,162,124,.25);
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
 }
 
-.instagram-icon {
-    width:75px;
-    height:75px;
-    margin:0 auto 25px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:var(--dark);
-    color:white;
-    font-size:2rem;
+.about-visual::after {
+    width: 490px;
+    height: 490px;
 }
 
-.instagram-box h3 {
-    font-size:2.3rem;
-    margin-bottom:15px;
+.about-visual h3 {
+    font-size: clamp(3.2rem,5vw,5rem);
+    line-height: 1.08;
+    position: relative;
+    z-index: 1;
 }
 
-.instagram-box p {
-    color:var(--muted);
-    margin-bottom:30px;
+.about-visual h3 em {
+    color: var(--goldlight);
 }
 
-/* ==========================
-   FOOTER
-========================== */
-
-.footer-dark {
-    background:var(--dark);
-    color:white;
-    text-align:center;
-    padding:110px 25px 90px;
+.about-visual small {
+    position: absolute;
+    bottom: 38px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
 }
 
-.footer-dark h2 {
-    font-size:clamp(3rem,5.5vw,5.8rem);
-    line-height:1.1;
-    margin-bottom:28px;
+/* SEZIONE CONTATTACI */
+
+.cta {
+    margin: 50px 0;
+    border-radius: 36px;
+    padding: 100px 25px;
+    text-align: center;
+    color: white;
+    background: var(--dark);
+    position: relative;
+    overflow: hidden;
 }
 
-.footer-dark h2 span {
-    display:block;
-    color:var(--goldlight);
-    font-style:italic;
+.cta::before {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(198,162,124,.2);
+    border-radius: 50%;
+    width: 470px;
+    height: 470px;
+    right: -200px;
+    top: -210px;
 }
 
-.footer-dark p {
-    color:rgba(255,255,255,.7);
-    max-width:600px;
-    margin:0 auto 35px;
+.cta > * {
+    position: relative;
 }
 
-.footer-buttons {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
+.cta .eyebrow {
+    color: var(--goldlight);
 }
 
-.footer-buttons .btn {
-    min-width:270px;
+.cta h2 {
+    font-size: clamp(3.1rem,5.5vw,6rem);
+    line-height: 1.1;
+    margin: 18px 0 20px;
 }
 
-.footer-bottom {
-    background:var(--dark2);
-    color:rgba(255,255,255,.55);
-    text-align:center;
-    padding:35px 20px;
-    font-size:.8rem;
+.cta h2 em {
+    display: block;
+    color: var(--goldlight);
 }
 
-/* ==========================
-   WHATSAPP FLOAT
-========================== */
-
-.whatsapp-floating {
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    z-index:9999;
-    width:62px;
-    height:62px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:var(--green);
-    color:white;
-    font-size:1.85rem;
-    box-shadow:0 12px 35px rgba(0,0,0,.2);
-    transition:.3s;
+.cta p {
+    color: rgba(255,255,255,.74);
+    max-width: 590px;
+    margin: 0 auto 32px;
 }
 
-.whatsapp-floating:hover {
-    transform:scale(1.1);
+/* INSTAGRAM */
+
+.social {
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,.55);
+    border-radius: 30px;
+    max-width: 1050px;
+    margin: auto;
+    text-align: center;
+    padding: 75px 30px;
 }
 
-/* ==========================
-   ANIMAZIONI
-========================== */
+.social-icon {
+    display: grid;
+    place-items: center;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background: var(--dark);
+    color: white;
+    font-size: 1.9rem;
+    margin: 0 auto 25px;
+}
+
+.social h2 {
+    font-size: clamp(2.2rem,3.5vw,3.5rem);
+    margin: 0 0 15px;
+}
+
+.social p {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 100px 20px 80px;
+}
+
+footer .eyebrow {
+    color: var(--goldlight);
+}
+
+footer h2 {
+    font-size: clamp(3rem,5vw,5.5rem);
+    line-height: 1.1;
+    margin: 16px 0 24px;
+}
+
+footer h2 em {
+    display: block;
+    color: var(--goldlight);
+}
+
+footer p {
+    color: rgba(255,255,255,.68);
+    max-width: 570px;
+    margin: 0 auto 32px;
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contacts .btn {
+    min-width: 270px;
+}
+
+.bottom {
+    background: var(--dark2);
+    color: rgba(255,255,255,.55);
+    text-align: center;
+    padding: 32px 20px;
+    font-size: .82rem;
+}
+
+/* WHATSAPP FISSO */
+
+.floating {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+    width: 62px;
+    height: 62px;
+    display: grid;
+    place-items: center;
+    background: var(--green);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.85rem;
+    box-shadow: 0 12px 35px rgba(0,0,0,.2);
+    transition: .3s;
+}
+
+.floating:hover {
+    transform: scale(1.1);
+}
+
+/* ANIMAZIONI */
 
 .reveal {
-    opacity:1;
-    transform:none;
+    opacity: 1;
+    transform: none;
 }
 
 .js-ready .reveal {
-    opacity:0;
-    transform:translateY(30px);
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .8s, transform .8s;
 }
 
 .js-ready .reveal.visible {
-    opacity:1;
-    transform:translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* ==========================
-   TABLET
-========================== */
+/* TABLET */
 
-@media(max-width:1000px) {
+@media(max-width: 1050px) {
 
-    .service-layout,
-    .service-layout.reverse {
-        grid-template-columns:1fr;
-        gap:45px;
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 35px;
+        padding: 75px 0;
     }
 
-    .service-layout.reverse .service-content,
-    .service-layout.reverse .service-media {
-        order:initial;
+    .hero-art {
+        min-height: auto;
     }
 
-    .portfolio-grid,
+    .hero-panel {
+        width: min(100%,600px);
+        min-height: 340px;
+    }
+
+    .service-grid,
+    .service-grid.reverse {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .service-grid.reverse .copy,
+    .service-grid.reverse .media {
+        order: initial;
+    }
+
+    .media {
+        max-width: 420px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .cards,
     .steps {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
-    .about-box {
-        grid-template-columns:1fr;
-        gap:40px;
+    .section {
+        padding: 85px 0;
     }
-
-    section {
-        padding:85px 0;
-    }
-
 }
 
-/* ==========================
-   MOBILE
-========================== */
+/* SMARTPHONE */
 
-@media(max-width:650px) {
+@media(max-width: 650px) {
 
-    .container {
-        width:calc(100% - 34px);
+    .wrap {
+        width: calc(100% - 34px);
     }
 
-    .header-inner {
-        width:calc(100% - 24px);
-        min-height:68px;
-        gap:10px;
+    .nav {
+        min-height: 68px;
+        gap: 8px;
     }
 
     .logo {
-        font-size:1rem;
+        font-size: 1rem;
     }
 
-    nav {
-        gap:10px;
+    .navlinks {
+        gap: 9px;
     }
 
-    nav a {
-        font-size:.65rem;
+    .navlinks a {
+        font-size: .65rem;
     }
 
-    .nav-button {
-        padding:0;
-        background:transparent;
-        color:var(--dark);
+    .navlinks .navbtn {
+        padding: 0;
+        background: transparent;
+        color: var(--dark);
     }
 
     .hero {
-        min-height:auto;
-        padding:90px 0 85px;
+        padding: 70px 0 60px;
     }
 
     .hero h1 {
-        font-size:clamp(2.8rem,10vw,4.3rem);
-        letter-spacing:-.5px;
+        font-size: clamp(2.8rem,10vw,4.3rem);
+        letter-spacing: -.5px;
     }
 
-    .hero p {
-        font-size:.96rem;
+    .hero-copy > p {
+        font-size: .97rem;
     }
 
-    .hero-buttons {
-        flex-direction:column;
+    .hero-actions {
+        flex-direction: column;
     }
 
-    .hero-buttons .btn {
-        width:100%;
+    .hero-actions .btn {
+        width: 100%;
     }
 
-    .hero-circle {
-        display:none;
+    .hero-panel {
+        min-height: 340px;
+        padding: 35px 25px;
     }
 
-    .service-bar {
-        margin-bottom:55px;
+    .hero-panel h2 {
+        font-size: 2.8rem;
     }
 
-    .service-bar-item {
-        flex-direction:column;
-        gap:8px;
-        padding:20px 5px;
-        text-align:center;
+    .servicebar {
+        margin-bottom: 55px;
     }
 
-    .service-bar-item i {
-        font-size:1.2rem;
+    .servicebar a {
+        flex-direction: column;
+        gap: 8px;
+        padding: 20px 5px;
+        text-align: center;
+        font-size: .67rem;
     }
 
-    .service-bar-item span {
-        font-size:.66rem;
+    .servicebar i {
+        font-size: 1.2rem;
     }
 
-    section {
-        padding:70px 0;
+    .section {
+        padding: 70px 0;
     }
 
-    .section-title {
-        font-size:clamp(2.5rem,9vw,3.7rem);
+    .section h2 {
+        font-size: clamp(2.5rem,9vw,3.7rem);
     }
 
-    .section-desc {
-        font-size:.96rem;
+    .lead {
+        font-size: .96rem;
     }
 
-    .service-layout {
-        gap:35px;
+    .service-grid {
+        gap: 35px;
+    }
+
+    .media {
+        max-width: 370px;
+    }
+
+    .video-shell {
+        padding: 8px;
+        border-radius: 27px;
     }
 
     .video-frame {
-        border-radius:22px;
+        border-radius: 21px;
     }
 
-    .video-frame::after {
-        border-radius:22px;
+    .card,
+    .step {
+        padding: 30px 26px;
     }
 
-    .portfolio-card {
-        min-height:auto;
-        padding:32px 26px;
+    .about-visual {
+        min-height: 310px;
     }
 
-    .about-decoration {
-        min-height:310px;
+    .cta {
+        padding: 65px 22px;
+        border-radius: 28px;
+        margin: 25px 0;
     }
 
-    .cta-box {
-        padding:65px 22px;
-        margin:25px 0;
-        border-radius:28px;
+    .social {
+        padding: 55px 22px;
     }
 
-    .cta-box h2 {
-        font-size:2.8rem;
+    footer {
+        padding: 75px 20px 65px;
     }
 
-    .step-card {
-        padding:30px;
+    .contacts {
+        flex-direction: column;
     }
 
-    .instagram-box {
-        padding:50px 22px;
+    .contacts .btn {
+        width: 100%;
+        min-width: 0;
     }
 
-    .instagram-box h3 {
-        font-size:1.85rem;
+    .floating {
+        width: 56px;
+        height: 56px;
+        right: 15px;
+        bottom: 15px;
     }
-
-    .footer-dark {
-        padding:85px 20px 70px;
-    }
-
-    .footer-dark h2 {
-        font-size:2.9rem;
-    }
-
-    .footer-buttons {
-        flex-direction:column;
-    }
-
-    .footer-buttons .btn {
-        min-width:0;
-        width:100%;
-    }
-
-    .whatsapp-floating {
-        width:56px;
-        height:56px;
-        right:15px;
-        bottom:15px;
-    }
-
 }
 
-@media(max-width:360px) {
-
-    nav {
-        gap:6px;
-    }
-
-    nav a {
-        font-size:.6rem;
-    }
+@media(max-width: 360px) {
 
     .logo {
-        font-size:.9rem;
+        font-size: .9rem;
     }
 
+    .navlinks {
+        gap: 6px;
+    }
+
+    .navlinks a {
+        font-size: .61rem;
+    }
 }
 
-@media(prefers-reduced-motion:reduce) {
+@media(prefers-reduced-motion: reduce) {
 
     *,
     *::before,
     *::after {
-        animation-duration:.01ms!important;
-        transition-duration:.01ms!important;
-        scroll-behavior:auto!important;
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
     }
-
 }
 
 </style>
@@ -1065,127 +1012,151 @@ section {
 <!-- HEADER -->
 
 <header>
+<div class="wrap nav">
 
-<div class="header-inner">
-
-<a href="#" class="logo">
-Zero <span>Sbatty</span>
+<a class="logo" href="#inizio">
+Zero <em>Sbatty</em>
 </a>
 
-<nav aria-label="Navigazione principale">
-
+<nav class="navlinks" aria-label="Menu principale">
 <a href="#video">Video</a>
 <a href="#dj">DJ</a>
 <a href="#drone">Drone</a>
-<a href="#contatti" class="nav-button">Contatti</a>
-
+<a class="navbtn" href="#contatti">Contatti</a>
 </nav>
 
 </div>
-
 </header>
 
-<main class="container">
+<main class="wrap">
 
-<!-- HERO -->
+<!-- PRIMA SCHERMATA -->
 
-<div class="hero reveal">
+<div class="hero" id="inizio">
 
-<div class="hero-circle one"></div>
-<div class="hero-circle two"></div>
+<div class="hero-copy reveal">
 
-<div class="hero-content">
-
-<div class="hero-badge">
-Tati & Thomas • Lucca
+<div class="hero-badge eyebrow">
+Tati &amp; Thomas • Lucca
 </div>
 
 <h1>
 Le vostre storie.
-<span>La nostra creatività.</span>
+<span class="serif">La nostra creatività.</span>
 </h1>
 
 <p>
 Video promozionali, DJ Set e riprese con drone.
-Tre modi diversi per trasformare le vostre idee
-in esperienze da ricordare.
+Tre modi diversi per dare vita alle vostre idee,
+con uno stile tutto nostro.
 </p>
 
-<div class="hero-buttons">
+<div class="hero-actions">
 
-<a href="https://wa.me/393669800153"
-class="btn btn-dark">
+<a class="btn btn-dark"
+href="https://wa.me/393669800153">
 
 <i class="fa-brands fa-whatsapp"></i>
-Raccontateci la vostra idea
+Raccontaci la tua idea
 
 </a>
 
-<a href="#video" class="btn btn-outline">
+<a class="btn btn-outline" href="#video">
 Scopri i nostri servizi
 </a>
 
 </div>
-
 </div>
 
+<div class="hero-art reveal">
+
+<div class="hero-panel">
+
+<div class="small">
+Creative Studio • Toscana
 </div>
 
-<!-- SERVICE BAR -->
-
-<div class="service-bar reveal">
-
-<div class="service-bar-item">
-<i class="fa-solid fa-clapperboard"></i>
-<span>Video Promozionali</span>
-</div>
-
-<div class="service-bar-item">
-<i class="fa-solid fa-headphones"></i>
-<span>DJ Set</span>
-</div>
-
-<div class="service-bar-item">
-<i class="fa-solid fa-plane-up"></i>
-<span>Riprese Drone</span>
-</div>
-
-</div>
-
-<!-- VIDEO -->
-
-<section id="video" class="reveal">
-
-<div class="service-layout">
-
-<div class="service-content">
-
-<div class="section-tag">
-01 • Video Promozionali
-</div>
-
-<h2 class="section-title">
-Le idee diventano
-<span>immagini.</span>
+<h2>
+Le idee belle<br>
+non aspettano.<br>
+<em>Si realizzano.</em>
 </h2>
 
-<p class="section-desc">
-Realizziamo video pubblicitari e contenuti social
-capaci di raccontare la tua attività,
-valorizzare i tuoi prodotti e catturare
-l'attenzione del pubblico.
+<div class="hero-panel-bottom">
+
+<span>
+<i class="fa-solid fa-clapperboard"></i>
+Video
+</span>
+
+<span>
+<i class="fa-solid fa-headphones"></i>
+DJ Set
+</span>
+
+<span>
+<i class="fa-solid fa-plane-up"></i>
+Drone
+</span>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- BARRA SERVIZI -->
+
+<div class="servicebar reveal">
+
+<a href="#video">
+<i class="fa-solid fa-clapperboard"></i>
+Video Promozionali
+</a>
+
+<a href="#dj">
+<i class="fa-solid fa-headphones"></i>
+DJ Set
+</a>
+
+<a href="#drone">
+<i class="fa-solid fa-plane-up"></i>
+Riprese Drone
+</a>
+
+</div>
+
+<!-- VIDEO PROMOZIONALI -->
+
+<section class="section reveal" id="video">
+
+<div class="service-grid">
+
+<div class="copy">
+
+<div class="eyebrow">
+01 • Video promozionali
+</div>
+
+<h2>
+Le idee diventano
+<span class="serif">immagini.</span>
+</h2>
+
+<p class="lead">
+Creiamo video pubblicitari e contenuti social
+che catturano l'attenzione, raccontano
+la tua attività e valorizzano ciò
+che ti rende unico.
 </p>
 
-<ul class="service-list">
-
-<li><span>01</span> Spot pubblicitari</li>
-<li><span>02</span> Reel e contenuti social</li>
-<li><span>03</span> Video per attività ed eventi</li>
-
+<ul class="list">
+<li><b>01</b> Spot pubblicitari</li>
+<li><b>02</b> Reel e contenuti social</li>
+<li><b>03</b> Video per prodotti, servizi ed eventi</li>
 </ul>
 
-<a href="https://wa.me/393669800153?text=Ciao%21%20Vorrei%20informazioni%20sui%20video%20promozionali."
-class="btn btn-dark">
+<a class="btn btn-dark"
+href="https://wa.me/393669800153?text=Ciao%21%20Vorrei%20informazioni%20sui%20video%20promozionali.">
 
 <i class="fa-brands fa-whatsapp"></i>
 Richiedi un video
@@ -1194,15 +1165,16 @@ Richiedi un video
 
 </div>
 
-<div class="service-media">
+<div class="media">
 
-<div class="video-label">
+<div class="media-label">
 Un nostro lavoro
 </div>
 
+<div class="video-shell">
 <div class="video-frame">
 
-<video class="service-video"
+<video
 autoplay
 muted
 loop
@@ -1218,52 +1190,49 @@ type="video/quicktime">
 </video>
 
 </div>
+</div>
 
-<div class="video-caption">
+<div class="media-caption">
 <i class="fa-solid fa-circle-check"></i>
 Creatività, riprese e montaggio
 </div>
 
 </div>
-
 </div>
-
 </section>
 
-<!-- DJ -->
+<!-- DJ SET -->
 
-<section id="dj" class="reveal">
+<section class="section reveal" id="dj">
 
-<div class="service-layout reverse">
+<div class="service-grid reverse">
 
-<div class="service-content">
+<div class="copy">
 
-<div class="section-tag">
+<div class="eyebrow">
 02 • DJ Set
 </div>
 
-<h2 class="section-title">
+<h2>
 La musica giusta.
-<span>Il momento perfetto.</span>
+<span class="serif">Il momento perfetto.</span>
 </h2>
 
-<p class="section-desc">
+<p class="lead">
 Dall'aperitivo alla pista da ballo,
-creiamo l'atmosfera perfetta
-per matrimoni, feste private,
-locali ed eventi.
+costruiamo la colonna sonora del tuo evento.
+Ogni serata ha un'atmosfera unica:
+troviamo quella giusta per te.
 </p>
 
-<ul class="service-list">
-
-<li><span>01</span> Matrimoni</li>
-<li><span>02</span> Feste private</li>
-<li><span>03</span> Locali ed eventi</li>
-
+<ul class="list">
+<li><b>01</b> Matrimoni</li>
+<li><b>02</b> Feste private</li>
+<li><b>03</b> Locali ed eventi</li>
 </ul>
 
-<a href="https://wa.me/393669800153?text=Ciao%21%20Vorrei%20informazioni%20per%20un%20DJ%20Set."
-class="btn btn-dark">
+<a class="btn btn-dark"
+href="https://wa.me/393669800153?text=Ciao%21%20Vorrei%20informazioni%20per%20un%20DJ%20Set.">
 
 <i class="fa-brands fa-whatsapp"></i>
 Organizza il tuo evento
@@ -1272,15 +1241,16 @@ Organizza il tuo evento
 
 </div>
 
-<div class="service-media">
+<div class="media">
 
-<div class="video-label">
+<div class="media-label">
 Vivi l'atmosfera
 </div>
 
+<div class="video-shell">
 <div class="video-frame">
 
-<video class="service-video"
+<video
 autoplay
 muted
 loop
@@ -1296,52 +1266,49 @@ type="video/quicktime">
 </video>
 
 </div>
+</div>
 
-<div class="video-caption">
+<div class="media-caption">
 <i class="fa-solid fa-circle-check"></i>
-Musica ed emozioni per ogni occasione
+La musica dei tuoi momenti speciali
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 <!-- DRONE -->
 
-<section id="drone" class="reveal">
+<section class="section reveal" id="drone">
 
-<div class="service-layout">
+<div class="service-grid">
 
-<div class="service-content">
+<div class="copy">
 
-<div class="section-tag">
-03 • Riprese Drone
+<div class="eyebrow">
+03 • Riprese con drone
 </div>
 
-<h2 class="section-title">
-Una prospettiva
-<span>straordinaria.</span>
+<h2>
+Un altro punto
+<span class="serif">di vista.</span>
 </h2>
 
-<p class="section-desc">
-Raccontiamo luoghi, eventi e momenti speciali
-attraverso riprese aeree suggestive.
-Un punto di vista diverso per immagini
-che lasciano il segno.
+<p class="lead">
+Riprese aeree suggestive per matrimoni,
+feste, attività e location.
+Per trasformare luoghi e momenti speciali
+in immagini che si fanno ricordare.
 </p>
 
-<ul class="service-list">
-
-<li><span>01</span> Matrimoni e cerimonie</li>
-<li><span>02</span> Eventi e feste private</li>
-<li><span>03</span> Attività e location</li>
-
+<ul class="list">
+<li><b>01</b> Matrimoni e cerimonie</li>
+<li><b>02</b> Eventi e feste private</li>
+<li><b>03</b> Attività, strutture e location</li>
 </ul>
 
-<a href="https://wa.me/393669800153?text=Ciao%21%20Vorrei%20informazioni%20sulle%20riprese%20con%20drone."
-class="btn btn-dark">
+<a class="btn btn-dark"
+href="https://wa.me/393669800153?text=Ciao%21%20Vorrei%20informazioni%20sulle%20riprese%20con%20drone.">
 
 <i class="fa-brands fa-whatsapp"></i>
 Richiedi riprese drone
@@ -1350,15 +1317,16 @@ Richiedi riprese drone
 
 </div>
 
-<div class="service-media">
+<div class="media">
 
-<div class="video-label">
+<div class="media-label">
 Guarda dall'alto
 </div>
 
+<div class="video-shell">
 <div class="video-frame">
 
-<video class="service-video"
+<video
 autoplay
 muted
 loop
@@ -1374,157 +1342,154 @@ type="video/quicktime">
 </video>
 
 </div>
+</div>
 
-<div class="video-caption">
+<div class="media-caption">
 <i class="fa-solid fa-circle-check"></i>
-Nuove prospettive, nuove emozioni
+Prospettive che lasciano il segno
 </div>
 
 </div>
-
 </div>
-
 </section>
 
-<!-- PORTFOLIO -->
+<!-- COSA REALIZZIAMO -->
 
-<section class="reveal">
+<section class="section reveal">
 
-<div class="section-tag">
-I nostri servizi
+<div class="eyebrow">
+Cosa realizziamo
 </div>
 
-<h2 class="section-title">
+<h2>
 Ogni progetto,
-<span>una nuova storia.</span>
+<span class="serif">una nuova storia.</span>
 </h2>
 
-<p class="section-desc">
-Dalle attività commerciali agli eventi privati,
-diamo forma alle idee attraverso
-immagini, musica e creatività.
+<p class="lead">
+Tre servizi, un'unica idea:
+rendere speciale ciò che vuoi raccontare.
 </p>
 
-<div class="portfolio-grid">
+<div class="cards">
 
-<div class="portfolio-card">
+<div class="card">
 
 <i class="fa-solid fa-store"></i>
 
-<h3>Attività & Brand</h3>
+<h3>Attività &amp; Brand</h3>
 
 <p>
-Contenuti pubblicitari,
-video promozionali e Reel
-per valorizzare prodotti e servizi.
+Video e Reel per valorizzare
+prodotti, servizi e attività.
 </p>
 
 </div>
 
-<div class="portfolio-card">
+<div class="card">
 
 <i class="fa-solid fa-music"></i>
 
-<h3>Feste & Matrimoni</h3>
+<h3>Feste &amp; Matrimoni</h3>
 
 <p>
 DJ Set e intrattenimento musicale
-per rendere speciale ogni evento.
+per ogni occasione.
 </p>
 
 </div>
 
-<div class="portfolio-card">
+<div class="card">
 
 <i class="fa-solid fa-camera"></i>
 
-<h3>Eventi & Location</h3>
+<h3>Eventi &amp; Location</h3>
 
 <p>
-Riprese video e aeree
-per raccontare luoghi,
-eventi ed esperienze.
+Riprese tradizionali e aeree
+per luoghi ed esperienze.
 </p>
 
 </div>
-
 </div>
-
 </section>
 
 <!-- CHI SIAMO -->
 
-<section class="reveal">
+<section class="section reveal">
 
-<div class="about-box">
+<div class="about">
 
 <div>
 
-<div class="section-tag">
+<div class="eyebrow">
 Chi siamo
 </div>
 
-<h2 class="section-title">
+<h2>
 Due persone.
-<span>Mille idee.</span>
+<span class="serif">Mille idee.</span>
 </h2>
 
-<p class="section-desc">
-Siamo Tati & Thomas, il team dietro Zero Sbatty.
-Uniamo creatività, passione per la musica
-e voglia di raccontare storie attraverso
-video, eventi e riprese.
+<p class="lead">
+Siamo Tati &amp; Thomas,
+il team dietro Zero Sbatty.
+Uniamo creatività, musica e passione
+per le immagini per dare vita
+a progetti su misura.
 </p>
 
-<p class="section-desc">
-Ogni progetto nasce da un'idea,
-da una conversazione e dalla voglia
-di realizzare qualcosa di speciale.
+<p class="lead">
+Ci piace conoscere le persone,
+ascoltare le loro idee e trasformarle
+in qualcosa di concreto.
+Con semplicità, attenzione
+e senza sbatti.
 </p>
 
-<a href="#contatti" class="btn btn-dark">
+<a class="btn btn-dark" href="#contatti">
 Conosciamoci
 </a>
 
 </div>
 
-<div class="about-decoration">
+<div class="about-visual">
 
 <h3>
-Tati
-<span>& Thomas</span>
+Tati<br>
+<em>&amp; Thomas</em>
 </h3>
 
-<p>Creative Team • Zero Sbatty</p>
+<small>
+Zero Sbatty • Creative Team
+</small>
 
 </div>
-
 </div>
-
 </section>
 
-<!-- CTA -->
+<!-- GRANDE INVITO -->
 
-<div class="cta-box reveal">
+<div class="cta reveal">
 
-<div class="section-tag">
+<div class="eyebrow">
 Il tuo prossimo progetto
 </div>
 
 <h2>
 Hai un'idea?
-<span>Ci pensiamo noi.</span>
+<em>Ci pensiamo noi.</em>
 </h2>
 
 <p>
 Un video per la tua attività,
-la musica per un evento speciale
-o delle riprese dall'alto.
-Raccontaci cosa hai in mente.
+la musica per una serata speciale
+o una ripresa dall'alto:
+raccontaci cosa hai in mente.
 </p>
 
-<a href="https://wa.me/393669800153"
-class="btn btn-light">
+<a class="btn btn-white"
+href="https://wa.me/393669800153">
 
 <i class="fa-brands fa-whatsapp"></i>
 Parliamone su WhatsApp
@@ -1533,48 +1498,48 @@ Parliamone su WhatsApp
 
 </div>
 
-<!-- COME FUNZIONA -->
+<!-- COME LAVORIAMO -->
 
-<section class="reveal">
+<section class="section reveal">
 
-<div class="section-tag">
+<div class="eyebrow">
 Come lavoriamo
 </div>
 
-<h2 class="section-title">
+<h2>
 Semplice.
-<span>Senza sbatti.</span>
+<span class="serif">Senza sbatti.</span>
 </h2>
 
 <div class="steps">
 
-<div class="step-card">
+<div class="step">
 
 <div class="step-number">01</div>
 
 <h3>Raccontaci</h3>
 
 <p>
-Parlaci della tua idea,
-del tuo evento o della tua attività.
+Parlaci della tua attività,
+del tuo evento o della tua idea.
 </p>
 
 </div>
 
-<div class="step-card">
+<div class="step">
 
 <div class="step-number">02</div>
 
 <h3>Progettiamo</h3>
 
 <p>
-Studiamo insieme la soluzione
-più adatta alle tue esigenze.
+Troviamo insieme la soluzione giusta
+per quello che vuoi realizzare.
 </p>
 
 </div>
 
-<div class="step-card">
+<div class="step">
 
 <div class="step-number">03</div>
 
@@ -1582,36 +1547,35 @@ più adatta alle tue esigenze.
 
 <p>
 Trasformiamo il progetto
-in qualcosa di concreto.
+in un risultato concreto.
 </p>
 
 </div>
 
 </div>
-
 </section>
 
 <!-- INSTAGRAM -->
 
-<section class="reveal">
+<section class="section reveal">
 
-<div class="instagram-box">
+<div class="social">
 
-<div class="instagram-icon">
+<div class="social-icon">
 <i class="fa-brands fa-instagram"></i>
 </div>
 
-<h3>Seguici su Instagram</h3>
+<h2>Seguici su Instagram</h2>
 
 <p>
 Scopri i nostri lavori,
 i backstage e le prossime serate.
 </p>
 
-<a href="https://www.instagram.com/"
+<a class="btn btn-outline"
+href="https://www.instagram.com/"
 target="_blank"
-rel="noopener noreferrer"
-class="btn btn-outline">
+rel="noopener noreferrer">
 
 <i class="fa-brands fa-instagram"></i>
 Visita Instagram
@@ -1619,22 +1583,21 @@ Visita Instagram
 </a>
 
 </div>
-
 </section>
 
 </main>
 
-<!-- FOOTER -->
+<!-- CONTATTI -->
 
-<footer class="footer-dark" id="contatti">
+<footer id="contatti">
 
-<div class="section-tag">
+<div class="eyebrow">
 Contattaci
 </div>
 
 <h2>
 Il primo passo?
-<span>Un messaggio.</span>
+<em>Un messaggio.</em>
 </h2>
 
 <p>
@@ -1643,18 +1606,18 @@ Scrivici per informazioni,
 disponibilità e preventivi.
 </p>
 
-<div class="footer-buttons">
+<div class="contacts">
 
-<a href="https://wa.me/393669800153"
-class="btn btn-light">
+<a class="btn btn-white"
+href="https://wa.me/393669800153">
 
 <i class="fa-brands fa-whatsapp"></i>
 Thomas • 366 980 0153
 
 </a>
 
-<a href="https://wa.me/393314828343"
-class="btn btn-light">
+<a class="btn btn-white"
+href="https://wa.me/393314828343">
 
 <i class="fa-brands fa-whatsapp"></i>
 Tatiana • 331 482 8343
@@ -1662,111 +1625,97 @@ Tatiana • 331 482 8343
 </a>
 
 </div>
-
 </footer>
 
-<div class="footer-bottom">
+<div class="bottom">
 
-Zero Sbatty • Tati & Thomas
-<br>
-Video Promozionali • DJ Set • Drone
-<br>
+Zero Sbatty • Tati &amp; Thomas<br>
+Video Promozionali • DJ Set • Drone<br>
 Lucca • Toscana
 
 </div>
 
 <!-- WHATSAPP FISSO -->
 
-<a href="https://wa.me/393669800153"
-class="whatsapp-floating"
+<a class="floating"
+href="https://wa.me/393669800153"
 aria-label="Contatta Zero Sbatty su WhatsApp">
 
 <i class="fa-brands fa-whatsapp"></i>
 
 </a>
 
-<!-- JAVASCRIPT -->
+<!-- ANIMAZIONI E VIDEO -->
 
 <script>
 
-/* ANIMAZIONI */
+const reveals = document.querySelectorAll('.reveal');
 
-const elements = document.querySelectorAll('.reveal');
-
-if ('IntersectionObserver' in window) {
+if (
+    'IntersectionObserver' in window &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+) {
 
     document.documentElement.classList.add('js-ready');
 
-    const observer = new IntersectionObserver(
-        entries => {
+    const observer = new IntersectionObserver(entries => {
 
-            entries.forEach(entry => {
+        entries.forEach(entry => {
 
-                if(entry.isIntersecting) {
+            if (entry.isIntersecting) {
 
-                    entry.target.classList.add('visible');
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
 
-                    observer.unobserve(entry.target);
+            }
 
-                }
+        });
 
-            });
+    }, {
+        threshold: 0.05
+    });
 
-        },
-        {threshold:0.08}
-    );
-
-    elements.forEach(el => observer.observe(el));
+    reveals.forEach(el => observer.observe(el));
 
 }
 
 /* VIDEO SEMPRE MUTI */
 
-const videos = document.querySelectorAll('.service-video');
+const videos = document.querySelectorAll('.video-frame video');
 
 videos.forEach(video => {
 
     video.muted = true;
     video.defaultMuted = true;
-    video.volume = 0;
-
     video.removeAttribute('controls');
-
-    video.addEventListener('volumechange', () => {
-        if (!video.muted || video.volume !== 0) {
-            video.muted = true;
-            video.volume = 0;
-        }
-    });
 
 });
 
-/* RIPRODUZIONE VIDEO */
+/* RIPRODUZIONE QUANDO VISIBILI */
 
 if ('IntersectionObserver' in window) {
 
-    const videoObserver = new IntersectionObserver(
-        entries => {
+    const videoObserver = new IntersectionObserver(entries => {
 
-            entries.forEach(entry => {
+        entries.forEach(entry => {
 
-                const video = entry.target;
+            const video = entry.target;
 
-                if(entry.isIntersecting) {
+            if (entry.isIntersecting) {
 
-                    video.play().catch(() => {});
+                video.play().catch(() => {});
 
-                } else {
+            } else {
 
-                    video.pause();
+                video.pause();
 
-                }
+            }
 
-            });
+        });
 
-        },
-        {threshold:0.25}
-    );
+    }, {
+        threshold: 0.15
+    });
 
     videos.forEach(video => videoObserver.observe(video));
 
