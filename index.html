@@ -1,1832 +1,463 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Zero Sbatty | Video, DJ Set e Drone a Lucca</title>
-
-    <meta
-        name="description"
-        content="Zero Sbatty di Tati & Thomas: video promozionali, DJ set per eventi e matrimoni e riprese con drone a Lucca e in Toscana."
-    >
-
-    <meta name="theme-color" content="#232b26">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-    >
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
-
-    <style>
-
-        :root {
-            --bg: #f7f4ed;
-            --bg-soft: #efe9dc;
-            --white: #ffffff;
-
-            --text: #222222;
-            --muted: #66645f;
-
-            --gold: #a67c52;
-            --gold-light: #c6a27c;
-
-            --dark: #232b26;
-            --dark-2: #18201c;
-
-            --border: #dfd8c9;
-
-            --whatsapp: #25D366;
-
-            --radius-small: 12px;
-            --radius-medium: 20px;
-            --radius-large: 30px;
-
-            --shadow:
-                0 20px 60px rgba(35, 43, 38, 0.12);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background:
-                radial-gradient(
-                    circle at top right,
-                    rgba(166,124,82,0.08),
-                    transparent 35%
-                ),
-                var(--bg);
-
-            color: var(--text);
-
-            font-family:
-                'Plus Jakarta Sans',
-                sans-serif;
-
-            line-height: 1.6;
-
-            -webkit-font-smoothing:
-                antialiased;
-
-            overflow-x: hidden;
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-family:
-                'Playfair Display',
-                serif;
-        }
-
-        a {
-            -webkit-tap-highlight-color:
-                transparent;
-        }
-
-        /* =========================
-           HEADER
-        ========================== */
-
-        header {
-            position: sticky;
-            top: 0;
-
-            z-index: 1000;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            padding:
-                16px 24px;
-
-            background:
-                rgba(247, 244, 237, 0.88);
-
-            backdrop-filter:
-                blur(18px);
-
-            border-bottom:
-                1px solid rgba(223,216,201,0.8);
-        }
-
-        .brand-name {
-            font-family:
-                'Playfair Display',
-                serif;
-
-            font-size: 1.15rem;
-            font-weight: 600;
-
-            white-space: nowrap;
-        }
-
-        .brand-name span {
-            color: var(--gold);
-            font-style: italic;
-        }
-
-        nav {
-            display: flex;
-            gap: 16px;
-            align-items: center;
-        }
-
-        nav a {
-            color: var(--text);
-
-            text-decoration: none;
-
-            font-size: 0.78rem;
-
-            transition:
-                color .25s ease;
-        }
-
-        nav a:hover {
-            color: var(--gold);
-        }
-
-        /* =========================
-           CONTAINER
-        ========================== */
-
-        .container {
-            width: min(
-                100% - 40px,
-                720px
-            );
-
-            margin: 0 auto;
-        }
-
-        /* =========================
-           HERO
-        ========================== */
-
-        .hero {
-            min-height: 82vh;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            text-align: center;
-
-            padding:
-                75px 0 90px;
-        }
-
-        .hero-badge {
-            width: fit-content;
-
-            margin:
-                0 auto 22px;
-
-            padding:
-                8px 14px;
-
-            border:
-                1px solid var(--border);
-
-            border-radius:
-                999px;
-
-            background:
-                rgba(255,255,255,0.48);
-
-            font-size: 0.69rem;
-
-            letter-spacing: 1.5px;
-
-            text-transform:
-                uppercase;
-
-            color: var(--gold);
-
-            font-weight: 600;
-        }
-
-        .hero h1 {
-            max-width: 700px;
-
-            margin:
-                0 auto 24px;
-
-            font-size:
-                clamp(
-                    3rem,
-                    9vw,
-                    5.6rem
-                );
-
-            line-height: 0.98;
-
-            font-weight: 400;
-        }
-
-        .hero h1 span {
-            display: block;
-
-            color: var(--gold);
-
-            font-style: italic;
-        }
-
-        .hero p {
-            max-width: 580px;
-
-            margin:
-                0 auto 34px;
-
-            color: var(--muted);
-
-            font-size: 1rem;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-direction: column;
-
-            gap: 10px;
-        }
-
-        /* =========================
-           BOTTONI
-        ========================== */
-
-        .btn-dark,
-        .btn-outline {
-            min-height: 54px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 15px;
-
-            padding:
-                15px 20px;
-
-            border-radius:
-                var(--radius-small);
-
-            font-size: 0.93rem;
-
-            text-decoration: none;
-
-            transition:
-                transform .25s ease,
-                box-shadow .25s ease,
-                opacity .25s ease;
-        }
-
-        .btn-dark {
-            background: var(--dark);
-            color: #fff;
-
-            box-shadow:
-                0 9px 22px
-                rgba(35,43,38,0.14);
-        }
-
-        .btn-outline {
-            color: var(--text);
-
-            border:
-                1px solid var(--text);
-
-            background:
-                rgba(255,255,255,0.18);
-        }
-
-        .btn-dark:hover,
-        .btn-outline:hover {
-            transform:
-                translateY(-3px);
-        }
-
-        .button-left {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-        }
-
-        .whatsapp-icon {
-            color: var(--whatsapp);
-            font-size: 1.25rem;
-        }
-
-        /* =========================
-           TRUST BAR
-        ========================== */
-
-        .trust-bar {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3,1fr);
-
-            margin-bottom: 50px;
-
-            border:
-                1px solid var(--border);
-
-            border-radius:
-                var(--radius-medium);
-
-            background:
-                rgba(255,255,255,0.42);
-
-            overflow: hidden;
-        }
-
-        .trust-item {
-            padding:
-                18px 10px;
-
-            text-align: center;
-        }
-
-        .trust-item:not(:last-child) {
-            border-right:
-                1px solid var(--border);
-        }
-
-        .trust-item i {
-            display: block;
-
-            margin-bottom: 8px;
-
-            color: var(--gold);
-
-            font-size: 1.15rem;
-        }
-
-        .trust-item span {
-            font-size: 0.72rem;
-            color: var(--muted);
-        }
-
-        /* =========================
-           SEZIONI
-        ========================== */
-
-        section {
-            padding:
-                75px 0;
-
-            border-top:
-                1px solid var(--border);
-        }
-
-        .section-tag {
-            margin-bottom: 14px;
-
-            color: var(--gold);
-
-            font-size: 0.75rem;
-
-            letter-spacing: 1.6px;
-
-            text-transform:
-                uppercase;
-
-            font-weight: 600;
-        }
-
-        .section-title {
-            margin-bottom: 20px;
-
-            font-size:
-                clamp(
-                    2.3rem,
-                    7vw,
-                    3.5rem
-                );
-
-            font-weight: 400;
-
-            line-height: 1.05;
-        }
-
-        .section-title span {
-            display: block;
-
-            color: var(--gold);
-
-            font-style: italic;
-        }
-
-        .section-desc {
-            margin-bottom: 22px;
-
-            color: var(--muted);
-
-            font-size: 0.95rem;
-        }
-
-        /* =========================
-           SERVIZI
-        ========================== */
-
-        .service-list {
-            list-style: none;
-
-            margin:
-                28px 0 32px;
-        }
-
-        .service-list li {
-            display: flex;
-            align-items: center;
-
-            padding:
-                16px 0;
-
-            border-bottom:
-                1px solid var(--border);
-
-            font-size: 0.92rem;
-        }
-
-        .service-list span {
-            margin-right: 18px;
-
-            color: var(--gold);
-
-            font-family:
-                'Playfair Display',
-                serif;
-
-            font-size: 1.15rem;
-
-            font-style: italic;
-        }
-
-        /* =========================
-           VIDEO
-        ========================== */
-
-        .video-title {
-            margin:
-                40px 0 14px;
-
-            text-align: center;
-
-            color: var(--gold);
-
-            font-size: 0.7rem;
-
-            letter-spacing: 1.6px;
-
-            text-transform:
-                uppercase;
-        }
-
-        .video-frame {
-            position: relative;
-
-            width: 100%;
-            max-width: 370px;
-
-            margin:
-                0 auto 30px;
-
-            border-radius:
-                24px;
-
-            overflow: hidden;
-
-            background: #000;
-
-            box-shadow:
-                var(--shadow);
-        }
-
-        .service-video {
-            width: 100%;
-
-            aspect-ratio:
-                9 / 16;
-
-            display: block;
-
-            object-fit: cover;
-        }
-
-        .video-frame::after {
-            content: "";
-
-            position: absolute;
-            inset: 0;
-
-            pointer-events: none;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.15);
-
-            border-radius:
-                24px;
-        }
-
-        /* =========================
-           PORTFOLIO
-        ========================== */
-
-        .portfolio-grid {
-            display: grid;
-            gap: 14px;
-
-            margin-top: 30px;
-        }
-
-        .portfolio-card {
-            position: relative;
-
-            padding: 25px;
-
-            background:
-                rgba(255,255,255,0.62);
-
-            border:
-                1px solid var(--border);
-
-            border-radius:
-                var(--radius-medium);
-
-            transition:
-                transform .25s ease,
-                box-shadow .25s ease;
-        }
-
-        .portfolio-card:hover {
-            transform:
-                translateY(-4px);
-
-            box-shadow:
-                var(--shadow);
-        }
-
-        .portfolio-card i {
-            margin-bottom: 16px;
-
-            color: var(--gold);
-
-            font-size: 1.5rem;
-        }
-
-        .portfolio-card h3 {
-            margin-bottom: 7px;
-
-            font-size: 1.35rem;
-
-            font-weight: 500;
-        }
-
-        .portfolio-card p {
-            color: var(--muted);
-
-            font-size: 0.87rem;
-        }
-
-        /* =========================
-           CTA PREMIUM
-        ========================== */
-
-        .cta-box {
-            margin:
-                25px 0;
-
-            padding:
-                40px 25px;
-
-            text-align: center;
-
-            background:
-                var(--dark);
-
-            color: white;
-
-            border-radius:
-                var(--radius-large);
-
-            box-shadow:
-                var(--shadow);
-        }
-
-        .cta-box .section-tag {
-            color: var(--gold-light);
-        }
-
-        .cta-box h2 {
-            margin-bottom: 18px;
-
-            font-size: 2.35rem;
-
-            font-weight: 400;
-
-            line-height: 1.05;
-        }
-
-        .cta-box h2 span {
-            display: block;
-
-            color: var(--gold-light);
-
-            font-style: italic;
-        }
-
-        .cta-box p {
-            margin-bottom: 25px;
-
-            color: rgba(255,255,255,0.72);
-
-            font-size: 0.9rem;
-        }
-
-        .cta-box .btn-dark {
-            background: white;
-            color: var(--dark);
-        }
-
-        /* =========================
-           COME FUNZIONA
-        ========================== */
-
-        .steps {
-            position: relative;
-
-            margin-top: 35px;
-        }
-
-        .step-box {
-            position: relative;
-
-            padding:
-                0 0 35px 45px;
-        }
-
-        .step-box::before {
-            content: "";
-
-            position: absolute;
-
-            left: 14px;
-            top: 34px;
-
-            width: 1px;
-            height: calc(100% - 10px);
-
-            background:
-                var(--border);
-        }
-
-        .step-box:last-child::before {
-            display: none;
-        }
-
-        .num {
-            position: absolute;
-
-            left: 0;
-            top: 0;
-
-            width: 30px;
-            height: 30px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border:
-                1px solid var(--gold);
-
-            border-radius: 50%;
-
-            background:
-                var(--bg);
-
-            color: var(--gold);
-
-            font-family:
-                'Playfair Display',
-                serif;
-
-            font-size: 0.8rem;
-        }
-
-        .step-box h3 {
-            margin-bottom: 6px;
-
-            font-size: 1.25rem;
-
-            font-weight: 500;
-        }
-
-        .step-box p {
-            color: var(--muted);
-
-            font-size: 0.88rem;
-        }
-
-        /* =========================
-           INSTAGRAM
-        ========================== */
-
-        .instagram-box {
-            padding:
-                35px 25px;
-
-            text-align: center;
-
-            border:
-                1px solid var(--border);
-
-            border-radius:
-                var(--radius-medium);
-
-            background:
-                rgba(255,255,255,0.5);
-        }
-
-        .instagram-icon {
-            width: 56px;
-            height: 56px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            margin:
-                0 auto 18px;
-
-            border-radius: 50%;
-
-            background:
-                var(--dark);
-
-            color: white;
-
-            font-size: 1.5rem;
-        }
-
-        .instagram-box h3 {
-            margin-bottom: 8px;
-
-            font-size: 1.6rem;
-
-            font-weight: 400;
-        }
-
-        .instagram-box p {
-            margin-bottom: 20px;
-
-            color: var(--muted);
-
-            font-size: 0.88rem;
-        }
-
-        /* =========================
-           FOOTER
-        ========================== */
-
-        .footer-dark {
-            padding:
-                70px 24px 55px;
-
-            text-align: center;
-
-            background:
-                var(--dark);
-
-            color: white;
-        }
-
-        .footer-dark h2 {
-            margin-bottom: 18px;
-
-            font-size: 2.5rem;
-
-            font-weight: 400;
-
-            line-height: 1.05;
-        }
-
-        .footer-dark h2 span {
-            display: block;
-
-            color: var(--gold-light);
-
-            font-style: italic;
-        }
-
-        .footer-dark p {
-            max-width: 500px;
-
-            margin:
-                0 auto 30px;
-
-            color:
-                rgba(255,255,255,0.68);
-
-            font-size: 0.9rem;
-        }
-
-        .footer-buttons {
-            width: min(
-                100%,
-                600px
-            );
-
-            margin: auto;
-        }
-
-        .footer-bottom {
-            padding:
-                28px 20px;
-
-            background:
-                var(--dark-2);
-
-            color:
-                rgba(255,255,255,0.48);
-
-            text-align: center;
-
-            font-size: 0.75rem;
-        }
-
-        /* =========================
-           WHATSAPP FLOATING
-        ========================== */
-
-        .whatsapp-floating {
-            position: fixed;
-
-            right: 18px;
-            bottom: 18px;
-
-            z-index: 9999;
-
-            width: 58px;
-            height: 58px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background:
-                var(--whatsapp);
-
-            color: white;
-
-            font-size: 1.75rem;
-
-            text-decoration: none;
-
-            box-shadow:
-                0 10px 30px
-                rgba(0,0,0,0.23);
-
-            animation:
-                pulse 2.5s infinite;
-        }
-
-        @keyframes pulse {
-
-            0% {
-                box-shadow:
-                    0 0 0 0
-                    rgba(37,211,102,0.4);
-            }
-
-            70% {
-                box-shadow:
-                    0 0 0 14px
-                    rgba(37,211,102,0);
-            }
-
-            100% {
-                box-shadow:
-                    0 0 0 0
-                    rgba(37,211,102,0);
-            }
-        }
-
-        /* =========================
-           ANIMAZIONI
-        ========================== */
-
-        .reveal {
-            opacity: 0;
-
-            transform:
-                translateY(22px);
-
-            transition:
-                opacity .75s ease,
-                transform .75s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-
-            transform:
-                translateY(0);
-        }
-
-        /* =========================
-           MOBILE
-        ========================== */
-
-        @media (max-width: 600px) {
-
-            header {
-                padding:
-                    14px 12px;
-            }
-
-            .brand-name {
-                font-size: 0.93rem;
-            }
-
-            nav {
-                gap: 8px;
-            }
-
-            nav a {
-                font-size: 0.65rem;
-            }
-
-            .container {
-                width:
-                    calc(100% - 34px);
-            }
-
-            .hero {
-                min-height: auto;
-
-                padding:
-                    65px 0 75px;
-            }
-
-            .trust-item {
-                padding:
-                    15px 5px;
-            }
-
-            .trust-item span {
-                font-size: 0.61rem;
-            }
-
-            .service-video {
-                max-width: 100%;
-            }
-
-            section {
-                padding:
-                    65px 0;
-            }
-
-            .cta-box {
-                padding:
-                    35px 20px;
-            }
-
-        }
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Zero Sbatty - Tati & Thomas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --bg-color: #f7f4ed;
+      --text-main: #222222;
+      --text-muted: #555555;
+      --accent-gold: #a67c52;
+      --dark-box: #232b26;
+      --border-color: #e3decb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: "Plus Jakarta Sans", sans-serif;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+    }
+
+    header {
+      width: 100%;
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247, 244, 237, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .brand-name {
+      font-family: "Playfair Display", serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--accent-gold);
+    }
+
+    .container {
+      width: 88%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 0;
+    }
+
+    .subtitle-top {
+      color: var(--accent-gold);
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 6.7rem);
+      line-height: 0.98;
+      max-width: 950px;
+      margin-bottom: 30px;
+    }
+
+    .hero h1 span {
+      color: var(--accent-gold);
+      font-style: italic;
+    }
+
+    .hero p {
+      max-width: 720px;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .btn-dark,
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      text-decoration: none;
+      border-radius: 50px;
+      padding: 15px 22px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-dark {
+      color: white;
+      background: var(--dark-box);
+    }
+
+    .btn-dark:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      color: var(--text-main);
+      border: 1px solid var(--text-main);
+    }
+
+    /* SEZIONI */
+
+    section {
+      padding: 100px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .section-tag {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.78rem;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      line-height: 1;
+      margin-bottom: 25px;
+      max-width: 850px;
+    }
+
+    .section-title span {
+      color: var(--accent-gold);
+      font-style: italic;
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 750px;
+      margin-bottom: 15px;
+    }
+
+    .service-list {
+      list-style: none;
+      margin: 30px 0;
+      max-width: 700px;
+    }
+
+    .service-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .service-list span {
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-right: 12px;
+    }
+
+    /* VIDEO */
+
+    .video-box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 50px 0 35px;
+    }
+
+    .service-video {
+      width: min(100%, 430px);
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.16);
+      background: #111;
+    }
+
+    /* SEZIONE SCURA */
+
+    .dark-section {
+      background: var(--dark-box);
+      color: white;
+      padding-left: 6%;
+      padding-right: 6%;
+      border-radius: 35px;
+      margin: 50px 0;
+    }
+
+    .dark-section .section-desc {
+      color: #d8d8d8;
+    }
+
+    .dark-section .service-list li {
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .dark-section .btn-dark {
+      background: white;
+      color: var(--dark-box);
+    }
+
+    /* CONTATTI */
+
+    .contact-section {
+      text-align: center;
+    }
+
+    .contact-section .section-title,
+    .contact-section .section-desc {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-section .btn-dark {
+      margin-top: 25px;
+    }
+
+    footer {
+      background: #1a211d;
+      color: white;
+      padding: 50px 7% 25px;
+      text-align: center;
+    }
+
+    footer h3 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      color: #b9b9b9;
+    }
+
+    .footer-bottom {
+      margin-top: 35px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.8rem;
+      color: #8c938f;
+    }
+
+    @media (max-width: 750px) {
+
+      header {
+        padding: 18px 5%;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 0.72rem;
+      }
+
+      .brand-name {
+        font-size: 1rem;
+      }
+
+      .container {
+        width: 90%;
+      }
+
+      .hero {
+        min-height: 70vh;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .dark-section {
+        border-radius: 25px;
+      }
+
+      .service-video {
+        width: 100%;
+        max-width: 380px;
+      }
+    }
+
+  </style>
 </head>
 
 
 <body>
 
+  <!-- MENU -->
 
-    <!-- HEADER -->
+  <header>
 
-    <header>
+    <div class="brand-name">
+      Tati & Thomas
+    </div>
 
-        <div class="brand-name">
-            Zero <span>Sbatty</span>
-        </div>
+    <nav>
+      <a href="#video">1. Video</a>
+      <a href="#drone">2. Drone</a>
+      <a href="#dj">3. DJ</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
 
-        <nav>
+  </header>
 
-            <a href="#video">
-                Video
-            </a>
 
-            <a href="#dj">
-                DJ
-            </a>
+  <main class="container">
 
-            <a href="#drone">
-                Drone
-            </a>
 
-            <a href="#contatti">
-                Contatti
-            </a>
+    <!-- HOME -->
 
-        </nav>
+    <div class="hero">
 
-    </header>
+      <div class="subtitle-top">
+        Zero Sbatty • Video Promozionali • Drone • DJ Set
+      </div>
 
+      <h1>
+        Le vostre storie.
+        <span>La nostra creatività.</span>
+      </h1>
 
-    <main class="container">
+      <p>
+        Siamo Tati & Thomas. Creiamo contenuti promozionali per attività,
+        riprese con drone e DJ set per feste, eventi e matrimoni.
+      </p>
 
+      <div class="hero-buttons">
 
-        <!-- HERO -->
+        <a href="https://wa.me/393669800153" class="btn-dark">
+          <span>Raccontaci la vostra idea</span>
+          <span>↗️</span>
+        </a>
 
-        <div class="hero reveal">
+        <a href="#video" class="btn-outline">
+          Scopri i servizi ↓
+        </a>
 
-            <div class="hero-badge">
-                Tati & Thomas • Lucca
-            </div>
-
-            <h1>
-                Le vostre storie.
-                <span>
-                    La nostra creatività.
-                </span>
-            </h1>
-
-            <p>
-                Video promozionali, DJ Set e riprese con drone.
-                Tre modi diversi per dare vita alle vostre idee.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a
-                    href="https://wa.me/393669800153"
-                    class="btn-dark">
-
-                    <span class="button-left">
-
-                        <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-
-                        Raccontateci la vostra idea
-
-                    </span>
-
-                    <span>↗️</span>
-
-                </a>
-
-                <a
-                    href="#video"
-                    class="btn-outline">
-
-                    Scopri i nostri servizi ↓
-
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- TRUST -->
-
-        <div class="trust-bar reveal">
-
-            <div class="trust-item">
-
-                <i class="fa-solid fa-clapperboard"></i>
-
-                <span>
-                    Video
-                </span>
-
-            </div>
-
-            <div class="trust-item">
-
-                <i class="fa-solid fa-headphones"></i>
-
-                <span>
-                    DJ Set
-                </span>
-
-            </div>
-
-            <div class="trust-item">
-
-                <i class="fa-solid fa-plane-up"></i>
-
-                <span>
-                    Drone
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <!-- ====================== -->
-        <!-- VIDEO PROMOZIONALI -->
-        <!-- ====================== -->
-
-        <section
-            id="video"
-            class="reveal">
-
-            <div class="section-tag">
-                01 • Video Promozionali
-            </div>
-
-            <h2 class="section-title">
-                Facciamo vedere
-                <span>
-                    il meglio di te.
-                </span>
-            </h2>
-
-            <p class="section-desc">
-                Creiamo video pensati per catturare
-                l'attenzione e raccontare la tua attività
-                in modo semplice, moderno e riconoscibile.
-            </p>
-
-            <ul class="service-list">
-
-                <li>
-                    <span>01</span>
-                    Spot pubblicitari
-                </li>
-
-                <li>
-                    <span>02</span>
-                    Reel e contenuti social
-                </li>
-
-                <li>
-                    <span>03</span>
-                    Video per prodotti, servizi ed eventi
-                </li>
-
-            </ul>
-
-            <div class="video-title">
-                Un nostro lavoro
-            </div>
-
-            <div class="video-frame">
-
-                <video
-                    class="service-video"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    preload="metadata">
-
-                    <source
-                        src="copy_B2276401-2368-4DED-8DC2-C6F072DA6D60 4.mov"
-                        type="video/quicktime">
-
-                </video>
-
-            </div>
-
-            <a
-                href="https://wa.me/393669800153"
-                class="btn-dark">
-
-                <span class="button-left">
-
-                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-
-                    Voglio un video per la mia attività
-
-                </span>
-
-                <span>↗️</span>
-
-            </a>
-
-        </section>
-
-
-        <!-- ====================== -->
-        <!-- DJ SET -->
-        <!-- ====================== -->
-
-        <section
-            id="dj"
-            class="reveal">
-
-            <div class="section-tag">
-                02 • DJ Set
-            </div>
-
-            <h2 class="section-title">
-                Ogni momento,
-                <span>
-                    la sua musica.
-                </span>
-            </h2>
-
-            <p class="section-desc">
-                Costruiamo il percorso musicale
-                della serata insieme a voi,
-                dall'aperitivo fino alla pista piena.
-            </p>
-
-            <ul class="service-list">
-
-                <li>
-                    <span>01</span>
-                    Matrimoni
-                </li>
-
-                <li>
-                    <span>02</span>
-                    Feste private
-                </li>
-
-                <li>
-                    <span>03</span>
-                    Locali ed eventi
-                </li>
-
-            </ul>
-
-            <div class="video-title">
-                Vivi l'atmosfera
-            </div>
-
-            <div class="video-frame">
-
-                <video
-                    class="service-video"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    preload="metadata">
-
-                    <source
-                        src="copy_B2276401-2368-4DED-8DC2-C6F072DA6D60 6.mov"
-                        type="video/quicktime">
-
-                </video>
-
-            </div>
-
-            <a
-                href="https://wa.me/393669800153"
-                class="btn-dark">
-
-                <span class="button-left">
-
-                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-
-                    Organizziamo la vostra serata
-
-                </span>
-
-                <span>↗️</span>
-
-            </a>
-
-        </section>
-
-
-        <!-- ====================== -->
-        <!-- DRONE -->
-        <!-- ====================== -->
-
-        <section
-            id="drone"
-            class="reveal">
-
-            <div class="section-tag">
-                03 • Drone
-            </div>
-
-            <h2 class="section-title">
-                Guarda tutto
-                <span>
-                    da un'altra prospettiva.
-                </span>
-            </h2>
-
-            <p class="section-desc">
-                Riprese aeree per attività,
-                location, matrimoni ed eventi.
-                Per dare alle immagini un impatto
-                completamente diverso.
-            </p>
-
-            <div class="video-title">
-                Guarda dall'alto
-            </div>
-
-            <div class="video-frame">
-
-                <video
-                    class="service-video"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    preload="metadata">
-
-                    <source
-                        src="copy_B2276401-2368-4DED-8DC2-C6F072DA6D60 5.mov"
-                        type="video/quicktime">
-
-                </video>
-
-            </div>
-
-            <a
-                href="https://wa.me/393669800153"
-                class="btn-dark">
-
-                <span class="button-left">
-
-                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-
-                    Voglio delle riprese con drone
-
-                </span>
-
-                <span>↗️</span>
-
-            </a>
-
-        </section>
-
-
-        <!-- ====================== -->
-        <!-- PORTFOLIO -->
-        <!-- ====================== -->
-
-        <section class="reveal">
-
-            <div class="section-tag">
-                Portfolio
-            </div>
-
-            <h2 class="section-title">
-                Cosa
-                <span>
-                    realizziamo.
-                </span>
-            </h2>
-
-            <div class="portfolio-grid">
-
-                <div class="portfolio-card">
-
-                    <i class="fa-solid fa-store"></i>
-
-                    <h3>
-                        Attività & Brand
-                    </h3>
-
-                    <p>
-                        Video, Reel e contenuti
-                        per presentare prodotti,
-                        servizi e attività.
-                    </p>
-
-                </div>
-
-
-                <div class="portfolio-card">
-
-                    <i class="fa-solid fa-music"></i>
-
-                    <h3>
-                        Feste & Matrimoni
-                    </h3>
-
-                    <p>
-                        Musica e DJ Set pensati
-                        per accompagnare ogni
-                        momento dell'evento.
-                    </p>
-
-                </div>
-
-
-                <div class="portfolio-card">
-
-                    <i class="fa-solid fa-camera"></i>
-
-                    <h3>
-                        Eventi & Location
-                    </h3>
-
-                    <p>
-                        Riprese tradizionali
-                        e aeree per raccontare
-                        luoghi ed esperienze.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ====================== -->
-        <!-- CTA -->
-        <!-- ====================== -->
-
-        <div class="cta-box reveal">
-
-            <div class="section-tag">
-                Hai già un'idea?
-            </div>
-
-            <h2>
-                Parliamone.
-                <span>
-                    Senza sbatti.
-                </span>
-            </h2>
-
-            <p>
-                Raccontaci cosa vuoi realizzare.
-                Ti aiutiamo a scegliere il servizio
-                più adatto al tuo progetto.
-            </p>
-
-            <a
-                href="https://wa.me/393669800153"
-                class="btn-dark">
-
-                <span class="button-left">
-
-                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-
-                    Scrivici su WhatsApp
-
-                </span>
-
-                <span>↗️</span>
-
-            </a>
-
-        </div>
-
-
-        <!-- ====================== -->
-        <!-- COME FUNZIONA -->
-        <!-- ====================== -->
-
-        <section class="reveal">
-
-            <div class="section-tag">
-                Come funziona
-            </div>
-
-            <h2 class="section-title">
-                Dall'idea al
-                <span>
-                    progetto.
-                </span>
-            </h2>
-
-            <div class="steps">
-
-                <div class="step-box">
-
-                    <div class="num">
-                        1
-                    </div>
-
-                    <h3>
-                        Raccontaci
-                    </h3>
-
-                    <p>
-                        Ci dici cosa hai in mente,
-                        dove e quando.
-                    </p>
-
-                </div>
-
-
-                <div class="step-box">
-
-                    <div class="num">
-                        2
-                    </div>
-
-                    <h3>
-                        Scegliamo
-                    </h3>
-
-                    <p>
-                        Troviamo insieme
-                        il servizio più adatto.
-                    </p>
-
-                </div>
-
-
-                <div class="step-box">
-
-                    <div class="num">
-                        3
-                    </div>
-
-                    <h3>
-                        Creiamo
-                    </h3>
-
-                    <p>
-                        Definiamo i dettagli
-                        e diamo vita al progetto.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ====================== -->
-        <!-- INSTAGRAM -->
-        <!-- ====================== -->
-
-        <section class="reveal">
-
-            <div class="instagram-box">
-
-                <div class="instagram-icon">
-
-                    <i class="fa-brands fa-instagram"></i>
-
-                </div>
-
-                <h3>
-                    Seguici su Instagram
-                </h3>
-
-                <p>
-                    Guarda gli ultimi lavori,
-                    i backstage e le nuove serate.
-                </p>
-
-                <!-- INSERISCI QUI IL TUO LINK INSTAGRAM -->
-
-                <a
-                    href="https://www.instagram.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-outline">
-
-                    Apri Instagram ↗️
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-    <!-- ====================== -->
-    <!-- CONTATTI -->
-    <!-- ====================== -->
-
-    <footer
-        class="footer-dark"
-        id="contatti">
-
-        <div class="section-tag">
-            Zero Sbatty
-        </div>
-
-        <h2>
-            Il primo passo?
-            <span>
-                Un messaggio.
-            </span>
-        </h2>
-
-        <p>
-            Scrivici per informazioni,
-            disponibilità e preventivi.
-        </p>
-
-        <div class="footer-buttons">
-
-            <a
-                href="https://wa.me/393669800153"
-                class="btn-dark"
-                style="
-                    border:
-                    1px solid rgba(255,255,255,0.16);
-                ">
-
-                <span class="button-left">
-
-                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-
-                    Thomas • 366 980 0153
-
-                </span>
-
-                <span>↗️</span>
-
-            </a>
-
-
-            <a
-                href="https://wa.me/393314828343"
-                class="btn-dark"
-                style="
-                    border:
-                    1px solid rgba(255,255,255,0.16);
-                ">
-
-                <span class="button-left">
-
-                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-
-                    Tatiana • 331 482 8343
-
-                </span>
-
-                <span>↗️</span>
-
-            </a>
-
-        </div>
-
-    </footer>
-
-
-    <div class="footer-bottom">
-
-        Zero Sbatty • Tati & Thomas
-        <br>
-
-        Video • DJ Set • Drone
-        <br>
-
-        Lucca • Toscana
+      </div>
 
     </div>
 
 
-    <!-- WHATSAPP FISSO -->
+    <!-- 1 VIDEO PROMOZIONALI -->
 
-    <a
-        href="https://wa.me/393669800153"
-        class="whatsapp-floating"
-        aria-label="Scrivi a Zero Sbatty su WhatsApp">
+    <section id="video">
 
-        <i class="fa-brands fa-whatsapp"></i>
+      <div class="section-tag">
+        1. Video Promozionali
+      </div>
 
-    </a>
+      <h2 class="section-title">
+        Facciamo vedere
+        <span>il meglio di te.</span>
+      </h2>
 
+      <p class="section-desc">
+        Con Zero Sbatty realizziamo video pubblicitari e promozionali
+        pensati per raccontare la tua attività in modo moderno,
+        dinamico e professionale.
+      </p>
 
-    <!-- ANIMAZIONI -->
+      <p class="section-desc">
+        Dall'idea alle riprese, fino al montaggio:
+        trasformiamo quello che fai in contenuti capaci di attirare
+        l'attenzione sui social.
+      </p>
 
-    <script>
+      <ul class="service-list">
 
-        const elements =
-            document.querySelectorAll(
-                '.reveal'
-            );
+        <li>
+          <span>01</span>
+          Spot pubblicitari e video promozionali
+        </li>
 
-        const observer =
-            new IntersectionObserver(
+        <li>
+          <span>02</span>
+          Reel e contenuti per i social
+        </li>
 
-                entries => {
+        <li>
+          <span>03</span>
+          Video per prodotti, servizi ed eventi
+        </li>
 
-                    entries.forEach(
-                        entry => {
-
-                            if (
-                                entry.isIntersecting
-                            ) {
-
-                                entry.target
-                                    .classList
-                                    .add(
-                                        'visible'
-                                    );
-
-                                observer
-                                    .unobserve(
-                                        entry.target
-                                    );
-
-                            }
-
-                        }
-                    );
-
-                },
-
-                {
-                    threshold: 0.12
-                }
-
-            );
-
-        elements.forEach(
-            element => {
-
-                observer.observe(
-                    element
-                );
-
-            }
-        );
+      </ul>
 
 
-        /*
-        PAUSA I VIDEO QUANDO
-        NON SONO VISIBILI
-        */
+      <!-- VIDEO PROMOZIONALE -->
 
-        const videos =
-            document.querySelectorAll(
-                '.service-video'
-            );
+      <div class="video-box">
 
-        const videoObserver =
-            new IntersectionObserver(
+        <video
+          class="service-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          preload="metadata">
 
-                entries => {
+          <source
+            src="copy_B2276401-2368-4DED-8DC2-C6F072DA6D60.MOV"
+            type="video/quicktime">
 
-                    entries.forEach(
-                        entry => {
+        </video>
 
-                            if (
-                                entry.isIntersecting
-                            ) {
-
-                                entry.target
-                                    .play()
-                                    .catch(
-                                        () => {}
-                                    );
-
-                            } else {
-
-                                entry.target
-                                    .pause();
-
-                            }
-
-                        }
-                    );
-
-                },
-
-                {
-                    threshold: 0.35
-                }
-
-            );
-
-        videos.forEach(
-            video => {
-
-                videoObserver.observe(
-                    video
-                );
-
-            }
-        );
-
-    </script>
+      </div>
 
 
-</body>
-</html>
+      <a href="https://wa.me/393669800153" class="btn-dark">
+        <span>Parliamo del tuo prossimo video
