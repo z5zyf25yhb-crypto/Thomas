@@ -6,20 +6,20 @@
 
 <title>Zero Sbatty | Video, DJ Set e Drone a Lucca</title>
 
-<meta name="description" content="Zero Sbatty di Tati & Thomas: video promozionali, DJ set per eventi e matrimoni e riprese con drone a Lucca e in Toscana.">
+<meta name="description" content="Zero Sbatty di Tati & Thomas. Video promozionali, DJ set per matrimoni, feste ed eventi e riprese con drone a Lucca e in Toscana.">
 
 <meta name="theme-color" content="#232b26">
 
 <link rel="canonical" href="https://www.zerosbatty.com/">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 
 /* ================================
-   COLORI ORIGINALI
+   ZERO SBATTY PREMIUM
 ================================ */
 
 :root {
@@ -34,7 +34,7 @@
     --dark-2: #18201c;
     --border: #dfd8c9;
     --whatsapp: #25D366;
-    --shadow: 0 20px 60px rgba(35,43,38,0.12);
+    --shadow: 0 24px 65px rgba(35,43,38,.13);
 }
 
 * {
@@ -52,77 +52,69 @@ body {
     background:
         radial-gradient(
             circle at top right,
-            rgba(166,124,82,0.08),
+            rgba(166,124,82,.08),
             transparent 35%
         ),
         var(--bg);
 
     color: var(--text);
     font-family: 'Plus Jakarta Sans', sans-serif;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+    line-height: 1.65;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
+    font-weight: 400;
 }
 
 a {
     -webkit-tap-highlight-color: transparent;
 }
 
-button, a {
-    touch-action: manipulation;
+button {
+    font-family: inherit;
+    cursor: pointer;
 }
-
-/* ================================
-   CONTAINER LARGO
-================================ */
 
 .container {
-    width: min(92%, 1400px);
-    margin: 0 auto;
+    width: min(92%, 1500px);
+    margin: auto;
 }
 
-/* ================================
-   HEADER
-================================ */
+/* HEADER */
 
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
-
-    background: rgba(247,244,237,0.91);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-
-    border-bottom: 1px solid rgba(223,216,201,0.8);
+    background: rgba(247,244,237,.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(223,216,201,.8);
 }
 
 .header-inner {
-    width: min(92%, 1400px);
+    width: min(92%, 1500px);
+    min-height: 82px;
     margin: auto;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    min-height: 78px;
     gap: 20px;
 }
 
-.brand-name {
+.brand {
     font-family: 'Playfair Display', serif;
-    font-size: 1.45rem;
+    font-size: 1.55rem;
     font-weight: 600;
-    white-space: nowrap;
-    text-decoration: none;
     color: var(--text);
+    text-decoration: none;
+    white-space: nowrap;
 }
 
-.brand-name span {
+.brand span {
     color: var(--gold);
     font-style: italic;
 }
@@ -130,129 +122,122 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: clamp(15px, 3vw, 40px);
+    gap: clamp(14px, 2.5vw, 38px);
 }
 
 nav a {
     color: var(--text);
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: .86rem;
     font-weight: 500;
-    transition: color .25s ease;
+    transition: color .3s;
 }
 
 nav a:hover {
     color: var(--gold);
 }
 
-.nav-contact {
-    padding: 11px 18px;
-    border: 1px solid var(--border);
+.nav-cta {
+    padding: 12px 20px;
+    background: var(--dark);
+    color: white;
     border-radius: 100px;
 }
 
-/* ================================
-   BOTTONI
-================================ */
+.nav-cta:hover {
+    color: white;
+    background: var(--gold);
+}
 
-.btn-dark,
-.btn-outline {
-    min-height: 56px;
+/* BUTTONS */
 
+.btn {
+    min-height: 58px;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 18px;
-    padding: 15px 22px;
-
-    border-radius: 13px;
-    font-size: 0.9rem;
-    font-weight: 500;
-
+    padding: 16px 23px;
+    border-radius: 14px;
     text-decoration: none;
+    font-size: .9rem;
+    font-weight: 600;
+    transition: transform .3s, box-shadow .3s, background .3s;
+}
 
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease,
-        background .3s ease;
+.btn:hover {
+    transform: translateY(-4px);
 }
 
 .btn-dark {
     background: var(--dark);
     color: white;
-    box-shadow: 0 9px 22px rgba(35,43,38,0.14);
-}
-
-.btn-outline {
-    color: var(--text);
-    border: 1px solid var(--dark);
-    background: rgba(255,255,255,0.2);
-}
-
-.btn-dark:hover,
-.btn-outline:hover {
-    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(35,43,38,.15);
 }
 
 .btn-dark:hover {
-    box-shadow: 0 16px 35px rgba(35,43,38,0.2);
+    box-shadow: 0 18px 38px rgba(35,43,38,.23);
 }
 
-.button-left {
+.btn-outline {
+    border: 1px solid var(--dark);
+    color: var(--dark);
+    background: rgba(255,255,255,.2);
+}
+
+.btn-light {
+    background: white;
+    color: var(--dark);
+}
+
+.btn i.fa-whatsapp {
+    color: var(--whatsapp);
+    font-size: 1.25rem;
+}
+
+.btn-left {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 11px;
 }
 
-.whatsapp-icon {
-    color: var(--whatsapp);
-    font-size: 1.3rem;
-}
-
-/* ================================
-   HERO
-================================ */
+/* HERO */
 
 .hero {
-    min-height: 76vh;
-    padding: 110px 0 90px;
-
+    position: relative;
+    min-height: 80vh;
+    padding: 105px 0 85px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-
+    justify-content: center;
     text-align: center;
 }
 
-.hero-badge {
-    width: fit-content;
-    margin-bottom: 28px;
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+}
 
-    padding: 9px 18px;
-
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 25px;
+    padding: 9px 19px;
     border: 1px solid var(--border);
     border-radius: 100px;
-
-    background: rgba(255,255,255,0.48);
-
+    background: rgba(255,255,255,.5);
     color: var(--gold);
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 1.6px;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: 1.8px;
     text-transform: uppercase;
 }
 
 .hero h1 {
-    max-width: 1150px;
-
-    margin-bottom: 30px;
-
-    font-size: clamp(3.3rem, 7vw, 7.5rem);
+    font-size: clamp(3.2rem, 7.2vw, 8rem);
     line-height: 1.04;
-    font-weight: 400;
-    letter-spacing: -1.5px;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
 }
 
 .hero h1 span {
@@ -262,89 +247,96 @@ nav a:hover {
 }
 
 .hero p {
-    max-width: 720px;
-    margin-bottom: 38px;
-
+    max-width: 730px;
+    margin: 0 auto 36px;
     color: var(--muted);
-    font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+    font-size: clamp(1rem, 1.3vw, 1.2rem);
 }
 
-.hero-buttons {
+.hero-actions {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-.hero-buttons a {
-    min-width: 270px;
+.hero-actions .btn {
+    min-width: 260px;
 }
 
-/* ================================
-   TRUST BAR
-================================ */
+.hero-decoration {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border: 1px solid rgba(166,124,82,.13);
+    border-radius: 50%;
+    pointer-events: none;
+}
 
-.trust-bar {
-    max-width: 1100px;
-    margin: 0 auto 90px;
+.hero-decoration.one {
+    left: -180px;
+    top: 15%;
+}
 
+.hero-decoration.two {
+    right: -180px;
+    bottom: 5%;
+}
+
+/* SERVICE STRIP */
+
+.service-strip {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     border: 1px solid var(--border);
-    border-radius: 22px;
-
-    background: rgba(255,255,255,0.42);
+    border-radius: 24px;
     overflow: hidden;
+    background: rgba(255,255,255,.48);
+    margin-bottom: 85px;
 }
 
-.trust-item {
+.strip-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
     padding: 30px 15px;
-    text-align: center;
 }
 
-.trust-item:not(:last-child) {
+.strip-item:not(:last-child) {
     border-right: 1px solid var(--border);
 }
 
-.trust-item i {
-    display: block;
-    margin-bottom: 10px;
-
+.strip-item i {
+    font-size: 1.5rem;
     color: var(--gold);
-    font-size: 1.6rem;
 }
 
-.trust-item span {
-    font-size: 0.9rem;
-    color: var(--muted);
+.strip-item span {
+    font-size: .9rem;
+    font-weight: 600;
 }
 
-/* ================================
-   SEZIONI
-================================ */
+/* SECTIONS */
 
 section {
-    padding: 110px 0;
+    padding: 115px 0;
     border-top: 1px solid var(--border);
 }
 
 .section-tag {
-    margin-bottom: 17px;
-
     color: var(--gold);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 1.8px;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .section-title {
-    margin-bottom: 25px;
-
-    font-size: clamp(2.8rem, 4.5vw, 5rem);
-    font-weight: 400;
+    font-size: clamp(2.8rem, 4.8vw, 5.5rem);
     line-height: 1.08;
+    margin-bottom: 28px;
 }
 
 .section-title span {
@@ -354,25 +346,23 @@ section {
 }
 
 .section-desc {
-    margin-bottom: 25px;
+    max-width: 650px;
     color: var(--muted);
-    font-size: 1.02rem;
-    max-width: 600px;
+    font-size: 1.05rem;
+    margin-bottom: 28px;
 }
 
-/* ================================
-   SERVIZI
-================================ */
+/* SERVICE LAYOUT */
 
 .service-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
-    gap: clamp(40px, 7vw, 120px);
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 470px);
     align-items: center;
+    gap: clamp(50px, 8vw, 145px);
 }
 
 .service-layout.reverse {
-    grid-template-columns: minmax(320px, 440px) minmax(0, 1fr);
+    grid-template-columns: minmax(330px, 470px) minmax(0, 1fr);
 }
 
 .service-layout.reverse .service-content {
@@ -389,80 +379,67 @@ section {
 
 .service-list {
     list-style: none;
-    margin: 30px 0 35px;
-    max-width: 580px;
+    max-width: 600px;
+    margin: 30px 0 38px;
 }
 
 .service-list li {
     display: flex;
     align-items: center;
-
     padding: 17px 0;
     border-bottom: 1px solid var(--border);
-
-    font-size: 0.95rem;
+    font-size: .95rem;
 }
 
 .service-list li span {
-    margin-right: 20px;
-
-    color: var(--gold);
     font-family: 'Playfair Display', serif;
+    color: var(--gold);
     font-size: 1.2rem;
     font-style: italic;
+    margin-right: 20px;
 }
 
-.service-content .btn-dark {
-    width: min(100%, 420px);
+.service-content .btn {
+    width: min(100%, 430px);
 }
 
-/* ================================
-   VIDEO
-================================ */
+/* VIDEO */
 
 .service-media {
     width: 100%;
-    max-width: 440px;
+    max-width: 470px;
     margin: auto;
 }
 
-.video-title {
-    margin-bottom: 17px;
-
+.video-label {
     text-align: center;
     color: var(--gold);
-
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 1.7px;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: 1.8px;
     text-transform: uppercase;
+    margin-bottom: 17px;
 }
 
 .video-frame {
     position: relative;
-
-    width: 100%;
     overflow: hidden;
-
-    border-radius: 28px;
-    background: #000;
-
+    width: 100%;
+    border-radius: 30px;
+    background: #111;
     box-shadow: var(--shadow);
-
-    transition:
-        transform .4s ease,
-        box-shadow .4s ease;
+    transition: transform .4s, box-shadow .4s;
 }
 
 .video-frame:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 30px 75px rgba(35,43,38,0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 35px 85px rgba(35,43,38,.22);
 }
 
 .service-video {
-    display: block;
     width: 100%;
     aspect-ratio: 9 / 16;
+    display: block;
     object-fit: cover;
 }
 
@@ -470,77 +447,96 @@ section {
     content: "";
     position: absolute;
     inset: 0;
-
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 30px;
     pointer-events: none;
-
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 28px;
 }
 
-/* ================================
-   PORTFOLIO
-================================ */
+.video-sound {
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    z-index: 5;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 50%;
+    background: rgba(0,0,0,.55);
+    color: white;
+    backdrop-filter: blur(10px);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-sound:hover {
+    background: var(--gold);
+}
+
+/* PORTFOLIO */
 
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
+    gap: 25px;
     margin-top: 45px;
 }
 
 .portfolio-card {
-    min-height: 260px;
-    padding: 42px 35px;
-
+    padding: 45px 35px;
+    min-height: 270px;
+    background: rgba(255,255,255,.58);
     border: 1px solid var(--border);
-    border-radius: 22px;
-
-    background: rgba(255,255,255,0.62);
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
+    border-radius: 25px;
+    transition: transform .35s, box-shadow .35s;
 }
 
 .portfolio-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow);
 }
 
 .portfolio-card i {
     display: block;
-    margin-bottom: 24px;
-
     color: var(--gold);
     font-size: 2rem;
+    margin-bottom: 25px;
 }
 
 .portfolio-card h3 {
+    font-size: 1.7rem;
     margin-bottom: 12px;
-    font-size: 1.65rem;
-    font-weight: 500;
 }
 
 .portfolio-card p {
     color: var(--muted);
-    font-size: 0.92rem;
+    font-size: .92rem;
 }
 
-/* ================================
-   CTA
-================================ */
+/* CTA */
 
 .cta-box {
-    margin: 50px 0;
-    padding: 90px 40px;
-
+    position: relative;
+    overflow: hidden;
+    margin: 55px 0;
+    padding: 100px 40px;
     text-align: center;
-
     background: var(--dark);
     color: white;
-
-    border-radius: 32px;
+    border-radius: 35px;
     box-shadow: var(--shadow);
+}
+
+.cta-box::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border: 1px solid rgba(198,162,124,.18);
+    border-radius: 50%;
+    right: -150px;
+    top: -180px;
 }
 
 .cta-box .section-tag {
@@ -548,11 +544,10 @@ section {
 }
 
 .cta-box h2 {
-    margin-bottom: 22px;
-
-    font-size: clamp(3rem, 5vw, 5.5rem);
-    font-weight: 400;
-    line-height: 1.08;
+    position: relative;
+    font-size: clamp(3rem, 5.5vw, 6rem);
+    line-height: 1.07;
+    margin-bottom: 25px;
 }
 
 .cta-box h2 span {
@@ -562,22 +557,18 @@ section {
 }
 
 .cta-box p {
-    max-width: 600px;
-    margin: 0 auto 30px;
-
-    color: rgba(255,255,255,0.72);
-    font-size: 1rem;
+    position: relative;
+    max-width: 620px;
+    margin: 0 auto 32px;
+    color: rgba(255,255,255,.72);
 }
 
-.cta-box .btn-dark {
-    width: min(100%, 380px);
-    background: white;
-    color: var(--dark);
+.cta-box .btn {
+    position: relative;
+    width: min(100%, 390px);
 }
 
-/* ================================
-   COME FUNZIONA
-================================ */
+/* STEPS */
 
 .steps {
     display: grid;
@@ -586,100 +577,80 @@ section {
     margin-top: 45px;
 }
 
-.step-box {
-    padding: 35px;
-
+.step-card {
+    padding: 38px;
+    background: rgba(255,255,255,.43);
     border: 1px solid var(--border);
-    border-radius: 22px;
-
-    background: rgba(255,255,255,0.45);
+    border-radius: 24px;
 }
 
-.num {
-    width: 40px;
-    height: 40px;
-
+.step-number {
+    width: 43px;
+    height: 43px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin-bottom: 25px;
-
     border: 1px solid var(--gold);
     border-radius: 50%;
-
     color: var(--gold);
     font-family: 'Playfair Display', serif;
+    margin-bottom: 25px;
 }
 
-.step-box h3 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-    font-weight: 500;
+.step-card h3 {
+    font-size: 1.55rem;
+    margin-bottom: 12px;
 }
 
-.step-box p {
+.step-card p {
     color: var(--muted);
-    font-size: 0.9rem;
+    font-size: .92rem;
 }
 
-/* ================================
-   INSTAGRAM
-================================ */
+/* INSTAGRAM */
 
 .instagram-box {
-    max-width: 1000px;
+    max-width: 1050px;
     margin: auto;
-    padding: 70px 40px;
-
+    padding: 80px 40px;
     text-align: center;
-
+    background: rgba(255,255,255,.52);
     border: 1px solid var(--border);
-    border-radius: 25px;
-
-    background: rgba(255,255,255,0.5);
+    border-radius: 28px;
 }
 
 .instagram-icon {
-    width: 65px;
-    height: 65px;
-
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin: 0 auto 22px;
-
-    border-radius: 50%;
     background: var(--dark);
-
     color: white;
-    font-size: 1.7rem;
+    border-radius: 50%;
+    font-size: 1.8rem;
 }
 
 .instagram-box h3 {
+    font-size: 2.2rem;
     margin-bottom: 12px;
-    font-size: 2rem;
-    font-weight: 400;
 }
 
 .instagram-box p {
-    margin-bottom: 25px;
     color: var(--muted);
+    margin-bottom: 28px;
 }
 
-.instagram-box .btn-outline {
+.instagram-box .btn {
     width: min(100%, 350px);
 }
 
-/* ================================
-   FOOTER
-================================ */
+/* FOOTER */
 
 .footer-dark {
-    padding: 100px 24px 85px;
+    padding: 110px 24px 90px;
     text-align: center;
-
     background: var(--dark);
     color: white;
 }
@@ -689,11 +660,9 @@ section {
 }
 
 .footer-dark h2 {
-    margin-bottom: 25px;
-
-    font-size: clamp(3rem, 5vw, 5rem);
-    font-weight: 400;
+    font-size: clamp(3rem, 5.5vw, 5.7rem);
     line-height: 1.08;
+    margin-bottom: 28px;
 }
 
 .footer-dark h2 span {
@@ -703,95 +672,74 @@ section {
 }
 
 .footer-dark p {
-    max-width: 550px;
+    max-width: 600px;
     margin: 0 auto 35px;
-
-    color: rgba(255,255,255,0.7);
+    color: rgba(255,255,255,.7);
 }
 
 .footer-buttons {
+    width: min(100%, 620px);
+    margin: auto;
     display: grid;
     gap: 15px;
-
-    width: min(100%, 600px);
-    margin: auto;
 }
 
-.footer-buttons .btn-dark {
-    background: white;
-    color: var(--dark);
+.footer-buttons .btn {
+    width: 100%;
 }
 
 .footer-bottom {
-    padding: 30px 20px;
-
     background: var(--dark-2);
-    color: rgba(255,255,255,0.5);
-
+    color: rgba(255,255,255,.55);
+    padding: 32px 20px;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: .8rem;
 }
 
-/* ================================
-   WHATSAPP FISSO
-================================ */
+/* WHATSAPP FLOAT */
 
 .whatsapp-floating {
     position: fixed;
     right: 20px;
     bottom: 20px;
     z-index: 9999;
-
-    width: 60px;
-    height: 60px;
-
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border-radius: 50%;
-
     background: var(--whatsapp);
     color: white;
-
-    font-size: 1.8rem;
+    font-size: 1.85rem;
     text-decoration: none;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.23);
-
+    box-shadow: 0 10px 30px rgba(0,0,0,.23);
     animation: pulse 2.5s infinite;
 }
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(37,211,102,0.4);
+        box-shadow: 0 0 0 0 rgba(37,211,102,.4);
     }
-
     70% {
-        box-shadow: 0 0 0 14px rgba(37,211,102,0);
+        box-shadow: 0 0 0 15px rgba(37,211,102,0);
     }
-
     100% {
         box-shadow: 0 0 0 0 rgba(37,211,102,0);
     }
 }
 
-/* ================================
-   ANIMAZIONI
-================================ */
+/* REVEAL */
 
 .reveal {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
 }
 
 .js-ready .reveal {
     opacity: 0;
-    transform: translateY(25px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
+    transform: translateY(28px);
+    transition: opacity .8s ease, transform .8s ease;
 }
 
 .js-ready .reveal.visible {
@@ -799,14 +747,12 @@ section {
     transform: translateY(0);
 }
 
-/* ================================
-   TABLET
-================================ */
+/* TABLET */
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
 
     .container {
-        width: min(92%, 760px);
+        width: min(92%, 780px);
     }
 
     .service-layout,
@@ -821,27 +767,22 @@ section {
     }
 
     .service-media {
-        max-width: 390px;
+        max-width: 400px;
     }
 
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .portfolio-grid,
     .steps {
         grid-template-columns: 1fr;
     }
 
     section {
-        padding: 80px 0;
+        padding: 85px 0;
     }
 }
 
-/* ================================
-   SMARTPHONE
-================================ */
+/* MOBILE */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
     .container {
         width: calc(100% - 34px);
@@ -849,12 +790,12 @@ section {
 
     .header-inner {
         width: calc(100% - 24px);
-        min-height: 65px;
+        min-height: 68px;
         gap: 10px;
     }
 
-    .brand-name {
-        font-size: 0.95rem;
+    .brand {
+        font-size: 1rem;
     }
 
     nav {
@@ -862,54 +803,65 @@ section {
     }
 
     nav a {
-        font-size: 0.65rem;
+        font-size: .65rem;
     }
 
-    .nav-contact {
+    .nav-cta {
         padding: 0;
-        border: none;
-        border-radius: 0;
+        background: transparent;
+        color: var(--text);
+    }
+
+    .nav-cta:hover {
+        background: transparent;
+        color: var(--gold);
     }
 
     .hero {
         min-height: auto;
-        padding: 75px 0 80px;
+        padding: 85px 0 80px;
     }
 
     .hero h1 {
-        font-size: clamp(2.8rem, 10vw, 4rem);
-        letter-spacing: -0.5px;
+        font-size: clamp(2.9rem, 10vw, 4.3rem);
+        letter-spacing: -.5px;
     }
 
     .hero p {
-        font-size: 0.95rem;
+        font-size: .95rem;
     }
 
-    .hero-buttons {
-        width: 100%;
+    .hero-actions {
         flex-direction: column;
-        gap: 12px;
+        width: 100%;
     }
 
-    .hero-buttons a {
+    .hero-actions .btn {
         min-width: 0;
         width: 100%;
     }
 
-    .trust-bar {
+    .hero-decoration {
+        display: none;
+    }
+
+    .service-strip {
         margin-bottom: 55px;
     }
 
-    .trust-item {
-        padding: 17px 5px;
+    .strip-item {
+        flex-direction: column;
+        gap: 8px;
+        padding: 20px 5px;
+        text-align: center;
     }
 
-    .trust-item i {
+    .strip-item i {
         font-size: 1.2rem;
     }
 
-    .trust-item span {
-        font-size: 0.68rem;
+    .strip-item span {
+        font-size: .66rem;
     }
 
     section {
@@ -917,11 +869,11 @@ section {
     }
 
     .section-title {
-        font-size: clamp(2.5rem, 9vw, 3.5rem);
+        font-size: clamp(2.5rem, 9vw, 3.7rem);
     }
 
     .section-desc {
-        font-size: 0.95rem;
+        font-size: .95rem;
     }
 
     .service-layout {
@@ -938,39 +890,53 @@ section {
     }
 
     .cta-box {
-        padding: 45px 22px;
+        padding: 55px 22px;
         margin: 25px 0;
     }
 
     .cta-box h2 {
-        font-size: 2.6rem;
+        font-size: 2.7rem;
     }
 
-    .step-box {
-        padding: 28px;
+    .step-card {
+        padding: 30px;
     }
 
     .instagram-box {
-        padding: 40px 22px;
+        padding: 45px 22px;
     }
 
     .instagram-box h3 {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
     }
 
     .footer-dark {
-        padding: 75px 20px 65px;
+        padding: 80px 20px 70px;
     }
 
     .footer-dark h2 {
-        font-size: 2.8rem;
+        font-size: 2.9rem;
     }
 
     .whatsapp-floating {
-        width: 55px;
-        height: 55px;
+        width: 56px;
+        height: 56px;
         right: 15px;
         bottom: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    nav {
+        gap: 6px;
+    }
+
+    nav a {
+        font-size: .6rem;
+    }
+
+    .brand {
+        font-size: .9rem;
     }
 }
 
@@ -978,8 +944,8 @@ section {
     *,
     *::before,
     *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
         scroll-behavior: auto !important;
     }
 }
@@ -989,14 +955,12 @@ section {
 
 <body>
 
-<!-- ================================
-     HEADER
-================================ -->
+<!-- HEADER -->
 
 <header>
     <div class="header-inner">
 
-        <a href="#" class="brand-name">
+        <a href="#" class="brand">
             Zero <span>Sbatty</span>
         </a>
 
@@ -1004,7 +968,7 @@ section {
             <a href="#video">Video</a>
             <a href="#dj">DJ</a>
             <a href="#drone">Drone</a>
-            <a href="#contatti" class="nav-contact">Contatti</a>
+            <a href="#contatti" class="nav-cta">Contatti</a>
         </nav>
 
     </div>
@@ -1012,71 +976,72 @@ section {
 
 <main class="container">
 
-<!-- ================================
-     HERO
-================================ -->
+<!-- HERO -->
 
 <div class="hero reveal">
 
-    <div class="hero-badge">
-        Tati & Thomas • Lucca
-    </div>
+    <div class="hero-decoration one"></div>
+    <div class="hero-decoration two"></div>
 
-    <h1>
-        Le vostre storie.
-        <span>La nostra creatività.</span>
-    </h1>
+    <div class="hero-content">
 
-    <p>
-        Video promozionali, DJ Set e riprese con drone.
-        Tre modi diversi per dare vita alle vostre idee.
-    </p>
+        <div class="eyebrow">
+            Tati & Thomas • Lucca
+        </div>
 
-    <div class="hero-buttons">
+        <h1>
+            Le vostre storie.
+            <span>La nostra creatività.</span>
+        </h1>
 
-        <a href="https://wa.me/393669800153" class="btn-dark">
-            <span class="button-left">
-                <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-                Raccontateci la vostra idea
-            </span>
-            <span>↗️</span>
-        </a>
+        <p>
+            Video promozionali, DJ Set e riprese con drone.
+            Tre modi diversi per dare vita alle vostre idee.
+        </p>
 
-        <a href="#video" class="btn-outline">
-            Scopri i nostri servizi
-            <span>↓</span>
-        </a>
+        <div class="hero-actions">
+
+            <a href="https://wa.me/393669800153" class="btn btn-dark">
+                <span class="btn-left">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Raccontateci la vostra idea
+                </span>
+                <span>↗️</span>
+            </a>
+
+            <a href="#video" class="btn btn-outline">
+                Scopri i nostri servizi
+                <span>↓</span>
+            </a>
+
+        </div>
 
     </div>
 
 </div>
 
-<!-- ================================
-     TRUST BAR
-================================ -->
+<!-- SERVICE STRIP -->
 
-<div class="trust-bar reveal">
+<div class="service-strip reveal">
 
-    <div class="trust-item">
+    <div class="strip-item">
         <i class="fa-solid fa-clapperboard"></i>
         <span>Video Promozionali</span>
     </div>
 
-    <div class="trust-item">
+    <div class="strip-item">
         <i class="fa-solid fa-headphones"></i>
         <span>DJ Set</span>
     </div>
 
-    <div class="trust-item">
+    <div class="strip-item">
         <i class="fa-solid fa-plane-up"></i>
         <span>Riprese Drone</span>
     </div>
 
 </div>
 
-<!-- ================================
-     VIDEO PROMOZIONALI
-================================ -->
+<!-- VIDEO PROMOZIONALI -->
 
 <section id="video" class="reveal">
 
@@ -1105,9 +1070,9 @@ section {
                 <li><span>03</span> Video per prodotti, servizi ed eventi</li>
             </ul>
 
-            <a href="https://wa.me/393669800153" class="btn-dark">
-                <span class="button-left">
-                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+            <a href="https://wa.me/393669800153" class="btn btn-dark">
+                <span class="btn-left">
+                    <i class="fa-brands fa-whatsapp"></i>
                     Voglio un video per la mia attività
                 </span>
                 <span>↗️</span>
@@ -1117,19 +1082,16 @@ section {
 
         <div class="service-media">
 
-            <div class="video-title">
+            <div class="video-label">
                 Un nostro lavoro
             </div>
 
             <div class="video-frame">
-                <video
-                    class="service-video"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
+
+                <video class="service-video"
+                    autoplay muted loop playsinline
                     preload="metadata"
-                    aria-label="Esempio di video promozionale Zero Sbatty">
+                    aria-label="Video promozionale Zero Sbatty">
 
                     <source
                         src="copy_B2276401-2368-4DED-8DC2-C6F072DA6D60 4.mov"
@@ -1137,6 +1099,12 @@ section {
 
                     Il tuo browser non supporta questo video.
                 </video>
+
+                <button class="video-sound" type="button"
+                    aria-label="Attiva audio video">
+                    <i class="fa-solid fa-volume-xmark"></i>
+                </button>
+
             </div>
 
         </div>
@@ -1145,9 +1113,7 @@ section {
 
 </section>
 
-<!-- ================================
-     DJ SET
-================================ -->
+<!-- DJ SET -->
 
 <section id="dj" class="reveal">
 
@@ -1176,9 +1142,9 @@ section {
                 <li><span>03</span> Locali ed eventi</li>
             </ul>
 
-            <a href="https://wa.me/393669800153" class="btn-dark">
-                <span class="button-left">
-                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+            <a href="https://wa.me/393669800153" class="btn btn-dark">
+                <span class="btn-left">
+                    <i class="fa-brands fa-whatsapp"></i>
                     Organizziamo la vostra serata
                 </span>
                 <span>↗️</span>
@@ -1188,19 +1154,16 @@ section {
 
         <div class="service-media">
 
-            <div class="video-title">
+            <div class="video-label">
                 Vivi l'atmosfera
             </div>
 
             <div class="video-frame">
-                <video
-                    class="service-video"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
+
+                <video class="service-video"
+                    autoplay muted loop playsinline
                     preload="metadata"
-                    aria-label="Esempio DJ Set Zero Sbatty">
+                    aria-label="DJ Set Zero Sbatty">
 
                     <source
                         src="copy_B2276401-2368-4DED-8DC2-C6F072DA6D60 6.mov"
@@ -1208,6 +1171,12 @@ section {
 
                     Il tuo browser non supporta questo video.
                 </video>
+
+                <button class="video-sound" type="button"
+                    aria-label="Attiva audio video">
+                    <i class="fa-solid fa-volume-xmark"></i>
+                </button>
+
             </div>
 
         </div>
@@ -1216,9 +1185,7 @@ section {
 
 </section>
 
-<!-- ================================
-     DRONE
-================================ -->
+<!-- DRONE -->
 
 <section id="drone" class="reveal">
 
@@ -1248,9 +1215,9 @@ section {
                 <li><span>03</span> Attività, strutture e location</li>
             </ul>
 
-            <a href="https://wa.me/393669800153" class="btn-dark">
-                <span class="button-left">
-                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+            <a href="https://wa.me/393669800153" class="btn btn-dark">
+                <span class="btn-left">
+                    <i class="fa-brands fa-whatsapp"></i>
                     Voglio delle riprese con drone
                 </span>
                 <span>↗️</span>
@@ -1260,19 +1227,16 @@ section {
 
         <div class="service-media">
 
-            <div class="video-title">
+            <div class="video-label">
                 Guarda dall'alto
             </div>
 
             <div class="video-frame">
-                <video
-                    class="service-video"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
+
+                <video class="service-video"
+                    autoplay muted loop playsinline
                     preload="metadata"
-                    aria-label="Esempio riprese drone Zero Sbatty">
+                    aria-label="Riprese drone Zero Sbatty">
 
                     <source
                         src="copy_B2276401-2368-4DED-8DC2-C6F072DA6D60 5.mov"
@@ -1280,6 +1244,12 @@ section {
 
                     Il tuo browser non supporta questo video.
                 </video>
+
+                <button class="video-sound" type="button"
+                    aria-label="Attiva audio video">
+                    <i class="fa-solid fa-volume-xmark"></i>
+                </button>
+
             </div>
 
         </div>
@@ -1288,19 +1258,14 @@ section {
 
 </section>
 
-<!-- ================================
-     PORTFOLIO
-================================ -->
+<!-- PORTFOLIO -->
 
 <section id="portfolio" class="reveal">
 
-    <div class="section-tag">
-        Portfolio
-    </div>
+    <div class="section-tag">Portfolio</div>
 
     <h2 class="section-title">
-        Cosa
-        <span>realizziamo.</span>
+        Cosa <span>realizziamo.</span>
     </h2>
 
     <p class="section-desc">
@@ -1311,51 +1276,37 @@ section {
     <div class="portfolio-grid">
 
         <div class="portfolio-card">
-
             <i class="fa-solid fa-store"></i>
-
             <h3>Attività & Brand</h3>
-
             <p>
                 Video, Reel e contenuti per presentare
                 prodotti, servizi e attività.
             </p>
-
         </div>
 
         <div class="portfolio-card">
-
             <i class="fa-solid fa-music"></i>
-
             <h3>Feste & Matrimoni</h3>
-
             <p>
                 Musica e DJ Set pensati per accompagnare
                 ogni momento dell'evento.
             </p>
-
         </div>
 
         <div class="portfolio-card">
-
             <i class="fa-solid fa-camera"></i>
-
             <h3>Eventi & Location</h3>
-
             <p>
                 Riprese tradizionali e aeree
                 per raccontare luoghi ed esperienze.
             </p>
-
         </div>
 
     </div>
 
 </section>
 
-<!-- ================================
-     CTA
-================================ -->
+<!-- CTA -->
 
 <div class="cta-box reveal">
 
@@ -1374,22 +1325,17 @@ section {
         più adatto al tuo progetto.
     </p>
 
-    <a href="https://wa.me/393669800153" class="btn-dark">
-
-        <span class="button-left">
-            <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+    <a href="https://wa.me/393669800153" class="btn btn-light">
+        <span class="btn-left">
+            <i class="fa-brands fa-whatsapp"></i>
             Scrivici su WhatsApp
         </span>
-
         <span>↗️</span>
-
     </a>
 
 </div>
 
-<!-- ================================
-     COME FUNZIONA
-================================ -->
+<!-- COME FUNZIONA -->
 
 <section class="reveal">
 
@@ -1404,52 +1350,38 @@ section {
 
     <div class="steps">
 
-        <div class="step-box">
-
-            <div class="num">1</div>
-
+        <div class="step-card">
+            <div class="step-number">1</div>
             <h3>Raccontaci</h3>
-
             <p>
                 Ci dici cosa hai in mente,
                 dove e quando.
             </p>
-
         </div>
 
-        <div class="step-box">
-
-            <div class="num">2</div>
-
+        <div class="step-card">
+            <div class="step-number">2</div>
             <h3>Scegliamo</h3>
-
             <p>
                 Troviamo insieme
                 il servizio più adatto.
             </p>
-
         </div>
 
-        <div class="step-box">
-
-            <div class="num">3</div>
-
+        <div class="step-card">
+            <div class="step-number">3</div>
             <h3>Creiamo</h3>
-
             <p>
                 Definiamo i dettagli
                 e diamo vita al progetto.
             </p>
-
         </div>
 
     </div>
 
 </section>
 
-<!-- ================================
-     INSTAGRAM
-================================ -->
+<!-- INSTAGRAM -->
 
 <section class="reveal">
 
@@ -1466,13 +1398,12 @@ section {
             i backstage e le nuove serate.
         </p>
 
-        <!-- SOSTITUISCI IL LINK CON IL TUO PROFILO INSTAGRAM -->
+        <!-- SOSTITUISCI CON IL LINK DEL TUO PROFILO -->
 
-        <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-outline">
+        <a href="https://www.instagram.com/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-outline">
 
             Apri Instagram
             <span>↗️</span>
@@ -1485,15 +1416,11 @@ section {
 
 </main>
 
-<!-- ================================
-     FOOTER
-================================ -->
+<!-- FOOTER -->
 
 <footer class="footer-dark" id="contatti">
 
-    <div class="section-tag">
-        Zero Sbatty
-    </div>
+    <div class="section-tag">Zero Sbatty</div>
 
     <h2>
         Il primo passo?
@@ -1507,26 +1434,20 @@ section {
 
     <div class="footer-buttons">
 
-        <a href="https://wa.me/393669800153" class="btn-dark">
-
-            <span class="button-left">
-                <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+        <a href="https://wa.me/393669800153" class="btn btn-light">
+            <span class="btn-left">
+                <i class="fa-brands fa-whatsapp"></i>
                 Thomas • 366 980 0153
             </span>
-
             <span>↗️</span>
-
         </a>
 
-        <a href="https://wa.me/393314828343" class="btn-dark">
-
-            <span class="button-left">
-                <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+        <a href="https://wa.me/393314828343" class="btn btn-light">
+            <span class="btn-left">
+                <i class="fa-brands fa-whatsapp"></i>
                 Tatiana • 331 482 8343
             </span>
-
             <span>↗️</span>
-
         </a>
 
     </div>
@@ -1534,31 +1455,22 @@ section {
 </footer>
 
 <div class="footer-bottom">
-
-    Zero Sbatty • Tati & Thomas
-    <br>
-    Video • DJ Set • Drone
-    <br>
+    Zero Sbatty • Tati & Thomas<br>
+    Video • DJ Set • Drone<br>
     Lucca • Toscana
-
 </div>
 
-<!-- ================================
-     WHATSAPP FISSO
-================================ -->
+<!-- WHATSAPP FISSO -->
 
-<a
-    href="https://wa.me/393669800153"
-    class="whatsapp-floating"
-    aria-label="Scrivi a Zero Sbatty su WhatsApp">
+<a href="https://wa.me/393669800153"
+   class="whatsapp-floating"
+   aria-label="Scrivi a Zero Sbatty su WhatsApp">
 
     <i class="fa-brands fa-whatsapp"></i>
 
 </a>
 
-<!-- ================================
-     JAVASCRIPT
-================================ -->
+<!-- JAVASCRIPT -->
 
 <script>
 
@@ -1579,18 +1491,15 @@ if ('IntersectionObserver' in window) {
                 }
             });
         },
-        {
-            threshold: 0.08
-        }
+        { threshold: 0.08 }
     );
 
     revealElements.forEach(element => {
         revealObserver.observe(element);
     });
-
 }
 
-/* VIDEO: RIPRODUZIONE QUANDO VISIBILI */
+/* VIDEO VISIBILI */
 
 const videos = document.querySelectorAll('.service-video');
 
@@ -1610,22 +1519,56 @@ if ('IntersectionObserver' in window) {
 
             });
         },
-        {
-            threshold: 0.25
-        }
+        { threshold: 0.25 }
     );
 
     videos.forEach(video => {
         videoObserver.observe(video);
     });
+}
 
-} else {
+/* ATTIVA / DISATTIVA AUDIO */
 
-    videos.forEach(video => {
-        video.play().catch(() => {});
+document.querySelectorAll('.video-sound').forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        const video = button.parentElement.querySelector('video');
+
+        const willUnmute = video.muted;
+
+        if (willUnmute) {
+
+            document.querySelectorAll('.service-video').forEach(otherVideo => {
+                otherVideo.muted = true;
+            });
+
+            document.querySelectorAll('.video-sound').forEach(otherButton => {
+                otherButton.innerHTML =
+                    '<i class="fa-solid fa-volume-xmark"></i>';
+                otherButton.setAttribute('aria-label', 'Attiva audio video');
+            });
+
+        }
+
+        video.muted = !willUnmute;
+
+        button.innerHTML = willUnmute
+            ? '<i class="fa-solid fa-volume-high"></i>'
+            : '<i class="fa-solid fa-volume-xmark"></i>';
+
+        button.setAttribute(
+            'aria-label',
+            willUnmute ? 'Disattiva audio video' : 'Attiva audio video'
+        );
+
+        if (video.paused) {
+            video.play().catch(() => {});
+        }
+
     });
 
-}
+});
 
 </script>
 
