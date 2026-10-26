@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Zero Sbatty - Tati & Thomas</title>
+    <title>Zero Sbatty | Video Promozionali, DJ Set e Drone a Lucca</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta name="description" content="Zero Sbatty di Tati & Thomas: video promozionali per attività, DJ set per eventi e matrimoni, riprese con drone a Lucca e in Toscana.">
+
+    <meta name="keywords" content="video promozionali Lucca, DJ matrimonio Lucca, DJ eventi Toscana, riprese drone Lucca, social media video Lucca, Zero Sbatty">
+
+    <meta name="author" content="Zero Sbatty - Tati & Thomas">
+
+    <meta name="theme-color" content="#232b26">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
@@ -37,6 +47,7 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
         h1,
@@ -46,41 +57,68 @@
             font-family: 'Playfair Display', serif;
         }
 
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* HEADER */
+
         header {
-            padding: 20px 24px;
+            padding: 18px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid var(--border-color);
-            font-size: 0.9rem;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(247, 244, 237, 0.92);
+            backdrop-filter: blur(12px);
         }
 
         .brand-name {
             font-family: 'Playfair Display', serif;
             font-size: 1.1rem;
             font-weight: 600;
+            white-space: nowrap;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 14px;
         }
 
         nav a {
             color: var(--text-main);
             text-decoration: none;
-            margin-left: 15px;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
+            transition: color 0.2s ease;
         }
 
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* CONTENITORE */
+
         .container {
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
             padding: 40px 24px;
         }
 
+        /* HERO */
+
         .hero {
             text-align: center;
-            padding: 40px 0 60px;
+            padding: 70px 0 80px;
         }
 
         .subtitle-top {
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--accent-gold);
@@ -89,8 +127,8 @@
         }
 
         h1 {
-            font-size: 2.8rem;
-            line-height: 1.15;
+            font-size: clamp(2.8rem, 8vw, 4.4rem);
+            line-height: 1.05;
             margin-bottom: 24px;
             font-weight: 400;
         }
@@ -104,38 +142,53 @@
         .hero p {
             color: var(--text-muted);
             font-size: 1rem;
-            margin-bottom: 35px;
-            padding: 0 10px;
+            margin: 0 auto 35px;
+            max-width: 560px;
         }
+
+        /* BOTTONI */
 
         .btn-dark {
             background-color: var(--dark-box);
             color: #fff;
-            padding: 16px 24px;
+            padding: 16px 22px;
             text-decoration: none;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.95rem;
+            font-size: 0.94rem;
             margin-bottom: 12px;
-            border-radius: 2px;
-            transition: opacity 0.2s;
+            border-radius: 7px;
+            transition:
+                transform 0.2s ease,
+                opacity 0.2s ease;
         }
 
         .btn-dark:hover {
-            opacity: 0.9;
+            opacity: 0.95;
+            transform: translateY(-2px);
         }
 
         .btn-outline {
             background: transparent;
             color: var(--text-main);
             border: 1px solid var(--text-main);
-            padding: 14px 24px;
+            padding: 14px 22px;
             text-decoration: none;
             display: block;
             text-align: center;
-            font-size: 0.95rem;
-            border-radius: 2px;
+            font-size: 0.94rem;
+            border-radius: 7px;
+            transition: background 0.2s ease;
+        }
+
+        .btn-outline:hover {
+            background: rgba(0,0,0,0.03);
+        }
+
+        .button-label {
+            display: flex;
+            align-items: center;
         }
 
         .whatsapp-icon {
@@ -144,18 +197,15 @@
             margin-right: 9px;
         }
 
-        .button-label {
-            display: flex;
-            align-items: center;
-        }
+        /* SEZIONI */
 
         section {
-            padding: 60px 0;
+            padding: 70px 0;
             border-top: 1px solid var(--border-color);
         }
 
         .section-tag {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             color: var(--accent-gold);
@@ -164,10 +214,10 @@
         }
 
         .section-title {
-            font-size: 2.2rem;
+            font-size: clamp(2.1rem, 7vw, 3rem);
             margin-bottom: 20px;
             font-weight: 400;
-            line-height: 1.2;
+            line-height: 1.15;
         }
 
         .section-title span {
@@ -178,9 +228,11 @@
 
         .section-desc {
             color: var(--text-muted);
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             font-size: 0.95rem;
         }
+
+        /* SERVIZI */
 
         .service-list {
             list-style: none;
@@ -203,22 +255,70 @@
             font-style: italic;
         }
 
+        /* VIDEO */
+
         .video-container {
             width: 100%;
             display: flex;
             justify-content: center;
-            margin: 35px 0;
+            margin: 35px 0 30px;
         }
 
         .service-video {
             width: 100%;
-            max-width: 360px;
+            max-width: 370px;
             aspect-ratio: 9 / 16;
             object-fit: cover;
             background-color: #000;
-            border-radius: 14px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-radius: 18px;
+
+            box-shadow:
+                0 18px 45px rgba(0, 0, 0, 0.16);
         }
+
+        .video-label {
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            margin-bottom: -15px;
+        }
+
+        /* LAVORI */
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .work-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 22px;
+        }
+
+        .work-card .icon {
+            font-size: 1.5rem;
+            margin-bottom: 14px;
+            color: var(--accent-gold);
+        }
+
+        .work-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .work-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* COME FUNZIONA */
 
         .step-box {
             margin-bottom: 35px;
@@ -243,10 +343,35 @@
             font-size: 0.9rem;
         }
 
+        /* SOCIAL */
+
+        .social-box {
+            text-align: center;
+        }
+
+        .instagram-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+            padding: 14px 22px;
+            border: 1px solid var(--text-main);
+            border-radius: 7px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .instagram-btn i {
+            font-size: 1.25rem;
+        }
+
+        /* FOOTER */
+
         .footer-dark {
             background-color: var(--dark-box);
             color: #fff;
-            padding: 60px 24px;
+            padding: 65px 24px;
             text-align: center;
         }
 
@@ -280,36 +405,98 @@
             color: #8c938f;
         }
 
-        @media (max-width: 500px) {
+        /* WHATSAPP FISSO */
+
+        .whatsapp-floating {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            width: 58px;
+            height: 58px;
+
+            border-radius: 50%;
+
+            background: var(--whatsapp);
+            color: #fff;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none;
+
+            font-size: 1.8rem;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.25);
+
+            z-index: 9999;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .whatsapp-floating:hover {
+            transform: scale(1.07);
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* ANIMAZIONI */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
             header {
-                padding: 18px 14px;
+                padding: 16px 12px;
             }
 
             .brand-name {
-                font-size: 0.95rem;
+                font-size: 0.94rem;
+            }
+
+            nav {
+                gap: 8px;
             }
 
             nav a {
-                margin-left: 8px;
-                font-size: 0.7rem;
+                font-size: 0.68rem;
             }
 
-            h1 {
-                font-size: 2.5rem;
+            .container {
+                padding-left: 20px;
+                padding-right: 20px;
             }
 
-            .section-title {
-                font-size: 2rem;
+            .hero {
+                padding-top: 55px;
             }
 
             .service-video {
-                max-width: 330px;
+                max-width: 340px;
             }
         }
+
     </style>
 </head>
 
 <body>
+
+    <!-- HEADER -->
 
     <header>
         <div class="brand-name">Tati & Thomas</div>
@@ -322,9 +509,12 @@
         </nav>
     </header>
 
+
     <div class="container">
 
-        <div class="hero">
+        <!-- HERO -->
+
+        <div class="hero reveal">
 
             <div class="subtitle-top">
                 Zero Sbatty • Video Promozionali • DJ Set • Drone
@@ -336,9 +526,9 @@
             </h1>
 
             <p>
-                Siamo Tati & Thomas. Creiamo video promozionali per le attività,
-                accompagniamo feste, eventi e matrimoni con la musica
-                e raccontiamo luoghi ed eventi con riprese dal cielo.
+                Siamo Tati & Thomas. Creiamo contenuti promozionali per attività,
+                DJ set per feste, eventi e matrimoni e riprese con drone
+                per raccontare ogni progetto da una prospettiva diversa.
             </p>
 
             <a href="https://wa.me/393669800153" class="btn-dark">
@@ -346,6 +536,7 @@
                     <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
                     Raccontateci la vostra idea
                 </span>
+
                 <span>↗️</span>
             </a>
 
@@ -356,9 +547,9 @@
         </div>
 
 
-        <!-- 1. VIDEO PROMOZIONALI -->
+        <!-- VIDEO PROMOZIONALI -->
 
-        <section id="video">
+        <section id="video" class="reveal">
 
             <div class="section-tag">
                 1. Video Promozionali
@@ -370,19 +561,12 @@
             </h2>
 
             <p class="section-desc">
-                Con Zero Sbatty realizziamo video pubblicitari e promozionali
-                per raccontare la tua attività, presentare i tuoi prodotti
-                e dare spazio ai tuoi servizi.
-            </p>
-
-            <p class="section-desc">
-                Dall'idea alle riprese, fino al montaggio:
-                trasformiamo quello che fai in contenuti pensati
-                per i social e la comunicazione della tua attività.
+                Realizziamo video promozionali per attività, prodotti,
+                servizi ed eventi, pensati per catturare l'attenzione
+                sui social e valorizzare quello che fai.
             </p>
 
             <ul class="service-list">
-
                 <li>
                     <span>01</span>
                     Spot pubblicitari e video promozionali
@@ -390,18 +574,18 @@
 
                 <li>
                     <span>02</span>
-                    Reel e contenuti per i social
+                    Reel e contenuti social
                 </li>
 
                 <li>
                     <span>03</span>
                     Video per prodotti, servizi ed eventi
                 </li>
-
             </ul>
 
-
-            <!-- VIDEO PROMOZIONALE = FILE 4 -->
+            <div class="video-label">
+                Guarda un nostro lavoro
+            </div>
 
             <div class="video-container">
 
@@ -411,7 +595,6 @@
                     muted
                     loop
                     playsinline
-                    controls
                     preload="metadata">
 
                     <source
@@ -422,21 +605,21 @@
 
             </div>
 
-
             <a href="https://wa.me/393669800153" class="btn-dark">
                 <span class="button-label">
                     <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
                     Parliamo del tuo prossimo video
                 </span>
+
                 <span>↗️</span>
             </a>
 
         </section>
 
 
-        <!-- 2. DJ SET -->
+        <!-- DJ SET -->
 
-        <section id="dj">
+        <section id="dj" class="reveal">
 
             <div class="section-tag">
                 2. DJ Set
@@ -448,13 +631,12 @@
             </h2>
 
             <p class="section-desc">
-                Ci sono canzoni che parlano di voi e altre che fanno
-                alzare tutti dalla sedia. Costruiamo insieme il percorso
-                musicale della vostra festa o del vostro matrimonio.
+                Creiamo il percorso musicale della vostra serata:
+                dall'atmosfera dell'aperitivo fino al momento
+                in cui la pista si riempie.
             </p>
 
             <ul class="service-list">
-
                 <li>
                     <span>01</span>
                     Aperitivo e inizio della festa
@@ -469,11 +651,11 @@
                     <span>03</span>
                     DJ Set fino all'ultima canzone
                 </li>
-
             </ul>
 
-
-            <!-- VIDEO DJ SET = FILE 6 -->
+            <div class="video-label">
+                Vivi l'atmosfera
+            </div>
 
             <div class="video-container">
 
@@ -483,7 +665,6 @@
                     muted
                     loop
                     playsinline
-                    controls
                     preload="metadata">
 
                     <source
@@ -494,21 +675,21 @@
 
             </div>
 
-
             <a href="https://wa.me/393669800153" class="btn-dark">
                 <span class="button-label">
                     <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
                     Parliamo della vostra musica
                 </span>
+
                 <span>↗️</span>
             </a>
 
         </section>
 
 
-        <!-- 3. DRONE -->
+        <!-- DRONE -->
 
-        <section id="drone">
+        <section id="drone" class="reveal">
 
             <div class="section-tag">
                 3. Drone
@@ -520,18 +701,18 @@
             </h2>
 
             <p class="section-desc">
-                Location, paesaggi, attività ed eventi:
-                le riprese con drone permettono di raccontare
-                ogni progetto da un punto di vista completamente diverso.
+                Riprese aeree per location, eventi, matrimoni,
+                attività e contenuti promozionali.
             </p>
 
             <p class="section-desc">
-                Realizziamo riprese aeree per matrimoni,
-                eventi, attività e contenuti promozionali.
+                Un punto di vista diverso per rendere
+                il racconto ancora più spettacolare.
             </p>
 
-
-            <!-- VIDEO DRONE = FILE 5 -->
+            <div class="video-label">
+                Guarda dall'alto
+            </div>
 
             <div class="video-container">
 
@@ -541,7 +722,6 @@
                     muted
                     loop
                     playsinline
-                    controls
                     preload="metadata">
 
                     <source
@@ -552,21 +732,85 @@
 
             </div>
 
-
             <a href="https://wa.me/393669800153" class="btn-dark">
                 <span class="button-label">
                     <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-                    Chiedete informazioni sul drone
+                    Chiedi informazioni sul drone
                 </span>
+
                 <span>↗️</span>
             </a>
 
         </section>
 
 
+        <!-- I NOSTRI LAVORI -->
+
+        <section class="reveal">
+
+            <div class="section-tag">
+                Portfolio
+            </div>
+
+            <h2 class="section-title">
+                I nostri
+                <span>lavori.</span>
+            </h2>
+
+            <p class="section-desc">
+                Tre servizi diversi, un unico obiettivo:
+                creare qualcosa che le persone ricordino.
+            </p>
+
+            <div class="work-grid">
+
+                <div class="work-card">
+                    <div class="icon">
+                        <i class="fa-solid fa-clapperboard"></i>
+                    </div>
+
+                    <h3>Attività e brand</h3>
+
+                    <p>
+                        Reel, spot e contenuti promozionali
+                        per raccontare prodotti e servizi.
+                    </p>
+                </div>
+
+                <div class="work-card">
+                    <div class="icon">
+                        <i class="fa-solid fa-headphones"></i>
+                    </div>
+
+                    <h3>Feste ed eventi</h3>
+
+                    <p>
+                        DJ set studiati per accompagnare
+                        ogni momento della serata.
+                    </p>
+                </div>
+
+                <div class="work-card">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-arrow"></i>
+                    </div>
+
+                    <h3>Riprese aeree</h3>
+
+                    <p>
+                        Video con drone per location,
+                        eventi e contenuti promozionali.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
         <!-- COME FUNZIONA -->
 
-        <section>
+        <section class="reveal">
 
             <div class="section-tag">
                 Si comincia da voi
@@ -579,46 +823,89 @@
 
             <div class="step-box">
 
-                <div class="num">01</div>
+                <div class="num">
+                    01
+                </div>
 
-                <h3>Raccontateci</h3>
+                <h3>
+                    Raccontateci
+                </h3>
 
                 <p>
-                    La vostra attività, l'evento,
-                    la festa o il matrimonio:
-                    raccontateci cosa avete in mente.
+                    Raccontateci la vostra attività,
+                    il vostro evento o il vostro progetto.
                 </p>
 
             </div>
-
 
             <div class="step-box">
 
-                <div class="num">02</div>
+                <div class="num">
+                    02
+                </div>
 
-                <h3>Scegliamo insieme</h3>
+                <h3>
+                    Scegliamo insieme
+                </h3>
 
                 <p>
-                    Video promozionali, DJ Set o riprese con drone:
-                    scegliamo insieme il servizio più adatto alla vostra idea.
+                    Video, DJ Set o Drone:
+                    troviamo il servizio più adatto.
                 </p>
 
             </div>
-
 
             <div class="step-box">
 
-                <div class="num">03</div>
+                <div class="num">
+                    03
+                </div>
 
-                <h3>Definiamo i dettagli</h3>
+                <h3>
+                    Creiamo
+                </h3>
 
                 <p>
-                    Definiamo contenuti, tempi e dettagli
-                    e prepariamo una proposta dedicata
-                    al vostro progetto.
+                    Definiamo i dettagli e trasformiamo
+                    l'idea in un progetto concreto.
                 </p>
 
             </div>
+
+        </section>
+
+
+        <!-- INSTAGRAM -->
+
+        <section class="social-box reveal">
+
+            <div class="section-tag">
+                Social
+            </div>
+
+            <h2 class="section-title">
+                Seguici
+                <span>su Instagram.</span>
+            </h2>
+
+            <p class="section-desc">
+                Guarda i nostri ultimi lavori,
+                i backstage e i nuovi progetti.
+            </p>
+
+            <!-- INSERISCI QUI IL LINK DEL VOSTRO INSTAGRAM -->
+
+            <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="instagram-btn">
+
+                <i class="fa-brands fa-instagram"></i>
+
+                Instagram Zero Sbatty
+
+            </a>
 
         </section>
 
@@ -641,9 +928,7 @@
         <p>
             Scriveteci su WhatsApp per informazioni,
             disponibilità e preventivi.
-            Raccontateci la vostra idea e il servizio che vi interessa.
         </p>
-
 
         <a
             href="https://wa.me/393669800153"
@@ -651,14 +936,16 @@
             style="border: 1px solid rgba(255,255,255,0.2); margin-bottom: 15px;">
 
             <span class="button-label">
+
                 <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+
                 SCRIVI A THOMAS • 3669800153
+
             </span>
 
             <span>↗️</span>
 
         </a>
-
 
         <a
             href="https://wa.me/393314828343"
@@ -666,8 +953,11 @@
             style="border: 1px solid rgba(255,255,255,0.2);">
 
             <span class="button-label">
+
                 <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+
                 SCRIVI A TATIANA • 3314828343
+
             </span>
 
             <span>↗️</span>
@@ -678,10 +968,66 @@
 
 
     <div class="footer-bottom">
-        Zero Sbatty • Tati & Thomas • Video, DJ Set e Drone
+
+        Zero Sbatty • Tati & Thomas
         <br>
-        Le vostre storie. La nostra creatività.
+
+        Video Promozionali • DJ Set • Drone
+        <br><br>
+
+        Lucca • Toscana
+
     </div>
+
+
+    <!-- WHATSAPP FISSO -->
+
+    <a
+        href="https://wa.me/393669800153"
+        class="whatsapp-floating"
+        aria-label="Scrivi su WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+    <!-- ANIMAZIONI -->
+
+    <script>
+
+        const revealElements =
+            document.querySelectorAll('.reveal');
+
+        const observer =
+            new IntersectionObserver(
+                (entries) => {
+
+                    entries.forEach(
+                        (entry) => {
+
+                            if (entry.isIntersecting) {
+
+                                entry.target.classList.add('visible');
+
+                                observer.unobserve(entry.target);
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+        revealElements.forEach(
+            (element) => observer.observe(element)
+        );
+
+    </script>
 
 </body>
 </html>
