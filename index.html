@@ -9,7 +9,7 @@
 
 <meta name="description" content="Zero Sbatty di Tati & Thomas. Video promozionali, DJ set per eventi e matrimoni e riprese con drone a Lucca e in Toscana.">
 
-<meta name="theme-color" content="#f7f4ed">
+<meta name="theme-color" content="#232b26">
 
 <link rel="canonical" href="https://www.zerosbatty.com/">
 
@@ -19,22 +19,17 @@
 
 <style>
 
-/* ==========================
-   ZERO SBATTY
-   BEIGE & ORO
-========================== */
+/* COLORI */
 
 :root {
     --bg: #f7f4ed;
     --soft: #efe9dc;
-    --cream: #f3eadc;
+    --dark: #232b26;
+    --dark2: #18201c;
     --gold: #a67c52;
     --goldlight: #c6a27c;
-    --goldpale: #e7d6bf;
-    --text: #292620;
-    --muted: #706b63;
-    --border: #ded3c3;
-    --white: #ffffff;
+    --muted: #68655e;
+    --border: #dfd8c9;
     --green: #25d366;
 }
 
@@ -49,7 +44,7 @@ html {
 
 body {
     margin: 0;
-    color: var(--text);
+    color: var(--dark);
     background:
         radial-gradient(
             circle at top right,
@@ -85,9 +80,7 @@ button {
     margin-inline: auto;
 }
 
-/* ==========================
-   HEADER
-========================== */
+/* HEADER */
 
 header {
     position: sticky;
@@ -96,7 +89,6 @@ header {
     background: rgba(247,244,237,.94);
     border-bottom: 1px solid var(--border);
     backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
 }
 
 .nav {
@@ -134,20 +126,13 @@ header {
 }
 
 .navlinks .navbtn {
-    background: var(--gold);
+    background: var(--dark);
     color: white;
     padding: 12px 22px;
     border-radius: 100px;
 }
 
-.navlinks .navbtn:hover {
-    background: #926843;
-    color: white;
-}
-
-/* ==========================
-   ELEMENTI COMUNI
-========================== */
+/* ELEMENTI COMUNI */
 
 .eyebrow {
     font-size: .74rem;
@@ -181,28 +166,27 @@ header {
 }
 
 .btn-dark {
-    background: var(--gold);
+    background: var(--dark);
     color: white;
-    box-shadow: 0 12px 28px rgba(166,124,82,.18);
+    box-shadow: 0 12px 28px rgba(35,43,38,.15);
 }
 
 .btn-dark:hover {
-    background: #926843;
+    background: #35443a;
 }
 
 .btn-outline {
-    border: 1px solid var(--gold);
+    border: 1px solid var(--dark);
     background: rgba(255,255,255,.4);
-    color: var(--text);
 }
 
 .btn-white {
-    background: var(--gold);
-    color: white;
+    background: white;
+    color: var(--dark);
 }
 
 .btn .fa-whatsapp {
-    color: white;
+    color: var(--green);
     font-size: 1.2rem;
 }
 
@@ -228,9 +212,7 @@ header {
     max-width: 620px;
 }
 
-/* ==========================
-   HERO
-========================== */
+/* HERO */
 
 .hero {
     position: relative;
@@ -290,9 +272,7 @@ header {
     gap: 12px;
 }
 
-/* ==========================
-   RIQUADRO INIZIALE
-========================== */
+/* RIQUADRO DECORATIVO */
 
 .hero-art {
     position: relative;
@@ -305,17 +285,11 @@ header {
     position: relative;
     width: min(100%, 430px);
     min-height: 460px;
-    background:
-        linear-gradient(
-            145deg,
-            #f3e8d8,
-            #e9d6bd
-        );
-    border: 1px solid #ddc5a8;
+    background: var(--dark);
     border-radius: 36px;
     padding: 48px 34px;
-    color: var(--text);
-    box-shadow: 0 30px 70px rgba(166,124,82,.13);
+    color: white;
+    box-shadow: 0 30px 70px rgba(35,43,38,.18);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -325,7 +299,7 @@ header {
 .hero-panel::before {
     content: "";
     position: absolute;
-    border: 1px solid rgba(166,124,82,.25);
+    border: 1px solid rgba(198,162,124,.23);
     border-radius: 50%;
     width: 400px;
     height: 400px;
@@ -334,7 +308,7 @@ header {
 }
 
 .hero-panel .small {
-    color: var(--gold);
+    color: var(--goldlight);
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: .74rem;
@@ -350,14 +324,14 @@ header {
 }
 
 .hero-panel h2 em {
-    color: var(--gold);
+    color: var(--goldlight);
 }
 
 .hero-panel-bottom {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
-    border-top: 1px solid rgba(166,124,82,.25);
+    border-top: 1px solid rgba(255,255,255,.2);
     padding-top: 22px;
 }
 
@@ -368,14 +342,12 @@ header {
 
 .hero-panel-bottom i {
     display: block;
-    color: var(--gold);
+    color: var(--goldlight);
     font-size: 1.35rem;
     margin-bottom: 8px;
 }
 
-/* ==========================
-   BARRA SERVIZI
-========================== */
+/* BARRA SERVIZI */
 
 .servicebar {
     display: grid;
@@ -409,9 +381,7 @@ header {
     background: white;
 }
 
-/* ==========================
-   SERVIZI
-========================== */
+/* SERVIZI */
 
 .service-grid {
     display: grid;
@@ -459,9 +429,7 @@ header {
     font-weight: 400;
 }
 
-/* ==========================
-   VIDEO SENZA BORDO BIANCO
-========================== */
+/* VIDEO VERTICALI */
 
 .media {
     width: 100%;
@@ -489,24 +457,23 @@ header {
 }
 
 .video-shell {
-    padding: 0;
-    border: none;
-    border-radius: 30px;
-    background: transparent;
-    box-shadow: 0 25px 65px rgba(72,54,35,.15);
-    overflow: hidden;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 36px;
+    background: rgba(255,255,255,.72);
+    box-shadow: 0 25px 70px rgba(35,43,38,.12);
     transition: transform .35s, box-shadow .35s;
 }
 
 .video-shell:hover {
     transform: translateY(-6px);
-    box-shadow: 0 32px 80px rgba(72,54,35,.19);
+    box-shadow: 0 32px 80px rgba(35,43,38,.18);
 }
 
 .video-frame {
     aspect-ratio: 9 / 16;
     overflow: hidden;
-    border-radius: 30px;
+    border-radius: 27px;
     background: #202020;
 }
 
@@ -530,9 +497,7 @@ header {
     color: var(--gold);
 }
 
-/* ==========================
-   PORTFOLIO
-========================== */
+/* PORTFOLIO */
 
 .cards,
 .steps {
@@ -544,7 +509,7 @@ header {
 
 .card,
 .step {
-    background: rgba(255,255,255,.5);
+    background: rgba(255,255,255,.58);
     border: 1px solid var(--border);
     border-radius: 27px;
     padding: 42px 35px;
@@ -554,7 +519,7 @@ header {
 .card:hover,
 .step:hover {
     transform: translateY(-6px);
-    box-shadow: 0 22px 55px rgba(166,124,82,.12);
+    box-shadow: 0 22px 55px rgba(35,43,38,.1);
 }
 
 .card i {
@@ -589,9 +554,7 @@ header {
     margin-bottom: 26px;
 }
 
-/* ==========================
-   CHI SIAMO
-========================== */
+/* CHI SIAMO */
 
 .about {
     display: grid;
@@ -603,27 +566,21 @@ header {
 .about-visual {
     min-height: 440px;
     border-radius: 36px;
-    background:
-        linear-gradient(
-            145deg,
-            #f0e3d1,
-            #e7d1b6
-        );
-    border: 1px solid #ddc5a8;
+    background: var(--dark);
     display: grid;
     place-items: center;
     position: relative;
     overflow: hidden;
     text-align: center;
     padding: 30px;
-    color: var(--text);
+    color: white;
 }
 
 .about-visual::before,
 .about-visual::after {
     content: "";
     position: absolute;
-    border: 1px solid rgba(166,124,82,.25);
+    border: 1px solid rgba(198,162,124,.25);
     border-radius: 50%;
     width: 350px;
     height: 350px;
@@ -642,7 +599,7 @@ header {
 }
 
 .about-visual h3 em {
-    color: var(--gold);
+    color: var(--goldlight);
 }
 
 .about-visual small {
@@ -650,26 +607,18 @@ header {
     bottom: 38px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--muted);
+    color: rgba(255,255,255,.6);
 }
 
-/* ==========================
-   GRANDE INVITO
-========================== */
+/* SEZIONE CONTATTACI */
 
 .cta {
     margin: 50px 0;
     border-radius: 36px;
     padding: 100px 25px;
     text-align: center;
-    color: var(--text);
-    background:
-        linear-gradient(
-            135deg,
-            #f1e5d5,
-            #e7d3ba
-        );
-    border: 1px solid #dcc5a8;
+    color: white;
+    background: var(--dark);
     position: relative;
     overflow: hidden;
 }
@@ -677,7 +626,7 @@ header {
 .cta::before {
     content: "";
     position: absolute;
-    border: 1px solid rgba(166,124,82,.25);
+    border: 1px solid rgba(198,162,124,.2);
     border-radius: 50%;
     width: 470px;
     height: 470px;
@@ -690,7 +639,7 @@ header {
 }
 
 .cta .eyebrow {
-    color: var(--gold);
+    color: var(--goldlight);
 }
 
 .cta h2 {
@@ -701,22 +650,20 @@ header {
 
 .cta h2 em {
     display: block;
-    color: var(--gold);
+    color: var(--goldlight);
 }
 
 .cta p {
-    color: var(--muted);
+    color: rgba(255,255,255,.74);
     max-width: 590px;
     margin: 0 auto 32px;
 }
 
-/* ==========================
-   INSTAGRAM
-========================== */
+/* INSTAGRAM */
 
 .social {
     border: 1px solid var(--border);
-    background: rgba(255,255,255,.5);
+    background: rgba(255,255,255,.55);
     border-radius: 30px;
     max-width: 1050px;
     margin: auto;
@@ -730,7 +677,7 @@ header {
     width: 74px;
     height: 74px;
     border-radius: 50%;
-    background: var(--gold);
+    background: var(--dark);
     color: white;
     font-size: 1.9rem;
     margin: 0 auto 25px;
@@ -746,25 +693,17 @@ header {
     margin-bottom: 25px;
 }
 
-/* ==========================
-   FOOTER BEIGE
-========================== */
+/* FOOTER */
 
 footer {
-    background:
-        linear-gradient(
-            135deg,
-            #eee0ce,
-            #e6d0b5
-        );
-    border-top: 1px solid #d8c0a2;
-    color: var(--text);
+    background: var(--dark);
+    color: white;
     text-align: center;
     padding: 100px 20px 80px;
 }
 
 footer .eyebrow {
-    color: var(--gold);
+    color: var(--goldlight);
 }
 
 footer h2 {
@@ -775,11 +714,11 @@ footer h2 {
 
 footer h2 em {
     display: block;
-    color: var(--gold);
+    color: var(--goldlight);
 }
 
 footer p {
-    color: var(--muted);
+    color: rgba(255,255,255,.68);
     max-width: 570px;
     margin: 0 auto 32px;
 }
@@ -796,16 +735,14 @@ footer p {
 }
 
 .bottom {
-    background: #e7d6c0;
-    color: var(--muted);
+    background: var(--dark2);
+    color: rgba(255,255,255,.55);
     text-align: center;
     padding: 32px 20px;
     font-size: .82rem;
 }
 
-/* ==========================
-   WHATSAPP FISSO
-========================== */
+/* WHATSAPP FISSO */
 
 .floating {
     position: fixed;
@@ -828,9 +765,7 @@ footer p {
     transform: scale(1.1);
 }
 
-/* ==========================
-   ANIMAZIONI
-========================== */
+/* ANIMAZIONI */
 
 .reveal {
     opacity: 1;
@@ -848,9 +783,7 @@ footer p {
     transform: translateY(0);
 }
 
-/* ==========================
-   TABLET
-========================== */
+/* TABLET */
 
 @media(max-width: 1050px) {
 
@@ -899,9 +832,7 @@ footer p {
     }
 }
 
-/* ==========================
-   SMARTPHONE
-========================== */
+/* SMARTPHONE */
 
 @media(max-width: 650px) {
 
@@ -929,7 +860,7 @@ footer p {
     .navlinks .navbtn {
         padding: 0;
         background: transparent;
-        color: var(--text);
+        color: var(--dark);
     }
 
     .hero {
@@ -998,9 +929,13 @@ footer p {
         max-width: 370px;
     }
 
-    .video-shell,
+    .video-shell {
+        padding: 8px;
+        border-radius: 27px;
+    }
+
     .video-frame {
-        border-radius: 23px;
+        border-radius: 21px;
     }
 
     .card,
