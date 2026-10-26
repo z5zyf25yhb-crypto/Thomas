@@ -8,6 +8,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <style>
         :root {
             --bg-color: #f7f4ed;
@@ -16,6 +18,7 @@
             --accent-gold: #a67c52;
             --dark-box: #232b26;
             --border-color: #e3decb;
+            --whatsapp: #25D366;
         }
 
         * {
@@ -133,6 +136,17 @@
             text-align: center;
             font-size: 0.95rem;
             border-radius: 2px;
+        }
+
+        .whatsapp-icon {
+            color: var(--whatsapp);
+            font-size: 1.25rem;
+            margin-right: 9px;
+        }
+
+        .button-label {
+            display: flex;
+            align-items: center;
         }
 
         section {
@@ -297,8 +311,6 @@
 
 <body>
 
-    <!-- HEADER -->
-
     <header>
         <div class="brand-name">Tati & Thomas</div>
 
@@ -310,10 +322,7 @@
         </nav>
     </header>
 
-
     <div class="container">
-
-        <!-- HOME -->
 
         <div class="hero">
 
@@ -333,7 +342,10 @@
             </p>
 
             <a href="https://wa.me/393669800153" class="btn-dark">
-                <span>Raccontateci la vostra idea</span>
+                <span class="button-label">
+                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+                    Raccontateci la vostra idea
+                </span>
                 <span>↗️</span>
             </a>
 
@@ -370,6 +382,7 @@
             </p>
 
             <ul class="service-list">
+
                 <li>
                     <span>01</span>
                     Spot pubblicitari e video promozionali
@@ -384,6 +397,7 @@
                     <span>03</span>
                     Video per prodotti, servizi ed eventi
                 </li>
+
             </ul>
 
 
@@ -410,7 +424,10 @@
 
 
             <a href="https://wa.me/393669800153" class="btn-dark">
-                <span>Parliamo del tuo prossimo video</span>
+                <span class="button-label">
+                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+                    Parliamo del tuo prossimo video
+                </span>
                 <span>↗️</span>
             </a>
 
@@ -456,7 +473,7 @@
             </ul>
 
 
-            <!-- VIDEO DJ SET = FILE 5 -->
+            <!-- VIDEO DJ SET = FILE 6 -->
 
             <div class="video-container">
 
@@ -470,7 +487,7 @@
                     preload="metadata">
 
                     <source
-                        src="copy_B2276401-2368-4DED-8DC2-C6F072DA6D60 5.mov"
+                        src="copy_B2276401-2368-4DED-8DC2-C6F072DA6D60 6.mov"
                         type="video/quicktime">
 
                 </video>
@@ -479,7 +496,10 @@
 
 
             <a href="https://wa.me/393669800153" class="btn-dark">
-                <span>Parliamo della vostra musica</span>
+                <span class="button-label">
+                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+                    Parliamo della vostra musica
+                </span>
                 <span>↗️</span>
             </a>
 
@@ -511,7 +531,7 @@
             </p>
 
 
-            <!-- VIDEO DRONE = FILE 6 -->
+            <!-- VIDEO DRONE = FILE 5 -->
 
             <div class="video-container">
 
@@ -525,7 +545,7 @@
                     preload="metadata">
 
                     <source
-                        src="copy_B2276401-2368-4DED-8DC2-C6F072DA6D60 6.mov"
+                        src="copy_B2276401-2368-4DED-8DC2-C6F072DA6D60 5.mov"
                         type="video/quicktime">
 
                 </video>
@@ -533,8 +553,12 @@
             </div>
 
 
-            <a href="https://wa.me/393669800153" class="btn-outline">
-                Chiedete informazioni sul drone ↗️
+            <a href="https://wa.me/393669800153" class="btn-dark">
+                <span class="button-label">
+                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+                    Chiedete informazioni sul drone
+                </span>
+                <span>↗️</span>
             </a>
 
         </section>
@@ -620,18 +644,18 @@
             Raccontateci la vostra idea e il servizio che vi interessa.
         </p>
 
+
         <a
             href="https://wa.me/393669800153"
             class="btn-dark"
             style="border: 1px solid rgba(255,255,255,0.2); margin-bottom: 15px;">
 
-            <span>
+            <span class="button-label">
+                <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
                 SCRIVI A THOMAS • 3669800153
             </span>
 
-            <span>
-                ↗️
-            </span>
+            <span>↗️</span>
 
         </a>
 
@@ -641,13 +665,12 @@
             class="btn-dark"
             style="border: 1px solid rgba(255,255,255,0.2);">
 
-            <span>
+            <span class="button-label">
+                <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
                 SCRIVI A TATIANA • 3314828343
             </span>
 
-            <span>
-                ↗️
-            </span>
+            <span>↗️</span>
 
         </a>
 
