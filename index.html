@@ -2,33 +2,54 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Zero Sbatty | Video Promozionali, DJ Set e Drone a Lucca</title>
+    <title>Zero Sbatty | Video, DJ Set e Drone a Lucca</title>
 
-    <meta name="description" content="Zero Sbatty di Tati & Thomas: video promozionali per attività, DJ set per eventi e matrimoni, riprese con drone a Lucca e in Toscana.">
-
-    <meta name="keywords" content="video promozionali Lucca, DJ matrimonio Lucca, DJ eventi Toscana, riprese drone Lucca, social media video Lucca, Zero Sbatty">
-
-    <meta name="author" content="Zero Sbatty - Tati & Thomas">
+    <meta
+        name="description"
+        content="Zero Sbatty di Tati & Thomas: video promozionali, DJ set per eventi e matrimoni e riprese con drone a Lucca e in Toscana."
+    >
 
     <meta name="theme-color" content="#232b26">
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
     <style>
+
         :root {
-            --bg-color: #f7f4ed;
-            --text-main: #222222;
-            --text-muted: #555555;
-            --accent-gold: #a67c52;
-            --dark-box: #232b26;
-            --border-color: #e3decb;
+            --bg: #f7f4ed;
+            --bg-soft: #efe9dc;
+            --white: #ffffff;
+
+            --text: #222222;
+            --muted: #66645f;
+
+            --gold: #a67c52;
+            --gold-light: #c6a27c;
+
+            --dark: #232b26;
+            --dark-2: #18201c;
+
+            --border: #dfd8c9;
+
             --whatsapp: #25D366;
+
+            --radius-small: 12px;
+            --radius-medium: 20px;
+            --radius-large: 30px;
+
+            --shadow:
+                0 20px 60px rgba(35, 43, 38, 0.12);
         }
 
         * {
@@ -42,431 +63,910 @@
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(166,124,82,0.08),
+                    transparent 35%
+                ),
+                var(--bg);
+
+            color: var(--text);
+
+            font-family:
+                'Plus Jakarta Sans',
+                sans-serif;
+
             line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
+
+            -webkit-font-smoothing:
+                antialiased;
+
             overflow-x: hidden;
         }
 
         h1,
         h2,
-        h3,
-        .serif {
-            font-family: 'Playfair Display', serif;
+        h3 {
+            font-family:
+                'Playfair Display',
+                serif;
         }
 
         a {
-            -webkit-tap-highlight-color: transparent;
+            -webkit-tap-highlight-color:
+                transparent;
         }
 
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================== */
 
         header {
-            padding: 18px 24px;
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid var(--border-color);
 
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            padding:
+                16px 24px;
 
-            background: rgba(247, 244, 237, 0.92);
-            backdrop-filter: blur(12px);
+            background:
+                rgba(247, 244, 237, 0.88);
+
+            backdrop-filter:
+                blur(18px);
+
+            border-bottom:
+                1px solid rgba(223,216,201,0.8);
         }
 
         .brand-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size: 1.15rem;
             font-weight: 600;
+
             white-space: nowrap;
+        }
+
+        .brand-name span {
+            color: var(--gold);
+            font-style: italic;
         }
 
         nav {
             display: flex;
+            gap: 16px;
             align-items: center;
-            gap: 14px;
         }
 
         nav a {
-            color: var(--text-main);
+            color: var(--text);
+
             text-decoration: none;
-            font-size: 0.82rem;
-            transition: color 0.2s ease;
+
+            font-size: 0.78rem;
+
+            transition:
+                color .25s ease;
         }
 
         nav a:hover {
-            color: var(--accent-gold);
+            color: var(--gold);
         }
 
-        /* CONTENITORE */
+        /* =========================
+           CONTAINER
+        ========================== */
 
         .container {
-            max-width: 650px;
+            width: min(
+                100% - 40px,
+                720px
+            );
+
             margin: 0 auto;
-            padding: 40px 24px;
         }
 
-        /* HERO */
+        /* =========================
+           HERO
+        ========================== */
 
         .hero {
+            min-height: 82vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
             text-align: center;
-            padding: 70px 0 80px;
+
+            padding:
+                75px 0 90px;
         }
 
-        .subtitle-top {
-            font-size: 0.72rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--accent-gold);
-            margin-bottom: 20px;
+        .hero-badge {
+            width: fit-content;
+
+            margin:
+                0 auto 22px;
+
+            padding:
+                8px 14px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                999px;
+
+            background:
+                rgba(255,255,255,0.48);
+
+            font-size: 0.69rem;
+
+            letter-spacing: 1.5px;
+
+            text-transform:
+                uppercase;
+
+            color: var(--gold);
+
             font-weight: 600;
         }
 
-        h1 {
-            font-size: clamp(2.8rem, 8vw, 4.4rem);
-            line-height: 1.05;
-            margin-bottom: 24px;
+        .hero h1 {
+            max-width: 700px;
+
+            margin:
+                0 auto 24px;
+
+            font-size:
+                clamp(
+                    3rem,
+                    9vw,
+                    5.6rem
+                );
+
+            line-height: 0.98;
+
             font-weight: 400;
         }
 
-        h1 span {
-            font-style: italic;
-            color: var(--accent-gold);
+        .hero h1 span {
             display: block;
+
+            color: var(--gold);
+
+            font-style: italic;
         }
 
         .hero p {
-            color: var(--text-muted);
+            max-width: 580px;
+
+            margin:
+                0 auto 34px;
+
+            color: var(--muted);
+
             font-size: 1rem;
-            margin: 0 auto 35px;
-            max-width: 560px;
         }
 
-        /* BOTTONI */
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
+        /* =========================
+           BOTTONI
+        ========================== */
+
+        .btn-dark,
+        .btn-outline {
+            min-height: 54px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 15px;
+
+            padding:
+                15px 20px;
+
+            border-radius:
+                var(--radius-small);
+
+            font-size: 0.93rem;
+
+            text-decoration: none;
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease,
+                opacity .25s ease;
+        }
 
         .btn-dark {
-            background-color: var(--dark-box);
+            background: var(--dark);
             color: #fff;
-            padding: 16px 22px;
-            text-decoration: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.94rem;
-            margin-bottom: 12px;
-            border-radius: 7px;
-            transition:
-                transform 0.2s ease,
-                opacity 0.2s ease;
-        }
 
-        .btn-dark:hover {
-            opacity: 0.95;
-            transform: translateY(-2px);
+            box-shadow:
+                0 9px 22px
+                rgba(35,43,38,0.14);
         }
 
         .btn-outline {
-            background: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--text-main);
-            padding: 14px 22px;
-            text-decoration: none;
-            display: block;
-            text-align: center;
-            font-size: 0.94rem;
-            border-radius: 7px;
-            transition: background 0.2s ease;
+            color: var(--text);
+
+            border:
+                1px solid var(--text);
+
+            background:
+                rgba(255,255,255,0.18);
         }
 
+        .btn-dark:hover,
         .btn-outline:hover {
-            background: rgba(0,0,0,0.03);
+            transform:
+                translateY(-3px);
         }
 
-        .button-label {
+        .button-left {
             display: flex;
             align-items: center;
+            gap: 9px;
         }
 
         .whatsapp-icon {
             color: var(--whatsapp);
             font-size: 1.25rem;
-            margin-right: 9px;
         }
 
-        /* SEZIONI */
+        /* =========================
+           TRUST BAR
+        ========================== */
+
+        .trust-bar {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            margin-bottom: 50px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius-medium);
+
+            background:
+                rgba(255,255,255,0.42);
+
+            overflow: hidden;
+        }
+
+        .trust-item {
+            padding:
+                18px 10px;
+
+            text-align: center;
+        }
+
+        .trust-item:not(:last-child) {
+            border-right:
+                1px solid var(--border);
+        }
+
+        .trust-item i {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: var(--gold);
+
+            font-size: 1.15rem;
+        }
+
+        .trust-item span {
+            font-size: 0.72rem;
+            color: var(--muted);
+        }
+
+        /* =========================
+           SEZIONI
+        ========================== */
 
         section {
-            padding: 70px 0;
-            border-top: 1px solid var(--border-color);
+            padding:
+                75px 0;
+
+            border-top:
+                1px solid var(--border);
         }
 
         .section-tag {
-            font-size: 0.78rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--accent-gold);
-            margin-bottom: 15px;
+            margin-bottom: 14px;
+
+            color: var(--gold);
+
+            font-size: 0.75rem;
+
+            letter-spacing: 1.6px;
+
+            text-transform:
+                uppercase;
+
             font-weight: 600;
         }
 
         .section-title {
-            font-size: clamp(2.1rem, 7vw, 3rem);
             margin-bottom: 20px;
+
+            font-size:
+                clamp(
+                    2.3rem,
+                    7vw,
+                    3.5rem
+                );
+
             font-weight: 400;
-            line-height: 1.15;
+
+            line-height: 1.05;
         }
 
         .section-title span {
-            font-style: italic;
-            color: var(--accent-gold);
             display: block;
+
+            color: var(--gold);
+
+            font-style: italic;
         }
 
         .section-desc {
-            color: var(--text-muted);
-            margin-bottom: 25px;
+            margin-bottom: 22px;
+
+            color: var(--muted);
+
             font-size: 0.95rem;
         }
 
-        /* SERVIZI */
+        /* =========================
+           SERVIZI
+        ========================== */
 
         .service-list {
             list-style: none;
-            margin-bottom: 30px;
+
+            margin:
+                28px 0 32px;
         }
 
         .service-list li {
-            padding: 18px 0;
-            border-bottom: 1px solid var(--border-color);
             display: flex;
             align-items: center;
-            font-size: 0.95rem;
+
+            padding:
+                16px 0;
+
+            border-bottom:
+                1px solid var(--border);
+
+            font-size: 0.92rem;
         }
 
         .service-list span {
-            color: var(--accent-gold);
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            margin-right: 20px;
+            margin-right: 18px;
+
+            color: var(--gold);
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size: 1.15rem;
+
             font-style: italic;
         }
 
-        /* VIDEO */
+        /* =========================
+           VIDEO
+        ========================== */
 
-        .video-container {
+        .video-title {
+            margin:
+                40px 0 14px;
+
+            text-align: center;
+
+            color: var(--gold);
+
+            font-size: 0.7rem;
+
+            letter-spacing: 1.6px;
+
+            text-transform:
+                uppercase;
+        }
+
+        .video-frame {
+            position: relative;
+
             width: 100%;
-            display: flex;
-            justify-content: center;
-            margin: 35px 0 30px;
+            max-width: 370px;
+
+            margin:
+                0 auto 30px;
+
+            border-radius:
+                24px;
+
+            overflow: hidden;
+
+            background: #000;
+
+            box-shadow:
+                var(--shadow);
         }
 
         .service-video {
             width: 100%;
-            max-width: 370px;
-            aspect-ratio: 9 / 16;
+
+            aspect-ratio:
+                9 / 16;
+
+            display: block;
+
             object-fit: cover;
-            background-color: #000;
-            border-radius: 18px;
-
-            box-shadow:
-                0 18px 45px rgba(0, 0, 0, 0.16);
         }
 
-        .video-label {
-            text-align: center;
-            font-size: 0.78rem;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 1.4px;
-            margin-bottom: -15px;
+        .video-frame::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            pointer-events: none;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.15);
+
+            border-radius:
+                24px;
         }
 
-        /* LAVORI */
+        /* =========================
+           PORTFOLIO
+        ========================== */
 
-        .work-grid {
+        .portfolio-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
+            gap: 14px;
+
             margin-top: 30px;
         }
 
-        .work-card {
-            background: #fff;
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 22px;
+        .portfolio-card {
+            position: relative;
+
+            padding: 25px;
+
+            background:
+                rgba(255,255,255,0.62);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius-medium);
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
         }
 
-        .work-card .icon {
+        .portfolio-card:hover {
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                var(--shadow);
+        }
+
+        .portfolio-card i {
+            margin-bottom: 16px;
+
+            color: var(--gold);
+
             font-size: 1.5rem;
-            margin-bottom: 14px;
-            color: var(--accent-gold);
         }
 
-        .work-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 8px;
+        .portfolio-card h3 {
+            margin-bottom: 7px;
+
+            font-size: 1.35rem;
+
             font-weight: 500;
         }
 
-        .work-card p {
-            color: var(--text-muted);
+        .portfolio-card p {
+            color: var(--muted);
+
+            font-size: 0.87rem;
+        }
+
+        /* =========================
+           CTA PREMIUM
+        ========================== */
+
+        .cta-box {
+            margin:
+                25px 0;
+
+            padding:
+                40px 25px;
+
+            text-align: center;
+
+            background:
+                var(--dark);
+
+            color: white;
+
+            border-radius:
+                var(--radius-large);
+
+            box-shadow:
+                var(--shadow);
+        }
+
+        .cta-box .section-tag {
+            color: var(--gold-light);
+        }
+
+        .cta-box h2 {
+            margin-bottom: 18px;
+
+            font-size: 2.35rem;
+
+            font-weight: 400;
+
+            line-height: 1.05;
+        }
+
+        .cta-box h2 span {
+            display: block;
+
+            color: var(--gold-light);
+
+            font-style: italic;
+        }
+
+        .cta-box p {
+            margin-bottom: 25px;
+
+            color: rgba(255,255,255,0.72);
+
             font-size: 0.9rem;
         }
 
-        /* COME FUNZIONA */
-
-        .step-box {
-            margin-bottom: 35px;
+        .cta-box .btn-dark {
+            background: white;
+            color: var(--dark);
         }
 
-        .step-box .num {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: var(--accent-gold);
-            font-style: italic;
-            margin-bottom: 5px;
+        /* =========================
+           COME FUNZIONA
+        ========================== */
+
+        .steps {
+            position: relative;
+
+            margin-top: 35px;
+        }
+
+        .step-box {
+            position: relative;
+
+            padding:
+                0 0 35px 45px;
+        }
+
+        .step-box::before {
+            content: "";
+
+            position: absolute;
+
+            left: 14px;
+            top: 34px;
+
+            width: 1px;
+            height: calc(100% - 10px);
+
+            background:
+                var(--border);
+        }
+
+        .step-box:last-child::before {
+            display: none;
+        }
+
+        .num {
+            position: absolute;
+
+            left: 0;
+            top: 0;
+
+            width: 30px;
+            height: 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border:
+                1px solid var(--gold);
+
+            border-radius: 50%;
+
+            background:
+                var(--bg);
+
+            color: var(--gold);
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size: 0.8rem;
         }
 
         .step-box h3 {
-            font-size: 1.3rem;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+
+            font-size: 1.25rem;
+
             font-weight: 500;
         }
 
         .step-box p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            color: var(--muted);
+
+            font-size: 0.88rem;
         }
 
-        /* SOCIAL */
+        /* =========================
+           INSTAGRAM
+        ========================== */
 
-        .social-box {
+        .instagram-box {
+            padding:
+                35px 25px;
+
             text-align: center;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius-medium);
+
+            background:
+                rgba(255,255,255,0.5);
         }
 
-        .instagram-btn {
-            display: inline-flex;
+        .instagram-icon {
+            width: 56px;
+            height: 56px;
+
+            display: flex;
             align-items: center;
-            gap: 10px;
-            margin-top: 8px;
-            padding: 14px 22px;
-            border: 1px solid var(--text-main);
-            border-radius: 7px;
-            color: var(--text-main);
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
+            justify-content: center;
 
-        .instagram-btn i {
-            font-size: 1.25rem;
-        }
-
-        /* FOOTER */
-
-        .footer-dark {
-            background-color: var(--dark-box);
-            color: #fff;
-            padding: 65px 24px;
-            text-align: center;
-        }
-
-        .footer-dark .subtitle-top {
-            color: var(--accent-gold);
-        }
-
-        .footer-dark h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            font-weight: 400;
-        }
-
-        .footer-dark h2 span {
-            font-style: italic;
-            color: var(--accent-gold);
-            display: block;
-        }
-
-        .footer-dark p {
-            color: #b5b5b5;
-            font-size: 0.9rem;
-            margin-bottom: 35px;
-        }
-
-        .footer-bottom {
-            background-color: #1a211d;
-            padding: 30px 24px;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #8c938f;
-        }
-
-        /* WHATSAPP FISSO */
-
-        .whatsapp-floating {
-            position: fixed;
-            right: 18px;
-            bottom: 18px;
-            width: 58px;
-            height: 58px;
+            margin:
+                0 auto 18px;
 
             border-radius: 50%;
 
-            background: var(--whatsapp);
-            color: #fff;
+            background:
+                var(--dark);
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            color: white;
 
-            text-decoration: none;
+            font-size: 1.5rem;
+        }
 
-            font-size: 1.8rem;
+        .instagram-box h3 {
+            margin-bottom: 8px;
 
-            box-shadow:
-                0 8px 25px rgba(0,0,0,0.25);
+            font-size: 1.6rem;
+
+            font-weight: 400;
+        }
+
+        .instagram-box p {
+            margin-bottom: 20px;
+
+            color: var(--muted);
+
+            font-size: 0.88rem;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        .footer-dark {
+            padding:
+                70px 24px 55px;
+
+            text-align: center;
+
+            background:
+                var(--dark);
+
+            color: white;
+        }
+
+        .footer-dark h2 {
+            margin-bottom: 18px;
+
+            font-size: 2.5rem;
+
+            font-weight: 400;
+
+            line-height: 1.05;
+        }
+
+        .footer-dark h2 span {
+            display: block;
+
+            color: var(--gold-light);
+
+            font-style: italic;
+        }
+
+        .footer-dark p {
+            max-width: 500px;
+
+            margin:
+                0 auto 30px;
+
+            color:
+                rgba(255,255,255,0.68);
+
+            font-size: 0.9rem;
+        }
+
+        .footer-buttons {
+            width: min(
+                100%,
+                600px
+            );
+
+            margin: auto;
+        }
+
+        .footer-bottom {
+            padding:
+                28px 20px;
+
+            background:
+                var(--dark-2);
+
+            color:
+                rgba(255,255,255,0.48);
+
+            text-align: center;
+
+            font-size: 0.75rem;
+        }
+
+        /* =========================
+           WHATSAPP FLOATING
+        ========================== */
+
+        .whatsapp-floating {
+            position: fixed;
+
+            right: 18px;
+            bottom: 18px;
 
             z-index: 9999;
 
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
-        }
+            width: 58px;
+            height: 58px;
 
-        .whatsapp-floating:hover {
-            transform: scale(1.07);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                var(--whatsapp);
+
+            color: white;
+
+            font-size: 1.75rem;
+
+            text-decoration: none;
+
             box-shadow:
-                0 10px 30px rgba(0,0,0,0.3);
+                0 10px 30px
+                rgba(0,0,0,0.23);
+
+            animation:
+                pulse 2.5s infinite;
         }
 
-        /* ANIMAZIONI */
+        @keyframes pulse {
+
+            0% {
+                box-shadow:
+                    0 0 0 0
+                    rgba(37,211,102,0.4);
+            }
+
+            70% {
+                box-shadow:
+                    0 0 0 14px
+                    rgba(37,211,102,0);
+            }
+
+            100% {
+                box-shadow:
+                    0 0 0 0
+                    rgba(37,211,102,0);
+            }
+        }
+
+        /* =========================
+           ANIMAZIONI
+        ========================== */
 
         .reveal {
             opacity: 0;
-            transform: translateY(24px);
+
+            transform:
+                translateY(22px);
+
             transition:
-                opacity 0.7s ease,
-                transform 0.7s ease;
+                opacity .75s ease,
+                transform .75s ease;
         }
 
         .reveal.visible {
             opacity: 1;
-            transform: translateY(0);
+
+            transform:
+                translateY(0);
         }
 
-        /* MOBILE */
+        /* =========================
+           MOBILE
+        ========================== */
 
         @media (max-width: 600px) {
+
             header {
-                padding: 16px 12px;
+                padding:
+                    14px 12px;
             }
 
             .brand-name {
-                font-size: 0.94rem;
+                font-size: 0.93rem;
             }
 
             nav {
@@ -474,102 +974,205 @@
             }
 
             nav a {
-                font-size: 0.68rem;
+                font-size: 0.65rem;
             }
 
             .container {
-                padding-left: 20px;
-                padding-right: 20px;
+                width:
+                    calc(100% - 34px);
             }
 
             .hero {
-                padding-top: 55px;
+                min-height: auto;
+
+                padding:
+                    65px 0 75px;
+            }
+
+            .trust-item {
+                padding:
+                    15px 5px;
+            }
+
+            .trust-item span {
+                font-size: 0.61rem;
             }
 
             .service-video {
-                max-width: 340px;
+                max-width: 100%;
             }
+
+            section {
+                padding:
+                    65px 0;
+            }
+
+            .cta-box {
+                padding:
+                    35px 20px;
+            }
+
         }
 
     </style>
 </head>
 
+
 <body>
+
 
     <!-- HEADER -->
 
     <header>
-        <div class="brand-name">Tati & Thomas</div>
+
+        <div class="brand-name">
+            Zero <span>Sbatty</span>
+        </div>
 
         <nav>
-            <a href="#video">1. Video</a>
-            <a href="#dj">2. DJ</a>
-            <a href="#drone">3. Drone</a>
-            <a href="#contatti">Contatti</a>
+
+            <a href="#video">
+                Video
+            </a>
+
+            <a href="#dj">
+                DJ
+            </a>
+
+            <a href="#drone">
+                Drone
+            </a>
+
+            <a href="#contatti">
+                Contatti
+            </a>
+
         </nav>
+
     </header>
 
 
-    <div class="container">
+    <main class="container">
+
 
         <!-- HERO -->
 
         <div class="hero reveal">
 
-            <div class="subtitle-top">
-                Zero Sbatty • Video Promozionali • DJ Set • Drone
+            <div class="hero-badge">
+                Tati & Thomas • Lucca
             </div>
 
             <h1>
                 Le vostre storie.
-                <span>La nostra creatività.</span>
+                <span>
+                    La nostra creatività.
+                </span>
             </h1>
 
             <p>
-                Siamo Tati & Thomas. Creiamo contenuti promozionali per attività,
-                DJ set per feste, eventi e matrimoni e riprese con drone
-                per raccontare ogni progetto da una prospettiva diversa.
+                Video promozionali, DJ Set e riprese con drone.
+                Tre modi diversi per dare vita alle vostre idee.
             </p>
 
-            <a href="https://wa.me/393669800153" class="btn-dark">
-                <span class="button-label">
-                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-                    Raccontateci la vostra idea
-                </span>
+            <div class="hero-buttons">
 
-                <span>↗️</span>
-            </a>
+                <a
+                    href="https://wa.me/393669800153"
+                    class="btn-dark">
 
-            <a href="#video" class="btn-outline">
-                Scoprite i servizi ↓
-            </a>
+                    <span class="button-left">
+
+                        <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+
+                        Raccontateci la vostra idea
+
+                    </span>
+
+                    <span>↗️</span>
+
+                </a>
+
+                <a
+                    href="#video"
+                    class="btn-outline">
+
+                    Scopri i nostri servizi ↓
+
+                </a>
+
+            </div>
 
         </div>
 
 
-        <!-- VIDEO PROMOZIONALI -->
+        <!-- TRUST -->
 
-        <section id="video" class="reveal">
+        <div class="trust-bar reveal">
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-clapperboard"></i>
+
+                <span>
+                    Video
+                </span>
+
+            </div>
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-headphones"></i>
+
+                <span>
+                    DJ Set
+                </span>
+
+            </div>
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-plane-up"></i>
+
+                <span>
+                    Drone
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ====================== -->
+        <!-- VIDEO PROMOZIONALI -->
+        <!-- ====================== -->
+
+        <section
+            id="video"
+            class="reveal">
 
             <div class="section-tag">
-                1. Video Promozionali
+                01 • Video Promozionali
             </div>
 
             <h2 class="section-title">
                 Facciamo vedere
-                <span>il meglio di te.</span>
+                <span>
+                    il meglio di te.
+                </span>
             </h2>
 
             <p class="section-desc">
-                Realizziamo video promozionali per attività, prodotti,
-                servizi ed eventi, pensati per catturare l'attenzione
-                sui social e valorizzare quello che fai.
+                Creiamo video pensati per catturare
+                l'attenzione e raccontare la tua attività
+                in modo semplice, moderno e riconoscibile.
             </p>
 
             <ul class="service-list">
+
                 <li>
                     <span>01</span>
-                    Spot pubblicitari e video promozionali
+                    Spot pubblicitari
                 </li>
 
                 <li>
@@ -581,13 +1184,14 @@
                     <span>03</span>
                     Video per prodotti, servizi ed eventi
                 </li>
+
             </ul>
 
-            <div class="video-label">
-                Guarda un nostro lavoro
+            <div class="video-title">
+                Un nostro lavoro
             </div>
 
-            <div class="video-container">
+            <div class="video-frame">
 
                 <video
                     class="service-video"
@@ -605,59 +1209,74 @@
 
             </div>
 
-            <a href="https://wa.me/393669800153" class="btn-dark">
-                <span class="button-label">
+            <a
+                href="https://wa.me/393669800153"
+                class="btn-dark">
+
+                <span class="button-left">
+
                     <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-                    Parliamo del tuo prossimo video
+
+                    Voglio un video per la mia attività
+
                 </span>
 
                 <span>↗️</span>
+
             </a>
 
         </section>
 
 
+        <!-- ====================== -->
         <!-- DJ SET -->
+        <!-- ====================== -->
 
-        <section id="dj" class="reveal">
+        <section
+            id="dj"
+            class="reveal">
 
             <div class="section-tag">
-                2. DJ Set
+                02 • DJ Set
             </div>
 
             <h2 class="section-title">
                 Ogni momento,
-                <span>la sua musica.</span>
+                <span>
+                    la sua musica.
+                </span>
             </h2>
 
             <p class="section-desc">
-                Creiamo il percorso musicale della vostra serata:
-                dall'atmosfera dell'aperitivo fino al momento
-                in cui la pista si riempie.
+                Costruiamo il percorso musicale
+                della serata insieme a voi,
+                dall'aperitivo fino alla pista piena.
             </p>
 
             <ul class="service-list">
+
                 <li>
                     <span>01</span>
-                    Aperitivo e inizio della festa
+                    Matrimoni
                 </li>
 
                 <li>
                     <span>02</span>
-                    Matrimoni, eventi e feste private
+                    Feste private
                 </li>
 
                 <li>
                     <span>03</span>
-                    DJ Set fino all'ultima canzone
+                    Locali ed eventi
                 </li>
+
             </ul>
 
-            <div class="video-label">
+            <div class="video-title">
                 Vivi l'atmosfera
             </div>
 
-            <div class="video-container">
+            <div class="video-frame">
 
                 <video
                     class="service-video"
@@ -675,46 +1294,56 @@
 
             </div>
 
-            <a href="https://wa.me/393669800153" class="btn-dark">
-                <span class="button-label">
+            <a
+                href="https://wa.me/393669800153"
+                class="btn-dark">
+
+                <span class="button-left">
+
                     <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-                    Parliamo della vostra musica
+
+                    Organizziamo la vostra serata
+
                 </span>
 
                 <span>↗️</span>
+
             </a>
 
         </section>
 
 
+        <!-- ====================== -->
         <!-- DRONE -->
+        <!-- ====================== -->
 
-        <section id="drone" class="reveal">
+        <section
+            id="drone"
+            class="reveal">
 
             <div class="section-tag">
-                3. Drone
+                03 • Drone
             </div>
 
             <h2 class="section-title">
-                Tutto cambia
-                <span>da un'altra prospettiva.</span>
+                Guarda tutto
+                <span>
+                    da un'altra prospettiva.
+                </span>
             </h2>
 
             <p class="section-desc">
-                Riprese aeree per location, eventi, matrimoni,
-                attività e contenuti promozionali.
+                Riprese aeree per attività,
+                location, matrimoni ed eventi.
+                Per dare alle immagini un impatto
+                completamente diverso.
             </p>
 
-            <p class="section-desc">
-                Un punto di vista diverso per rendere
-                il racconto ancora più spettacolare.
-            </p>
-
-            <div class="video-label">
+            <div class="video-title">
                 Guarda dall'alto
             </div>
 
-            <div class="video-container">
+            <div class="video-frame">
 
                 <video
                     class="service-video"
@@ -732,19 +1361,28 @@
 
             </div>
 
-            <a href="https://wa.me/393669800153" class="btn-dark">
-                <span class="button-label">
+            <a
+                href="https://wa.me/393669800153"
+                class="btn-dark">
+
+                <span class="button-left">
+
                     <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-                    Chiedi informazioni sul drone
+
+                    Voglio delle riprese con drone
+
                 </span>
 
                 <span>↗️</span>
+
             </a>
 
         </section>
 
 
-        <!-- I NOSTRI LAVORI -->
+        <!-- ====================== -->
+        <!-- PORTFOLIO -->
+        <!-- ====================== -->
 
         <section class="reveal">
 
@@ -753,54 +1391,62 @@
             </div>
 
             <h2 class="section-title">
-                I nostri
-                <span>lavori.</span>
+                Cosa
+                <span>
+                    realizziamo.
+                </span>
             </h2>
 
-            <p class="section-desc">
-                Tre servizi diversi, un unico obiettivo:
-                creare qualcosa che le persone ricordino.
-            </p>
+            <div class="portfolio-grid">
 
-            <div class="work-grid">
+                <div class="portfolio-card">
 
-                <div class="work-card">
-                    <div class="icon">
-                        <i class="fa-solid fa-clapperboard"></i>
-                    </div>
+                    <i class="fa-solid fa-store"></i>
 
-                    <h3>Attività e brand</h3>
+                    <h3>
+                        Attività & Brand
+                    </h3>
 
                     <p>
-                        Reel, spot e contenuti promozionali
-                        per raccontare prodotti e servizi.
+                        Video, Reel e contenuti
+                        per presentare prodotti,
+                        servizi e attività.
                     </p>
+
                 </div>
 
-                <div class="work-card">
-                    <div class="icon">
-                        <i class="fa-solid fa-headphones"></i>
-                    </div>
 
-                    <h3>Feste ed eventi</h3>
+                <div class="portfolio-card">
+
+                    <i class="fa-solid fa-music"></i>
+
+                    <h3>
+                        Feste & Matrimoni
+                    </h3>
 
                     <p>
-                        DJ set studiati per accompagnare
-                        ogni momento della serata.
+                        Musica e DJ Set pensati
+                        per accompagnare ogni
+                        momento dell'evento.
                     </p>
+
                 </div>
 
-                <div class="work-card">
-                    <div class="icon">
-                        <i class="fa-solid fa-location-arrow"></i>
-                    </div>
 
-                    <h3>Riprese aeree</h3>
+                <div class="portfolio-card">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                    <h3>
+                        Eventi & Location
+                    </h3>
 
                     <p>
-                        Video con drone per location,
-                        eventi e contenuti promozionali.
+                        Riprese tradizionali
+                        e aeree per raccontare
+                        luoghi ed esperienze.
                     </p>
+
                 </div>
 
             </div>
@@ -808,161 +1454,236 @@
         </section>
 
 
+        <!-- ====================== -->
+        <!-- CTA -->
+        <!-- ====================== -->
+
+        <div class="cta-box reveal">
+
+            <div class="section-tag">
+                Hai già un'idea?
+            </div>
+
+            <h2>
+                Parliamone.
+                <span>
+                    Senza sbatti.
+                </span>
+            </h2>
+
+            <p>
+                Raccontaci cosa vuoi realizzare.
+                Ti aiutiamo a scegliere il servizio
+                più adatto al tuo progetto.
+            </p>
+
+            <a
+                href="https://wa.me/393669800153"
+                class="btn-dark">
+
+                <span class="button-left">
+
+                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+
+                    Scrivici su WhatsApp
+
+                </span>
+
+                <span>↗️</span>
+
+            </a>
+
+        </div>
+
+
+        <!-- ====================== -->
         <!-- COME FUNZIONA -->
+        <!-- ====================== -->
 
         <section class="reveal">
 
             <div class="section-tag">
-                Si comincia da voi
-            </div>
-
-            <h2 class="section-title" style="margin-bottom: 40px;">
-                Dall'idea al
-                <span>vostro progetto.</span>
-            </h2>
-
-            <div class="step-box">
-
-                <div class="num">
-                    01
-                </div>
-
-                <h3>
-                    Raccontateci
-                </h3>
-
-                <p>
-                    Raccontateci la vostra attività,
-                    il vostro evento o il vostro progetto.
-                </p>
-
-            </div>
-
-            <div class="step-box">
-
-                <div class="num">
-                    02
-                </div>
-
-                <h3>
-                    Scegliamo insieme
-                </h3>
-
-                <p>
-                    Video, DJ Set o Drone:
-                    troviamo il servizio più adatto.
-                </p>
-
-            </div>
-
-            <div class="step-box">
-
-                <div class="num">
-                    03
-                </div>
-
-                <h3>
-                    Creiamo
-                </h3>
-
-                <p>
-                    Definiamo i dettagli e trasformiamo
-                    l'idea in un progetto concreto.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- INSTAGRAM -->
-
-        <section class="social-box reveal">
-
-            <div class="section-tag">
-                Social
+                Come funziona
             </div>
 
             <h2 class="section-title">
-                Seguici
-                <span>su Instagram.</span>
+                Dall'idea al
+                <span>
+                    progetto.
+                </span>
             </h2>
 
-            <p class="section-desc">
-                Guarda i nostri ultimi lavori,
-                i backstage e i nuovi progetti.
-            </p>
+            <div class="steps">
 
-            <!-- INSERISCI QUI IL LINK DEL VOSTRO INSTAGRAM -->
+                <div class="step-box">
 
-            <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="instagram-btn">
+                    <div class="num">
+                        1
+                    </div>
 
-                <i class="fa-brands fa-instagram"></i>
+                    <h3>
+                        Raccontaci
+                    </h3>
 
-                Instagram Zero Sbatty
+                    <p>
+                        Ci dici cosa hai in mente,
+                        dove e quando.
+                    </p>
 
-            </a>
+                </div>
+
+
+                <div class="step-box">
+
+                    <div class="num">
+                        2
+                    </div>
+
+                    <h3>
+                        Scegliamo
+                    </h3>
+
+                    <p>
+                        Troviamo insieme
+                        il servizio più adatto.
+                    </p>
+
+                </div>
+
+
+                <div class="step-box">
+
+                    <div class="num">
+                        3
+                    </div>
+
+                    <h3>
+                        Creiamo
+                    </h3>
+
+                    <p>
+                        Definiamo i dettagli
+                        e diamo vita al progetto.
+                    </p>
+
+                </div>
+
+            </div>
 
         </section>
 
-    </div>
+
+        <!-- ====================== -->
+        <!-- INSTAGRAM -->
+        <!-- ====================== -->
+
+        <section class="reveal">
+
+            <div class="instagram-box">
+
+                <div class="instagram-icon">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </div>
+
+                <h3>
+                    Seguici su Instagram
+                </h3>
+
+                <p>
+                    Guarda gli ultimi lavori,
+                    i backstage e le nuove serate.
+                </p>
+
+                <!-- INSERISCI QUI IL TUO LINK INSTAGRAM -->
+
+                <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-outline">
+
+                    Apri Instagram ↗️
+
+                </a>
+
+            </div>
+
+        </section>
 
 
+    </main>
+
+
+    <!-- ====================== -->
     <!-- CONTATTI -->
+    <!-- ====================== -->
 
-    <footer class="footer-dark" id="contatti">
+    <footer
+        class="footer-dark"
+        id="contatti">
 
-        <div class="subtitle-top">
-            Tati & Thomas
+        <div class="section-tag">
+            Zero Sbatty
         </div>
 
         <h2>
             Il primo passo?
-            <span>Un messaggio.</span>
+            <span>
+                Un messaggio.
+            </span>
         </h2>
 
         <p>
-            Scriveteci su WhatsApp per informazioni,
+            Scrivici per informazioni,
             disponibilità e preventivi.
         </p>
 
-        <a
-            href="https://wa.me/393669800153"
-            class="btn-dark"
-            style="border: 1px solid rgba(255,255,255,0.2); margin-bottom: 15px;">
+        <div class="footer-buttons">
 
-            <span class="button-label">
+            <a
+                href="https://wa.me/393669800153"
+                class="btn-dark"
+                style="
+                    border:
+                    1px solid rgba(255,255,255,0.16);
+                ">
 
-                <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+                <span class="button-left">
 
-                SCRIVI A THOMAS • 3669800153
+                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
 
-            </span>
+                    Thomas • 366 980 0153
 
-            <span>↗️</span>
+                </span>
 
-        </a>
+                <span>↗️</span>
 
-        <a
-            href="https://wa.me/393314828343"
-            class="btn-dark"
-            style="border: 1px solid rgba(255,255,255,0.2);">
+            </a>
 
-            <span class="button-label">
 
-                <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+            <a
+                href="https://wa.me/393314828343"
+                class="btn-dark"
+                style="
+                    border:
+                    1px solid rgba(255,255,255,0.16);
+                ">
 
-                SCRIVI A TATIANA • 3314828343
+                <span class="button-left">
 
-            </span>
+                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
 
-            <span>↗️</span>
+                    Tatiana • 331 482 8343
 
-        </a>
+                </span>
+
+                <span>↗️</span>
+
+            </a>
+
+        </div>
 
     </footer>
 
@@ -972,8 +1693,8 @@
         Zero Sbatty • Tati & Thomas
         <br>
 
-        Video Promozionali • DJ Set • Drone
-        <br><br>
+        Video • DJ Set • Drone
+        <br>
 
         Lucca • Toscana
 
@@ -985,7 +1706,7 @@
     <a
         href="https://wa.me/393669800153"
         class="whatsapp-floating"
-        aria-label="Scrivi su WhatsApp">
+        aria-label="Scrivi a Zero Sbatty su WhatsApp">
 
         <i class="fa-brands fa-whatsapp"></i>
 
@@ -996,21 +1717,33 @@
 
     <script>
 
-        const revealElements =
-            document.querySelectorAll('.reveal');
+        const elements =
+            document.querySelectorAll(
+                '.reveal'
+            );
 
         const observer =
             new IntersectionObserver(
-                (entries) => {
+
+                entries => {
 
                     entries.forEach(
-                        (entry) => {
+                        entry => {
 
-                            if (entry.isIntersecting) {
+                            if (
+                                entry.isIntersecting
+                            ) {
 
-                                entry.target.classList.add('visible');
+                                entry.target
+                                    .classList
+                                    .add(
+                                        'visible'
+                                    );
 
-                                observer.unobserve(entry.target);
+                                observer
+                                    .unobserve(
+                                        entry.target
+                                    );
 
                             }
 
@@ -1018,16 +1751,82 @@
                     );
 
                 },
+
                 {
                     threshold: 0.12
                 }
+
             );
 
-        revealElements.forEach(
-            (element) => observer.observe(element)
+        elements.forEach(
+            element => {
+
+                observer.observe(
+                    element
+                );
+
+            }
+        );
+
+
+        /*
+        PAUSA I VIDEO QUANDO
+        NON SONO VISIBILI
+        */
+
+        const videos =
+            document.querySelectorAll(
+                '.service-video'
+            );
+
+        const videoObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(
+                        entry => {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target
+                                    .play()
+                                    .catch(
+                                        () => {}
+                                    );
+
+                            } else {
+
+                                entry.target
+                                    .pause();
+
+                            }
+
+                        }
+                    );
+
+                },
+
+                {
+                    threshold: 0.35
+                }
+
+            );
+
+        videos.forEach(
+            video => {
+
+                videoObserver.observe(
+                    video
+                );
+
+            }
         );
 
     </script>
+
 
 </body>
 </html>
