@@ -691,36 +691,36 @@ footer {
   isolation: isolate;
 }
 
-/* ANIMAZIONE WHATSAPP DELICATA */
+/* UNICA MODIFICA: ANIMAZIONE WHATSAPP DELICATA */
 
 .float-wa::before {
   content: "";
   position: absolute;
-  inset: -3px;
-  border: 1.5px solid rgba(37,211,102,.45);
+  inset: -2px;
+  border: 1.5px solid rgba(37,211,102,.35);
   border-radius: 50%;
   z-index: -1;
   pointer-events: none;
-  animation: wa-soft-pulse 3.5s ease-out infinite;
+  animation: wa-ripple 4s ease-out infinite;
 }
 
 .float-wa::after {
   display: none;
 }
 
-@keyframes wa-soft-pulse {
+@keyframes wa-ripple {
   0% {
     transform: scale(1);
-    opacity: .45;
+    opacity: .35;
   }
 
-  65% {
-    transform: scale(1.35);
+  55% {
+    transform: scale(1.25);
     opacity: 0;
   }
 
   100% {
-    transform: scale(1.35);
+    transform: scale(1.25);
     opacity: 0;
   }
 }
@@ -746,7 +746,7 @@ footer {
 
 .to-top i { display: block; }
 
-/* ANIMAZIONI SCORRIMENTO */
+/* ANIMAZIONI */
 
 .reveal {
   opacity: 1;
@@ -1350,7 +1350,7 @@ footer {
   </span>
 </a>
 
-<!-- WHATSAPP CON ANIMAZIONE DELICATA -->
+<!-- WHATSAPP -->
 
 <a class="float-wa"
    href="https://wa.me/393669800153"
