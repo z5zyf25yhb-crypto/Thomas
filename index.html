@@ -6,7 +6,7 @@
 
 <title>Zero Sbatty | Video, DJ Set e Drone a Lucca</title>
 <meta name="description" content="Zero Sbatty di Tati & Thomas: video promozionali, DJ set per matrimoni ed eventi e riprese drone a Lucca e in Toscana.">
-<meta name="theme-color" content="#f5dde6">
+<meta name="theme-color" content="#fff1f6">
 <link rel="canonical" href="https://www.zerosbatty.com/">
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -14,16 +14,16 @@
 
 <style>
 :root {
-  --cream: #faf8f5;
-  --cream2: #f9edf2;
-  --forest: #f5dde6;
-  --forest2: #ead0df;
-  --gold: #9b83b5;
-  --gold2: #b7a0cf;
-  --line: #e9dce8;
-  --muted: #716a76;
+  --cream: #fff1f6;
+  --cream2: #ffd6e7;
+  --forest: #f5009b;
+  --forest2: #ffacd1;
+  --gold: #000;
+  --gold2: #000;
+  --line: rgba(0,0,0,.2);
+  --muted: #000;
   --wa: #25d366;
-  --dark: #403646;
+  --dark: #000;
 }
 
 * {
@@ -101,13 +101,13 @@ a {
 .button.forest {
   background: var(--forest);
   color: var(--dark);
-  border-color: var(--forest);
+  border-color: var(--dark);
 }
 
 .button.light {
   background: var(--cream);
   color: var(--dark);
-  border-color: var(--cream);
+  border-color: var(--dark);
 }
 
 .button.ghost {
@@ -124,7 +124,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250,248,245,.95);
+  background: rgba(255,241,246,.96);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(18px);
 }
@@ -162,7 +162,7 @@ a {
 }
 
 .nav-links .contact-link {
-  background: var(--forest);
+  background: var(--forest2);
   color: var(--dark);
   border-radius: 100px;
   padding: 12px 20px;
@@ -223,7 +223,7 @@ a {
 .hero-art {
   position: relative;
   min-height: 490px;
-  background: var(--forest);
+  background: var(--forest2);
   border-radius: 190px 190px 26px 26px;
   color: var(--dark);
   padding: 75px 38px 35px;
@@ -232,14 +232,14 @@ a {
   justify-content: space-between;
   text-align: center;
   overflow: hidden;
-  box-shadow: 0 28px 65px rgba(100,70,110,.12);
+  box-shadow: 0 28px 65px rgba(0,0,0,.12);
 }
 
 .hero-art::before,
 .hero-art::after {
   content: "";
   position: absolute;
-  border: 1px solid rgba(255,255,255,.7);
+  border: 1px solid var(--line);
   border-radius: 50%;
   width: 450px;
   height: 450px;
@@ -270,7 +270,7 @@ a {
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  border-top: 1px solid rgba(255,255,255,.7);
+  border-top: 1px solid var(--line);
   padding-top: 23px;
   gap: 8px;
 }
@@ -286,7 +286,7 @@ a {
   margin-bottom: 8px;
 }
 
-/* BARRA SERVIZI SENZA ASTERISCHI */
+/* BARRA SERVIZI */
 
 .ribbon {
   background: var(--forest);
@@ -428,7 +428,7 @@ a {
   overflow: hidden;
   border-radius: 170px 170px 25px 25px;
   background: #171a17;
-  box-shadow: 0 24px 55px rgba(100,70,110,.12);
+  box-shadow: 0 24px 55px rgba(0,0,0,.12);
 }
 
 .video-frame video {
@@ -450,7 +450,7 @@ a {
   margin-right: 6px;
 }
 
-/* SEZIONE ROSA */
+/* FILOSOFIA */
 
 .editorial {
   padding: 95px 0;
@@ -501,7 +501,7 @@ a {
   min-height: 340px;
   border-radius: 26px;
   overflow: hidden;
-  background: linear-gradient(150deg,#f9e8ee,#efd2e1);
+  background: var(--cream2);
   color: var(--dark);
   padding: 35px;
   display: flex;
@@ -516,11 +516,11 @@ a {
 }
 
 .tile:nth-child(2) {
-  background: linear-gradient(150deg,#f6e7f2,#e9d8f0);
+  background: var(--forest2);
 }
 
 .tile:nth-child(3) {
-  background: linear-gradient(150deg,#f7e5ec,#e8cce1);
+  background: #ffcae2;
 }
 
 .tile::before {
@@ -528,7 +528,7 @@ a {
   position: absolute;
   width: 250px;
   height: 250px;
-  border: 1px solid rgba(255,255,255,.7);
+  border: 1px solid var(--line);
   border-radius: 50%;
   right: -90px;
   top: -70px;
@@ -569,7 +569,7 @@ a {
 .about-card {
   min-height: 470px;
   border-radius: 220px 220px 25px 25px;
-  background: var(--forest);
+  background: var(--forest2);
   color: var(--dark);
   display: flex;
   align-items: center;
@@ -585,7 +585,7 @@ a {
   position: absolute;
   width: 370px;
   height: 370px;
-  border: 1px solid rgba(255,255,255,.7);
+  border: 1px solid var(--line);
   border-radius: 50%;
   top: -80px;
 }
@@ -637,7 +637,7 @@ a {
   padding: 35px;
   border: 1px solid var(--line);
   border-radius: 22px;
-  background: rgba(255,255,255,.5);
+  background: var(--cream2);
 }
 
 .process-card .number {
@@ -691,10 +691,8 @@ a {
   min-width: 265px;
 }
 
-/* ICONE WHATSAPP VERDI */
-
 .contact-buttons .fa-whatsapp {
-  color: #25d366;
+  color: #000;
   font-size: 1.35rem;
 }
 
@@ -703,7 +701,12 @@ a {
 .social-strip {
   padding: 55px 0;
   text-align: center;
-  background: var(--cream2);
+  background: var(--cream);
+}
+
+.social-strip h2 {
+  font-size: clamp(2.4rem,4vw,4rem);
+  margin: 10px 0;
 }
 
 .social-strip p {
@@ -734,13 +737,11 @@ footer {
   place-items: center;
   border-radius: 50%;
   background: var(--wa);
-  color: white;
+  color: #000;
   font-size: 1.85rem;
   box-shadow: 0 12px 30px rgba(0,0,0,.2);
   isolation: isolate;
 }
-
-/* ANIMAZIONE WHATSAPP DELICATA */
 
 .float-wa::before {
   content: "";
@@ -763,12 +764,7 @@ footer {
     opacity: .35;
   }
 
-  55% {
-    transform: scale(1.25);
-    opacity: 0;
-  }
-
-  100% {
+  55%, 100% {
     transform: scale(1.25);
     opacity: 0;
   }
@@ -1085,7 +1081,7 @@ footer {
     </div>
 
     <div class="hero-art reveal">
-      <div class="overline" style="color:var(--gold)">
+      <div class="overline">
         Zero Sbatty · Creative Studio
       </div>
 
@@ -1115,7 +1111,7 @@ footer {
   </div>
 </section>
 
-<!-- BARRA SERVIZI SENZA ASTERISCHI -->
+<!-- BARRA SERVIZI -->
 
 <div class="ribbon">
   <div class="container ribbon-inner">
@@ -1307,13 +1303,11 @@ footer {
   </div>
 </section>
 
-<!-- SEZIONE ROSA -->
+<!-- FILOSOFIA -->
 
 <section class="editorial">
   <div class="container reveal">
-    <div class="overline" style="color:var(--gold)">
-      La nostra filosofia
-    </div>
+    <div class="overline">La nostra filosofia</div>
 
     <h2>
       Tu immagina.<br>
@@ -1372,9 +1366,7 @@ footer {
   <div class="container about-grid">
 
     <div class="about-card reveal">
-      <div class="overline" style="color:var(--gold)">
-        Dietro le quinte
-      </div>
+      <div class="overline">Dietro le quinte</div>
 
       <h3>
         Tati<br>
@@ -1452,9 +1444,7 @@ footer {
 
 <section class="contact-band" id="contatti">
   <div class="container reveal">
-    <div class="overline" style="color:var(--gold)">
-      Contattaci
-    </div>
+    <div class="overline">Contattaci</div>
 
     <h2>
       Hai un'idea?<br>
@@ -1487,9 +1477,7 @@ footer {
   <div class="container">
     <div class="overline">Seguici</div>
 
-    <h2 style="font-size:clamp(2.4rem,4vw,4rem);margin:10px 0">
-      Ci vediamo su Instagram.
-    </h2>
+    <h2>Ci vediamo su Instagram.</h2>
 
     <p>Nuovi lavori, backstage e prossimi eventi.</p>
 
@@ -1531,7 +1519,6 @@ footer {
 </a>
 
 <script>
-
 /* VIDEO SEMPRE MUTI */
 
 const videos = document.querySelectorAll('.video-frame video');
@@ -1585,7 +1572,6 @@ if (
     revealObserver.observe(element);
   });
 }
-
 </script>
 
 </body>
