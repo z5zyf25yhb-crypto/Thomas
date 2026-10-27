@@ -6,7 +6,7 @@
 
 <title>Zero Sbatty | Video, DJ Set e Drone a Lucca</title>
 <meta name="description" content="Zero Sbatty di Tati & Thomas: video promozionali, DJ set per matrimoni ed eventi e riprese drone a Lucca e in Toscana.">
-<meta name="theme-color" content="#ff00a8">
+<meta name="theme-color" content="#f5dde6">
 <link rel="canonical" href="https://www.zerosbatty.com/">
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -14,19 +14,21 @@
 
 <style>
 :root {
-  --cream: #ff00a8;
-  --cream2: #ff00a8;
-  --forest: #ff00a8;
-  --forest2: #ff00a8;
-  --gold: #000;
-  --gold2: #000;
-  --line: rgba(0,0,0,.25);
-  --muted: #000;
+  --cream: #faf8f5;
+  --cream2: #f9edf2;
+  --forest: #f5dde6;
+  --forest2: #ead0df;
+  --gold: #9b83b5;
+  --gold2: #b7a0cf;
+  --line: #e9dce8;
+  --muted: #716a76;
   --wa: #25d366;
-  --dark: #000;
+  --dark: #403646;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
@@ -42,7 +44,9 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3, p {
+  margin-top: 0;
+}
 
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
@@ -90,22 +94,29 @@ a {
   transition: .25s;
 }
 
-.button:hover { transform: translateY(-3px); }
+.button:hover {
+  transform: translateY(-3px);
+}
 
 .button.forest {
   background: var(--forest);
   color: var(--dark);
-  border-color: var(--dark);
+  border-color: var(--forest);
 }
 
 .button.light {
   background: var(--cream);
   color: var(--dark);
-  border-color: var(--dark);
+  border-color: var(--cream);
 }
 
-.button.ghost { background: transparent; }
-.button i { font-size: 1.15rem; }
+.button.ghost {
+  background: transparent;
+}
+
+.button i {
+  font-size: 1.15rem;
+}
 
 /* HEADER */
 
@@ -113,7 +124,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255,0,168,.95);
+  background: rgba(250,248,245,.95);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(18px);
 }
@@ -131,7 +142,9 @@ a {
   white-space: nowrap;
 }
 
-.brand em { color: var(--gold); }
+.brand em {
+  color: var(--gold);
+}
 
 .nav-links {
   display: flex;
@@ -144,7 +157,9 @@ a {
   font-weight: 700;
 }
 
-.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover {
+  color: var(--gold);
+}
 
 .nav-links .contact-link {
   background: var(--forest);
@@ -188,7 +203,9 @@ a {
   margin: 20px 0 28px;
 }
 
-.hero h1 span { display: block; }
+.hero h1 span {
+  display: block;
+}
 
 .hero p {
   max-width: 560px;
@@ -215,14 +232,14 @@ a {
   justify-content: space-between;
   text-align: center;
   overflow: hidden;
-  box-shadow: 0 28px 65px rgba(0,0,0,.12);
+  box-shadow: 0 28px 65px rgba(100,70,110,.12);
 }
 
 .hero-art::before,
 .hero-art::after {
   content: "";
   position: absolute;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255,255,255,.7);
   border-radius: 50%;
   width: 450px;
   height: 450px;
@@ -253,12 +270,14 @@ a {
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(255,255,255,.7);
   padding-top: 23px;
   gap: 8px;
 }
 
-.art-icons span { font-size: .8rem; }
+.art-icons span {
+  font-size: .8rem;
+}
 
 .art-icons i {
   display: block;
@@ -267,14 +286,13 @@ a {
   margin-bottom: 8px;
 }
 
-/* BARRA SERVIZI */
+/* BARRA SERVIZI SENZA ASTERISCHI */
 
 .ribbon {
   background: var(--forest);
   color: var(--dark);
   padding: 19px 0;
   overflow: hidden;
-  border-block: 1px solid var(--line);
 }
 
 .ribbon-inner {
@@ -322,7 +340,9 @@ a {
   border-top: 1px solid var(--line);
 }
 
-.service.reverse { background: var(--cream2); }
+.service.reverse {
+  background: var(--cream2);
+}
 
 .service-layout {
   display: grid;
@@ -335,8 +355,13 @@ a {
   grid-template-columns: minmax(320px,480px) minmax(0,1fr);
 }
 
-.service.reverse .service-copy { order: 2; }
-.service.reverse .service-media { order: 1; }
+.service.reverse .service-copy {
+  order: 2;
+}
+
+.service.reverse .service-media {
+  order: 1;
+}
 
 .service-copy h2 {
   font-size: clamp(3rem,5.5vw,6rem);
@@ -403,7 +428,7 @@ a {
   overflow: hidden;
   border-radius: 170px 170px 25px 25px;
   background: #171a17;
-  box-shadow: 0 24px 55px rgba(0,0,0,.12);
+  box-shadow: 0 24px 55px rgba(100,70,110,.12);
 }
 
 .video-frame video {
@@ -425,7 +450,7 @@ a {
   margin-right: 6px;
 }
 
-/* FILOSOFIA */
+/* SEZIONE ROSA */
 
 .editorial {
   padding: 95px 0;
@@ -439,7 +464,9 @@ a {
   margin: 14px 0 25px;
 }
 
-.editorial h2 em { color: var(--gold); }
+.editorial h2 em {
+  color: var(--gold);
+}
 
 .editorial p {
   max-width: 600px;
@@ -449,7 +476,9 @@ a {
 
 /* RIQUADRI */
 
-.offerings { padding: 110px 0; }
+.offerings {
+  padding: 110px 0;
+}
 
 .offerings-head {
   text-align: center;
@@ -470,10 +499,9 @@ a {
 .tile {
   position: relative;
   min-height: 340px;
-  border: 1px solid var(--line);
   border-radius: 26px;
   overflow: hidden;
-  background: var(--cream);
+  background: linear-gradient(150deg,#f9e8ee,#efd2e1);
   color: var(--dark);
   padding: 35px;
   display: flex;
@@ -483,14 +511,24 @@ a {
   transition: transform .3s;
 }
 
-.tile:hover { transform: translateY(-6px); }
+.tile:hover {
+  transform: translateY(-6px);
+}
+
+.tile:nth-child(2) {
+  background: linear-gradient(150deg,#f6e7f2,#e9d8f0);
+}
+
+.tile:nth-child(3) {
+  background: linear-gradient(150deg,#f7e5ec,#e8cce1);
+}
 
 .tile::before {
   content: "";
   position: absolute;
   width: 250px;
   height: 250px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255,255,255,.7);
   border-radius: 50%;
   right: -90px;
   top: -70px;
@@ -540,7 +578,6 @@ a {
   position: relative;
   overflow: hidden;
   text-align: center;
-  border: 1px solid var(--line);
 }
 
 .about-card::before {
@@ -548,7 +585,7 @@ a {
   position: absolute;
   width: 370px;
   height: 370px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255,255,255,.7);
   border-radius: 50%;
   top: -80px;
 }
@@ -559,7 +596,9 @@ a {
   z-index: 1;
 }
 
-.about-card em { color: var(--gold); }
+.about-card em {
+  color: var(--gold);
+}
 
 .about-card small {
   color: var(--muted);
@@ -579,7 +618,9 @@ a {
 
 /* COME LAVORIAMO */
 
-.process { padding: 110px 0; }
+.process {
+  padding: 110px 0;
+}
 
 .process h2 {
   font-size: clamp(3rem,5vw,5.8rem);
@@ -596,7 +637,7 @@ a {
   padding: 35px;
   border: 1px solid var(--line);
   border-radius: 22px;
-  background: var(--cream);
+  background: rgba(255,255,255,.5);
 }
 
 .process-card .number {
@@ -629,7 +670,9 @@ a {
   margin: 18px 0 22px;
 }
 
-.contact-band h2 em { color: var(--gold); }
+.contact-band h2 em {
+  color: var(--gold);
+}
 
 .contact-band p {
   color: var(--dark);
@@ -644,10 +687,14 @@ a {
   flex-wrap: wrap;
 }
 
-.contact-buttons .button { min-width: 265px; }
+.contact-buttons .button {
+  min-width: 265px;
+}
+
+/* ICONE WHATSAPP VERDI */
 
 .contact-buttons .fa-whatsapp {
-  color: #000;
+  color: #25d366;
   font-size: 1.35rem;
 }
 
@@ -657,11 +704,6 @@ a {
   padding: 55px 0;
   text-align: center;
   background: var(--cream2);
-}
-
-.social-strip h2 {
-  font-size: clamp(2.4rem,4vw,4rem);
-  margin: 10px 0;
 }
 
 .social-strip p {
@@ -677,7 +719,6 @@ footer {
   color: var(--dark);
   text-align: center;
   font-size: .84rem;
-  border-top: 1px solid var(--line);
 }
 
 /* WHATSAPP FISSO */
@@ -693,11 +734,13 @@ footer {
   place-items: center;
   border-radius: 50%;
   background: var(--wa);
-  color: #000;
+  color: white;
   font-size: 1.85rem;
   box-shadow: 0 12px 30px rgba(0,0,0,.2);
   isolation: isolate;
 }
+
+/* ANIMAZIONE WHATSAPP DELICATA */
 
 .float-wa::before {
   content: "";
@@ -710,11 +753,25 @@ footer {
   animation: wa-ripple 4s ease-out infinite;
 }
 
-.float-wa::after { display: none; }
+.float-wa::after {
+  display: none;
+}
 
 @keyframes wa-ripple {
-  0% { transform: scale(1); opacity: .35; }
-  55%, 100% { transform: scale(1.25); opacity: 0; }
+  0% {
+    transform: scale(1);
+    opacity: .35;
+  }
+
+  55% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
 }
 
 /* TORNA IN ALTO */
@@ -736,7 +793,9 @@ footer {
   text-align: center;
 }
 
-.to-top i { display: block; }
+.to-top i {
+  display: block;
+}
 
 /* ANIMAZIONI SCORRIMENTO */
 
@@ -759,8 +818,13 @@ footer {
 /* TABLET */
 
 @media (max-width:1050px) {
-  .hero-layout { grid-template-columns: 1fr; }
-  .hero { padding: 80px 0; }
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 80px 0;
+  }
 
   .hero-art {
     width: min(100%,550px);
@@ -777,30 +841,47 @@ footer {
     order: initial;
   }
 
-  .service-media { max-width: 420px; }
-  .about-grid { grid-template-columns: 1fr; }
+  .service-media {
+    max-width: 420px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
 
   .tile-grid,
   .process-grid {
     grid-template-columns: 1fr;
   }
 
-  .tile { min-height: 260px; }
+  .tile {
+    min-height: 260px;
+  }
 }
 
 /* SMARTPHONE */
 
 @media (max-width:650px) {
-  .container { width: calc(100% - 34px); }
+  .container {
+    width: calc(100% - 34px);
+  }
 
   .nav {
     min-height: 68px;
     gap: 8px;
   }
 
-  .brand { font-size: 1rem; }
-  .nav-links { gap: 9px; }
-  .nav-links a { font-size: .65rem; }
+  .brand {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 9px;
+  }
+
+  .nav-links a {
+    font-size: .65rem;
+  }
 
   .nav-links .contact-link {
     padding: 0;
@@ -813,10 +894,21 @@ footer {
     min-height: auto;
   }
 
-  .hero h1 { font-size: clamp(3.4rem,12vw,5rem); }
-  .hero p { font-size: .98rem; }
-  .hero-actions { flex-direction: column; }
-  .hero-actions .button { width: 100%; }
+  .hero h1 {
+    font-size: clamp(3.4rem,12vw,5rem);
+  }
+
+  .hero p {
+    font-size: .98rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
 
   .hero-art {
     min-height: 380px;
@@ -824,7 +916,9 @@ footer {
     border-radius: 150px 150px 22px 22px;
   }
 
-  .hero-art .art-title { font-size: 3rem; }
+  .hero-art .art-title {
+    font-size: 3rem;
+  }
 
   .ribbon-inner {
     gap: 13px;
@@ -832,15 +926,41 @@ footer {
     letter-spacing: .04em;
   }
 
-  .statement { padding: 80px 0; }
-  .statement h2 { font-size: clamp(2.6rem,9vw,4rem); }
-  .service { padding: 75px 0; }
-  .service-layout { gap: 45px; }
-  .service-copy h2 { font-size: clamp(2.8rem,10vw,4.3rem); }
-  .service-media { max-width: 370px; }
-  .video-frame { border-radius: 125px 125px 22px 22px; }
-  .editorial { padding: 80px 0; }
-  .editorial h2 { font-size: clamp(3rem,10vw,4.5rem); }
+  .statement {
+    padding: 80px 0;
+  }
+
+  .statement h2 {
+    font-size: clamp(2.6rem,9vw,4rem);
+  }
+
+  .service {
+    padding: 75px 0;
+  }
+
+  .service-layout {
+    gap: 45px;
+  }
+
+  .service-copy h2 {
+    font-size: clamp(2.8rem,10vw,4.3rem);
+  }
+
+  .service-media {
+    max-width: 370px;
+  }
+
+  .video-frame {
+    border-radius: 125px 125px 22px 22px;
+  }
+
+  .editorial {
+    padding: 80px 0;
+  }
+
+  .editorial h2 {
+    font-size: clamp(3rem,10vw,4.5rem);
+  }
 
   .offerings,
   .about-section,
@@ -853,10 +973,21 @@ footer {
     border-radius: 160px 160px 22px 22px;
   }
 
-  .about-copy h2 { font-size: clamp(3rem,10vw,4.5rem); }
-  .process-card { padding: 28px; }
-  .contact-band { padding: 80px 0; }
-  .contact-buttons { flex-direction: column; }
+  .about-copy h2 {
+    font-size: clamp(3rem,10vw,4.5rem);
+  }
+
+  .process-card {
+    padding: 28px;
+  }
+
+  .contact-band {
+    padding: 80px 0;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+  }
 
   .contact-buttons .button {
     width: 100%;
@@ -877,9 +1008,17 @@ footer {
 }
 
 @media (max-width:360px) {
-  .brand { font-size: .9rem; }
-  .nav-links { gap: 6px; }
-  .nav-links a { font-size: .61rem; }
+  .brand {
+    font-size: .9rem;
+  }
+
+  .nav-links {
+    gap: 6px;
+  }
+
+  .nav-links a {
+    font-size: .61rem;
+  }
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -917,6 +1056,7 @@ footer {
 
 <section class="hero" id="inizio">
   <div class="container hero-layout">
+
     <div class="reveal">
       <div class="overline">Tati &amp; Thomas · Lucca, Toscana</div>
 
@@ -945,7 +1085,9 @@ footer {
     </div>
 
     <div class="hero-art reveal">
-      <div class="overline">Zero Sbatty · Creative Studio</div>
+      <div class="overline" style="color:var(--gold)">
+        Zero Sbatty · Creative Studio
+      </div>
 
       <div class="art-title">
         Le idee belle<br>
@@ -957,20 +1099,23 @@ footer {
           <i class="fa-solid fa-clapperboard"></i>
           Video
         </span>
+
         <span>
           <i class="fa-solid fa-headphones"></i>
           DJ Set
         </span>
+
         <span>
           <i class="fa-solid fa-plane-up"></i>
           Drone
         </span>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- BARRA SERVIZI -->
+<!-- BARRA SERVIZI SENZA ASTERISCHI -->
 
 <div class="ribbon">
   <div class="container ribbon-inner">
@@ -1003,6 +1148,7 @@ footer {
 
 <section class="service" id="video">
   <div class="container service-layout">
+
     <div class="service-copy reveal">
       <div class="overline">01 / Video promozionali</div>
 
@@ -1049,6 +1195,7 @@ footer {
         Creatività, riprese e montaggio
       </div>
     </div>
+
   </div>
 </section>
 
@@ -1056,6 +1203,7 @@ footer {
 
 <section class="service reverse" id="dj">
   <div class="container service-layout">
+
     <div class="service-copy reveal">
       <div class="overline">02 / DJ Set</div>
 
@@ -1101,6 +1249,7 @@ footer {
         La colonna sonora dei tuoi momenti
       </div>
     </div>
+
   </div>
 </section>
 
@@ -1108,6 +1257,7 @@ footer {
 
 <section class="service" id="drone">
   <div class="container service-layout">
+
     <div class="service-copy reveal">
       <div class="overline">03 / Riprese con drone</div>
 
@@ -1153,14 +1303,17 @@ footer {
         Immagini che lasciano il segno
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- FILOSOFIA -->
+<!-- SEZIONE ROSA -->
 
 <section class="editorial">
   <div class="container reveal">
-    <div class="overline">La nostra filosofia</div>
+    <div class="overline" style="color:var(--gold)">
+      La nostra filosofia
+    </div>
 
     <h2>
       Tu immagina.<br>
@@ -1217,8 +1370,11 @@ footer {
 
 <section class="about-section">
   <div class="container about-grid">
+
     <div class="about-card reveal">
-      <div class="overline">Dietro le quinte</div>
+      <div class="overline" style="color:var(--gold)">
+        Dietro le quinte
+      </div>
 
       <h3>
         Tati<br>
@@ -1251,8 +1407,11 @@ footer {
         Il tutto, naturalmente, senza sbatti.
       </p>
 
-      <a class="button forest" href="#contatti">Conosciamoci</a>
+      <a class="button forest" href="#contatti">
+        Conosciamoci
+      </a>
     </div>
+
   </div>
 </section>
 
@@ -1293,7 +1452,9 @@ footer {
 
 <section class="contact-band" id="contatti">
   <div class="container reveal">
-    <div class="overline">Contattaci</div>
+    <div class="overline" style="color:var(--gold)">
+      Contattaci
+    </div>
 
     <h2>
       Hai un'idea?<br>
@@ -1325,7 +1486,11 @@ footer {
 <section class="social-strip">
   <div class="container">
     <div class="overline">Seguici</div>
-    <h2>Ci vediamo su Instagram.</h2>
+
+    <h2 style="font-size:clamp(2.4rem,4vw,4rem);margin:10px 0">
+      Ci vediamo su Instagram.
+    </h2>
+
     <p>Nuovi lavori, backstage e prossimi eventi.</p>
 
     <a class="button ghost"
@@ -1366,6 +1531,7 @@ footer {
 </a>
 
 <script>
+
 /* VIDEO SEMPRE MUTI */
 
 const videos = document.querySelectorAll('.video-frame video');
@@ -1419,6 +1585,7 @@ if (
     revealObserver.observe(element);
   });
 }
+
 </script>
 
 </body>
